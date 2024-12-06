@@ -8,6 +8,7 @@ namespace Silicon.Controllers
 {
     public class AccountController : Controller
     {
+        [System.Web.Mvc.HttpGet] // Usa System.Web.Mvc.HttpGetAttribute, no System.Web.Http.HttpGetAttribute
         // GET: Account
         public ActionResult collections()
         {
