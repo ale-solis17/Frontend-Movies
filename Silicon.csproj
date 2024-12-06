@@ -136,6 +136,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="assets\audio\sample.wav" />
     <Content Include="assets\css\theme.css" />
     <Content Include="assets\css\theme.min.css" />
