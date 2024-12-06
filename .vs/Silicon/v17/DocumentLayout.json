@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend\\Mvc\\Silicon\\",
+  "WorkspaceRootPath": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|c:\\ulatina\\progra web\\proyecto\\frontend\\mvc\\silicon\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|c:\\ulatina\\progra web\\proyecto\\frontend-movies\\views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|solutionrelative:views\\account\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|c:\\ulatina\\progra web\\proyecto\\frontend-movies\\models\\accountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|solutionrelative:models\\accountmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|c:\\ulatina\\progra web\\proyecto\\frontend-movies\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|c:\\ulatina\\progra web\\proyecto\\frontend-movies\\views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1BEDEAA1-4ADB-4784-A7E6-66B15EF9CAEF}|Silicon.csproj|solutionrelative:views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,13 +50,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "signup.cshtml",
+              "DocumentMoniker": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\Views\\Account\\signup.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\signup.cshtml",
+              "ToolTip": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\Views\\Account\\signup.cshtml",
+              "RelativeToolTip": "Views\\Account\\signup.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T03:21:37.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "signin.cshtml",
+              "DocumentMoniker": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\Views\\Account\\signin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\signin.cshtml",
+              "ToolTip": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\Views\\Account\\signin.cshtml",
+              "RelativeToolTip": "Views\\Account\\signin.cshtml",
+              "ViewState": "AgIAADcAAAAAAAAAAAAgwEkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T03:20:30.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountModel.cs",
+              "DocumentMoniker": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\Models\\AccountModel.cs",
+              "RelativeDocumentMoniker": "Models\\AccountModel.cs",
+              "ToolTip": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\Models\\AccountModel.cs",
+              "RelativeToolTip": "Models\\AccountModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T03:08:17.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend\\Mvc\\Silicon\\Controllers\\AccountController.cs",
+              "DocumentMoniker": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend\\Mvc\\Silicon\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Ulatina\\Progra web\\Proyecto\\Frontend-Movies\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA1wDAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAxwDAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-06T01:05:07.803Z",
               "EditorCaption": ""
