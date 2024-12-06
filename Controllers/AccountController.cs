@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,7 +9,7 @@ namespace Silicon.Controllers
 {
     public class AccountController : Controller
     {
-        [System.Web.Mvc.HttpGet] // Usa System.Web.Mvc.HttpGetAttribute, no System.Web.Http.HttpGetAttribute
+        // Usa System.Web.Mvc.HttpGetAttribute, no System.Web.Http.HttpGetAttribute
         // GET: Account
         public ActionResult collections()
         {
@@ -42,9 +43,16 @@ namespace Silicon.Controllers
         {
             return View();
         }
+        [System.Web.Mvc.HttpGet]
         public ActionResult signup()
         {
             return View();
         }
-    }
+        [System.Web.Mvc.HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Register(ActionModel.RegisterModel model)
+        { 
+        }
+
+        }
 }
