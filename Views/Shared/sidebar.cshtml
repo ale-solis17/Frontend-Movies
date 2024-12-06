@@ -1,0 +1,102 @@
+﻿<aside data-bs-theme="dark">
+    <div id="componentsNav" class="offcanvas-lg offcanvas-start d-flex flex-column position-fixed top-0 start-0 vh-100 bg-dark border-end-lg" style="width: 21rem; z-index: 1045;">
+        <div class="offcanvas-header d-none d-lg-flex justify-content-start">
+            <a href="/Components/typography" class="navbar-brand text-dark d-none d-lg-flex py-0">
+                <img src="~/assets/img/logo.svg" width="47" alt="Silicon">
+                Silicon
+            </a>
+            <span class="badge bg-warning d-none d-lg-inline-block">UI Kit</span>
+        </div>
+        <div class="offcanvas-header d-block d-lg-none border-bottom">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h5 class="d-lg-none mb-0">Menu</h5>
+                <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" data-bs-target="#componentsNav" aria-label="Close"></button>
+            </div>
+            <div class="list-group list-group-flush mx-n4">
+                <a href="/" class="list-group-item list-group-item-action d-flex align-items-center border-0 py-2 px-4 @if (ViewBag.Title == "landing") {<text>active</text>}">
+                    <i class="bx bx-desktop fs-lg opacity-80 me-2"></i>
+                    Preview
+                </a>
+                <a href="/" class="list-group-item list-group-item-action d-flex align-items-center border-0 py-2 px-4 @if (ViewBag.Title == "landing") {<text>active</text>}">
+                    <i class="bx bx-file fs-lg opacity-80 me-2"></i>
+                    Documentation
+                </a>
+            </div>
+        </div>
+        <div class="offcanvas-body swiper scrollbar-hover overflow-hidden w-100 p-4" data-swiper-options='{
+          "direction": "vertical",
+          "slidesPerView": "auto",
+          "freeMode": true,
+          "scrollbar": {
+            "el": ".swiper-scrollbar"
+          },
+          "mousewheel": true
+        }'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide h-auto">
+                    <h3 class="fs-lg">Content</h3>
+                    <div class="list-group list-group-flush border-bottom pb-3 mb-4 mx-n4">
+                        <a href="/Components/typography" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "typography") {<text>active</text>}">Typography</a>
+                        <a href="https://boxicons.com/" class="list-group-item list-group-item-action border-0 py-2 px-4" target="_blank" rel="noopener">Icon font</a>
+                        <a href="/Components/code" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "code") {<text>active</text>}">Code</a>
+                        <a href="/Components/images" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "images") {<text>active</text>}">Images &amp; figures</a>
+                        <a href="/Components/tables" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "tables") {<text>active</text>}">Tables</a>
+                    </div>
+                    <h3 class="fs-lg">Components</h3>
+                    <div class="list-group list-group-flush border-bottom pb-3 mb-4 mx-n4">
+                        <a href="/Components/accordion" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "accordion") {<text>active</text>}">Accordion</a>
+                        <a href="/Components/alerts" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "alerts") {<text>active</text>}">Alerts</a>
+                        <a href="/Components/audioplayer" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "audioplayer") {<text>active</text>}">Audio player</a>
+                        <a href="/Components/badges" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "badges") {<text>active</text>}">Badges</a>
+                        <a href="/Components/blogcomponents" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "blogcomponents") {<text>active</text>}">Blog components</a>
+                        <a href="/Components/breadcrumb" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "breadcrumb") {<text>active</text>}">Breadcrumb</a>
+                        <a href="/Components/buttons" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "buttons") {<text>active</text>}">Buttons</a>
+                        <a href="/Components/buttongroup" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "buttonGroup") {<text>active</text>}">Button group</a>
+                        <a href="/Components/cards" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "cards") {<text>active</text>}">Cards</a>
+                        <a href="/Components/carousel" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "carousel") {<text>active</text>}">Carousel (Slider)</a>
+                        <a href="/Components/collapse" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "collapse") {<text>active</text>}">Collapse</a>
+                        <a href="/Components/dropdowns" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "dropdowns") {<text>active</text>}">Dropdowns</a>
+                        <a href="/Components/forms" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "forms") {<text>active</text>}">Forms</a>
+                        <a href="/Components/gallery" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "gallery") {<text>active</text>}">Gallery (Lightbox)</a>
+                        <a href="/Components/imageComparisonSlider" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "imagecomparisonslider") {<text>active</text>}">Image comparison slider</a>
+                        <a href="/Components/inputgroup" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "inputGroup") {<text>active</text>}">Input group</a>
+                        <a href="/Components/listgroup" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "listGroup") {<text>active</text>}">List group</a>
+                        <a href="/Components/modal" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "modal") {<text>active</text>}">Modal</a>
+                        <a href="/Components/navbar" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "navbar") {<text>active</text>}">Navbar</a>
+                        <a href="/Components/offcanvas" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "offcanvas") {<text>active</text>}">Offcanvas</a>
+                        <a href="/Components/pagination" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "pagination") {<text>active</text>}">Pagination</a>
+                        <a href="/Components/parallax" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "parallax") {<text>active</text>}">Parallax</a>
+                        <a href="/Components/pills" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "pills") {<text>active</text>}">Pills</a>
+                        <a href="/Components/placeholders" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "placeholders") {<text>active</text>}">Placeholders</a>
+                        <a href="/Components/popovers" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "popovers") {<text>active</text>}">Popovers</a>
+                        <a href="/Components/portfoliocomponents" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "portfolioComponents") {<text>active</text>}">Portfolio components</a>
+                        <a href="/Components/pricing" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "pricing") {<text>active</text>}">Pricing</a>
+                        <a href="/Components/progressbars" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "progressBars") {<text>active</text>}">Progress bars</a>
+                        <a href="/Components/socialbuttons" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "socialButtons") {<text>active</text>}">Social buttons</a>
+                        <a href="/Components/spinners" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "spinners") {<text>active</text>}">Spinners</a>
+                        <a href="/Components/steps" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "steps") {<text>active</text>}">Steps</a>
+                        <a href="/Components/tabs" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "tabs") {<text>active</text>}">Tabs</a>
+                        <a href="/Components/team" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "team") {<text>active</text>}">Team</a>
+                        <a href="/Components/testimonials" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "testimonials") {<text>active</text>}">Testimonials / reviews</a>
+                        <a href="/Components/toasts" class="list-group-item list-group-item-action border-0 py-2 px-4
+                           @if (ViewBag.Title == "toasts") {<text>active</text>}">Toasts</a>
+                        <a href="/Components/tooltips" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "tooltips") {<text>active</text>}">Tooltips</a>
+                        <a href="/Components/videopopup" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "videoPopup") {<text>active</text>}">Video popup</a>
+                    </div>
+                    <h3 class="fs-lg">Utilities</h3>
+                    <div class="list-group list-group-flush mx-n4 pb-2">
+                        <a href="https://getbootstrap.com/docs/5.3/utilities/background/" class="list-group-item list-group-item-action border-0 py-2 px-4" target="_blank" rel="noopener">Bootstrap</a>
+                        <a href="/Components/utilities" class="list-group-item list-group-item-action border-0 py-2 px-4 @if (ViewBag.Title == "utilities") {<text>active</text>}">Silicon</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-scrollbar end-0"></div>
+        </div>
+        <div class="offcanvas-header border-top">
+            <a href="#!" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
+                &nbsp;Buy now
+            </a>
+        </div>
+    </div>
+</aside>

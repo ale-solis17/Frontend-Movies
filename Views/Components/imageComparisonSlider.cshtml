@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "imageComparisonSlider";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Image Comparison Slider</h1>
+                <p class="text-muted fs-lg mb-2">JavaScript based slider component that can be used to demonstrate the difference between two images.</p>
+            </div>
+            <span class="badge bg-warning mb-2">Silicon component</span>
+        </div>
+
+        <!-- Info alert -->
+        <div class="alert alert-info mt-5 mb-n1 mb-lg-0" role="alert">
+            <div class="d-flex">
+                <i class="bx bx-info-circle lead me-2 me-sm-3"></i>
+                <div class="text-break">
+                    <p class="mb-2">Image comparison slider relies on 3rd party plugin. Make sure to link to <strong>plugin css and js</strong> files in your document: <strong>assets/vendor/img-comparison-slider/dist/styles.css</strong> and <strong>assets/vendor/img-comparison-slider/dist/index.js</strong>.</p>
+                    <p class="mb-2">Use this page as a reference.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example -->
+        <section class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Example</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <img-comparison-slider style="max-width: 860px;">
+                        <figure slot="first" class="position-relative">
+                            <img src="../assets/img/portfolio/grid/10.jpg" alt="Image before">
+                            <figcaption class="badge position-absolute top-50 start-0 translate-middle-y bg-white rounded text-nav fs-sm fw-semibold lh-1 px-3 py-2 ms-3 ms-sm-4">Before</figcaption>
+                        </figure>
+                        <figure slot="second" class="position-relative">
+                            <img src="../assets/img/portfolio/grid/11.jpg" alt="Image after">
+                            <figcaption class="badge position-absolute top-50 end-0 translate-middle-y bg-white rounded text-nav fs-sm fw-semibold lh-1 px-3 py-2 me-3 me-sm-4">After</figcaption>
+                        </figure>
+                        <div slot="handle" style="width: 36px;">
+                            <svg class="text-primary shadow-primary rounded-circle" width="36" height="36" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 36 36"><g><circle fill="currentColor" cx="18" cy="18" r="18" /></g><path fill="#fff" d="M22.2,17.2h-8.3v-3.3L9.7,18l4.2,4.2v-3.3h8.3v3.3l4.2-4.2l-4.2-4.2V17.2z" /></svg>
+                        </div>
+                    </img-comparison-slider>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Image comparison slider example --&gt;
+&lt;img-comparison-slider&gt;
+  &lt;figure slot=&quot;first&quot; class=&quot;position-relative&quot;&gt;
+    &lt;img src=&quot;assets/img/portfolio/grid/10.jpg&quot; alt=&quot;Image before&quot;&gt;
+    &lt;figcaption class=&quot;badge position-absolute top-50 start-0 translate-middle-y bg-white rounded text-nav fs-sm fw-semibold lh-1 px-3 py-2 ms-3 ms-sm-4&quot;&gt;Before&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;figure slot=&quot;second&quot; class=&quot;position-relative&quot;&gt;
+    &lt;img src=&quot;assets/img/portfolio/grid/11.jpg&quot; alt=&quot;Image after&quot;&gt;
+    &lt;figcaption class=&quot;badge position-absolute top-50 end-0 translate-middle-y bg-white rounded text-nav fs-sm fw-semibold lh-1 px-3 py-2 me-3 me-sm-4&quot;&gt;After&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;div slot=&quot;handle&quot;&gt;
+    &lt;svg class=&quot;text-primary shadow-primary rounded-circle&quot; width=&quot;36&quot; height=&quot;36&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 36 36&quot;&gt;&lt;g&gt;&lt;circle fill=&quot;currentColor&quot; cx=&quot;18&quot; cy=&quot;18&quot; r=&quot;18&quot;/&gt;&lt;/g&gt;&lt;path fill=&quot;#fff&quot; d=&quot;M22.2,17.2h-8.3v-3.3L9.7,18l4.2,4.2v-3.3h8.3v3.3l4.2-4.2l-4.2-4.2V17.2z&quot;/&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/img-comparison-slider&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

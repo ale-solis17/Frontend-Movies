@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "error404v1";
+    ViewBag.ActiveItem = "pages";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="header navbar navbar-expand-lg bg-light fixed-top">
+    <div class="container px-3">
+        <a href="/" class="navbar-brand pe-3">
+            <img src="~/assets/img/logo.svg" width="47" alt="Silicon">
+            Silicon
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                @Html.Partial("~/Views/Shared/header.cshtml")
+
+            </div>
+            <div class="offcanvas-header border-top">
+                <a href="#!" class="btn btn-primary w-100" target="_blank" rel="noopener">
+                    <i class="bx bx-cart fs-4 lh-1 me-1"></i>
+                    &nbsp;Buy now
+                </a>
+            </div>
+        </div>
+        <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#!" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+            <i class="bx bx-cart fs-5 lh-1 me-1"></i>
+            &nbsp;Buy now
+        </a>
+    </div>
+</header>
+
+<section class="d-flex align-items-center min-vh-100 py-5 bg-light" style="background: radial-gradient(144.3% 173.7% at 71.41% 94.26%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 32.49%, rgba(241, 244, 253, 0.07) 82.52%);">
+    <div class="container my-5 text-md-start text-center">
+        <div class="row align-items-center">
+
+            <!-- Animation -->
+            <div class="col-xl-6 col-md-7 order-md-2 ms-n5">
+                <lottie-player src="~/assets/json/animation-404-v1.json" background="transparent" speed="1" loop autoplay></lottie-player>
+            </div>
+
+            <!-- Text -->
+            <div class="col-md-5 offset-xl-1 order-md-1">
+                <h1 class="display-1 mb-sm-4 mt-n4 mt-sm-n5">Error 404</h1>
+                <p class="mb-md-5 mb-4 mx-md-0 mx-auto pb-2 lead">The page you are looking for was moved, removed or might never existed.</p>
+                <a href="/" class="btn btn-lg btn-primary shadow-primary w-sm-auto w-100">
+                    <i class="bx bx-home-alt me-2 ms-n1 lead"></i>
+                    Go to homepage
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section footer{
+    <footer class="container text-md-start text-center py-lg-5 py-4" style="transform: translateY(-100%);">
+        <div class="row">
+            <div class="col-xl-11 offset-xl-1">
+                <p class="nav d-block fs-sm text-center text-md-start mb-0">
+                    &copy; All rights reserved. Made by
+                    <a class="nav-link d-inline-block p-0" href="https://themeforest.net/user/srbthemes" target="_blank" rel="noopener">srbthemes</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+}
+
+@section scripts{
+
+    <script src="~/assets/vendor/@("@")lottiefiles/lottie-player/dist/lottie-player.js"></script>
+}

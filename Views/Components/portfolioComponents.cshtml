@@ -1,0 +1,205 @@
+﻿
+@{
+    ViewBag.Title = "portfolioComponents";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Portfolio components</h1>
+                <p class="text-muted fs-lg mb-2">Components that are related to the portfolio section of the website.</p>
+            </div>
+            <span class="badge bg-warning mb-2">Silicon component</span>
+        </div>
+
+
+        <!-- Grid view: Card style 1 -->
+        <section id="portfolio-grid-1" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Grid view: Card style 1</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <div class="card card-portfolio" style="max-width: 526px;">
+                        <div class="card-img">
+                            <img src="../assets/img/portfolio/grid/05.jpg" alt="Image">
+                        </div>
+                        <div class="card-body pb-0">
+                            <h2 class="h4 mb-2">
+                                <a href="#" class="stretched-link">3D Shape Illustration</a>
+                            </h2>
+                            <div class="card-portfolio-meta">
+                                <span class="text-muted">3D Design / Illustration / Art</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Portfolio grid view: Card style 1 --&gt;
+&lt;div class=&quot;card card-portfolio&quot;&gt;
+  &lt;div class=&quot;card-img&quot;&gt;
+    &lt;img src=&quot;assets/img/portfolio/grid/05.jpg&quot; alt=&quot;Image&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-body pb-0&quot;&gt;
+    &lt;h2 class=&quot;h4 mb-2&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;stretched-link&quot;&gt;3D Shape Illustration&lt;/a&gt;
+    &lt;/h2&gt;
+    &lt;div class=&quot;card-portfolio-meta&quot;&gt;
+      &lt;span class=&quot;text-muted&quot;&gt;3D Design / Illustration / Art&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Grid view: Card style 2 -->
+        <section id="portfolio-grid-2" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Grid view: Card style 2</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <a href="#" class="card card-portfolio card-hover bg-transparent border-0" style="max-width: 700px;">
+                        <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3"></span>
+                            <div class="position-relative zindex-2">
+                                <h3 class="h5 text-light mb-2">Scene of Sunglasses &amp; Headphone on Human Head</h3>
+                                <span class="fs-sm text-light opacity-70">NFT / Graphic Design / Art / Identity / Motion Design</span>
+                            </div>
+                        </div>
+                        <div class="card-img">
+                            <img src="../assets/img/portfolio/grid/02.jpg" class="rounded-3" alt="Image">
+                        </div>
+                    </a>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Portfolio grid view: Card style 2 --&gt;
+&lt;a href=&quot;#&quot; class=&quot;card card-portfolio card-hover bg-transparent border-0&quot;&gt;
+  &lt;div class=&quot;card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3&quot;&gt;
+    &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50 rounded-3&quot;&gt;&lt;/span&gt;
+    &lt;div class=&quot;position-relative zindex-2&quot;&gt;
+      &lt;h3 class=&quot;h5 text-light mb-2&quot;&gt;Scene of Sunglasses &amp; Headphone on Human Head&lt;/h3&gt;
+      &lt;span class=&quot;fs-sm text-light opacity-70&quot;&gt;NFT / Graphic Design / Art / Identity / Motion Design&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-img&quot;&gt;
+    &lt;img src=&quot;assets/img/portfolio/grid/02.jpg&quot; class=&quot;rounded-3&quot; alt=&quot;Image&quot;&gt;
+  &lt;/div&gt;
+&lt;/a&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- List view -->
+        <section id="portfolio-list" class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">List view</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <div class="row pb-lg-3">
+                        <div class="col-md-6 pb-1 mb-3 pb-md-0 mb-md-0">
+                            <a href="#">
+                                <img src="../assets/img/portfolio/list/01.jpg" class="rounded-3" width="600" alt="Image">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ps-md-4 ms-md-2">
+                                <div class="fs-sm text-muted mb-1">Nov 18, 2023</div>
+                                <h2 class="h3">SaaS Project Management Tool</h2>
+                                <a href="#" class="d-table badge bg-faded-primary text-primary fs-sm mb-3">Graphic Design</a>
+                                <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3">Malesuada eu cursus natoque purus ipsum nunc, velit cras tellus. Maecenas viverra pellentesque at ultrices purus vitae quis erat volutpat. Turpis auctor neque bibendum id pellentesque ut egestas. Donec ut faucibus nisl nec at purus. Cursus vel gravida gravida purus varius feugiat.Semper mauris id adipiscing est. Nam leo rutrum gravida curabitur at vel risus.</p>
+                                <a href="#" class="btn btn-outline-primary">View more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Portfolio list view --&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-md-6 pb-1 mb-3 pb-md-0 mb-md-0&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+      &lt;img src=&quot;assets/img/portfolio/list/01.jpg&quot; class=&quot;rounded-3&quot; width=&quot;600&quot; alt=&quot;Image&quot;&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-md-6&quot;&gt;
+    &lt;div class=&quot;ps-md-4 ms-md-2&quot;&gt;
+      &lt;div class=&quot;fs-sm text-muted mb-1&quot;&gt;Nov 18, 2023&lt;/div&gt;
+      &lt;h2 class=&quot;h3&quot;&gt;SaaS Project Management Tool&lt;/h2&gt;
+      &lt;a href=&quot;#&quot; class=&quot;d-table badge bg-faded-primary text-primary fs-sm mb-3&quot;&gt;Graphic Design&lt;/a&gt;
+      &lt;p class=&quot;d-md-none d-lg-block pb-3 mb-2 mb-md-3&quot;&gt;Malesuada eu cursus natoque purus ipsum nunc, velit cras tellus. Maecenas viverra pellentesque at ultrices purus vitae quis erat volutpat. Turpis auctor neque bibendum id pellentesque ut egestas. Donec ut faucibus nisl nec at purus. Cursus vel gravida gravida purus varius feugiat.Semper mauris id adipiscing est. Nam leo rutrum gravida curabitur at vel risus.&lt;/p&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-outline-primary&quot;&gt;View more&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Jump to anchor navigation -->
+<aside id="jumpToNav" class="side-nav side-nav-end d-none d-xxl-block position-fixed top-0 end-0 vh-100 py-5" style="width: 20rem;">
+    <h3 class="fs-lg mt-5 pt-5">Jump to</h3>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#portfolio-grid-1" class="nav-link" data-scroll data-scroll-offset="-6">Grid view: Card style 1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#portfolio-grid-2" class="nav-link" data-scroll data-scroll-offset="-6">Grid view: Card style 2</a>
+        </li>
+        <li class="nav-item">
+            <a href="#portfolio-list" class="nav-link" data-scroll data-scroll-offset="-6">List view</a>
+        </li>
+    </ul>
+</aside>

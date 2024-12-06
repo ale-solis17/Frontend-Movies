@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewBag.Title = "collapse";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Collapse</h1>
+                <p class="text-muted fs-lg mb-2">Toggle the visibility of content.</p>
+            </div>
+            <a href="https://getbootstrap.com/docs/5.3/components/collapse/" class="btn btn-link px-0" target="_blank" rel="noopener">
+                Bootstrap docs
+                <i class="bx bx-link-external fs-lg ms-2"></i>
+            </a>
+        </div>
+
+
+        <!-- Basic example -->
+        <section class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Basic example</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <a class="btn btn-outline-primary me-2" href="#collapseExample" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Link with href</a>
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-bs-target</button>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body mt-3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Link with href --&gt;
+&lt;a href=&quot;#collapseExample&quot; class=&quot;btn btn-outline-primary&quot; data-bs-toggle=&quot;collapse&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseExample&quot;&gt;
+  Link with href
+&lt;/a&gt;
+
+&lt;!-- Button with data-bs-target --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseExample&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseExample&quot;&gt;
+  Button with data-bs-target
+&lt;/button&gt;
+
+&lt;!-- Collapse --&gt;
+&lt;div class=&quot;collapse&quot; id=&quot;collapseExample&quot;&gt;
+  &lt;div class=&quot;card card-body mt-3&quot;&gt;
+    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Horizontal -->
+        <section class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Horizontal</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHorizontal" aria-expanded="false" aria-controls="collapseHorizontal">
+                        Toggle width collapse
+                    </button>
+                    <div class="collapse collapse-horizontal" id="collapseHorizontal">
+                        <div class="card card-body mt-3" style="width: 25rem;">
+                            This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Horizotal (width) collapse --&gt;
+&lt;button class=&quot;btn btn-outline-primary&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseHorizontal&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;collapseHorizontal&quot;&gt;
+  Toggle width collapse
+&lt;/button&gt;
+&lt;div class=&quot;collapse collapse-horizontal&quot; id=&quot;collapseHorizontal&quot;&gt;
+  &lt;div class=&quot;card card-body mt-3&quot; style=&quot;width: 25rem;&quot;&gt;
+    This is some placeholder content for a horizontal collapse. It's hidden by default and shown when triggered.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Multiple targets -->
+        <section class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Multiple targets</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <a class="btn btn-outline-primary my-1 me-2" href="#multiCollapseExample1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                    <button class="btn btn-outline-primary my-1 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+                    <button class="btn btn-outline-primary my-1" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+                    <div class="row">
+                        <div class="col-sm-6 mb-2 mb-sm-0">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body mt-3">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body mt-3">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Toggle first element --&gt;
+&lt;a href=&quot;#multiCollapseExample1&quot; class=&quot;btn btn-outline-primary my-1 me-2&quot; data-bs-toggle=&quot;collapse&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample1&quot;&gt;
+  Toggle first element
+&lt;/a&gt;
+
+&lt;!-- Toggle second element --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary my-1 me-2&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#multiCollapseExample2&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample2&quot;&gt;
+  Toggle second element
+&lt;/button&gt;
+
+&lt;!-- Toggle both elements --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary my-1&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;.multi-collapse&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;multiCollapseExample1 multiCollapseExample2&quot;&gt;
+  Toggle both elements
+&lt;/button&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-6 mb-2 mb-sm-0&quot;&gt;
+
+    &lt;!-- Collapse 1 --&gt;
+    &lt;div class=&quot;collapse multi-collapse&quot; id=&quot;multiCollapseExample1&quot;&gt;
+      &lt;div class=&quot;card card-body&quot;&gt;
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;
+
+    &lt;!-- Collapse 2 --&gt;
+    &lt;div class=&quot;collapse multi-collapse&quot; id=&quot;multiCollapseExample2&quot;&gt;
+      &lt;div class=&quot;card card-body&quot;&gt;
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+

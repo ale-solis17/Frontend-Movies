@@ -1,0 +1,280 @@
+﻿
+@{
+    ViewBag.Title = "parallax";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Parallax</h1>
+                <p class="text-muted fs-lg mb-2">Silicon supports 2 types of parallax effect: on page scrolling and cursor position.</p>
+            </div>
+            <span class="badge bg-warning mb-2">Silicon component</span>
+        </div>
+
+
+        <!-- Info alert -->
+        <div class="alert alert-info mt-5 mb-n1 mb-lg-0" role="alert">
+            <div class="d-flex">
+                <i class="bx bx-info-circle lead me-2 me-sm-3"></i>
+                <div class="text-break">
+                    <p class="mb-2">In your document make sure to link to:</p>
+                    <ul class="mb-2 list-unstyled">
+                        <li><strong>assets/vendor/jarallax/dist/jarallax.min.js</strong> - for background image parallax</li>
+                        <li><strong>assets/vendor/rellax/rellax.min.js</strong> - for element parallax</li>
+                        <li><strong>assets/vendor/parallax-js/dist/parallax.min.js</strong> - for cursor position parallax</li>
+                        <li><strong>assets/vendor/vanilla-tilt/dist/vanilla-tilt.min.js</strong> - for 3D tilt effect</li>
+                    </ul>
+                    <p class="mb-0">Use this page as a reference.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Background image -->
+        <section id="parallax-background" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Background image</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt fs-sm" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <div class="pb-4 mx-auto" style="max-width: 38rem;">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <span class="d-none d-md-inline">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat.</span></p>
+                    </div>
+                    <div class="jarallax bg-dark py-5" data-jarallax data-speed="0.5">
+                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></span>
+                        <div class="jarallax-img" style="background-image: url(../assets/img/landing/software-agency-1/case-study01.jpg);"></div>
+                        <div class="position-relative text-center zindex-5 py-sm-5">
+                            <div class="py-lg-5 px-3">
+                                <h2 class="h1 my-5 text-light text-shadow">Parallax backgound image</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 mx-auto" style="max-width: 38rem;">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. <span class="d-none d-md-inline">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat.</span></p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Background image parallax --&gt;
+&lt;div class=&quot;jarallax bg-dark py-5&quot; data-jarallax data-speed=&quot;0.5&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;jarallax-img&quot; style=&quot;background-image: url(assets/img/landing/software-agency-1/case-study01.jpg);&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;position-relative text-center zindex-5 py-sm-5&quot;&gt;
+    &lt;div class=&quot;py-lg-5 px-3&quot;&gt;
+      &lt;h2 class=&quot;h1 my-5 text-light text-shadow&quot;&gt;Parallax backgound image&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Element parallax -->
+        <section id="parallax-element" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Element parallax</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <div class="d-flex justify-content-center py-5">
+                        <div class="rellax display-1 text-primary px-1" data-rellax-percentage="0.5" data-rellax-speed="-0.5">S</div>
+                        <div class="rellax display-1 text-success px-1" data-rellax-percentage="0.5" data-rellax-speed="1">I</div>
+                        <div class="rellax display-1 text-warning px-1" data-rellax-percentage="0.5" data-rellax-speed="-0.75">L</div>
+                        <div class="rellax display-1 text-info px-1" data-rellax-percentage="0.5" data-rellax-speed="0.75">I</div>
+                        <div class="rellax display-1 text-danger px-1" data-rellax-percentage="0.5" data-rellax-speed="-1.5">C</div>
+                        <div class="rellax display-1 text-success px-1" data-rellax-percentage="0.5" data-rellax-speed="1.25">O</div>
+                        <div class="rellax display-1 text-primary px-1" data-rellax-percentage="0.5" data-rellax-speed="-1">N</div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Element parallax --&gt;
+&lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+  &lt;div class=&quot;rellax display-1 text-primary px-1&quot; data-rellax-percentage=&quot;0.5&quot; data-rellax-speed=&quot;-0.5&quot;&gt;S&lt;/div&gt;
+  &lt;div class=&quot;rellax display-1 text-success px-1&quot; data-rellax-percentage=&quot;0.5&quot; data-rellax-speed=&quot;1&quot;&gt;I&lt;/div&gt;
+  &lt;div class=&quot;rellax display-1 text-warning px-1&quot; data-rellax-percentage=&quot;0.5&quot; data-rellax-speed=&quot;-0.75&quot;&gt;L&lt;/div&gt;
+  &lt;div class=&quot;rellax display-1 text-info px-1&quot; data-rellax-percentage=&quot;0.5&quot; data-rellax-speed=&quot;0.75&quot;&gt;I&lt;/div&gt;
+  &lt;div class=&quot;rellax display-1 text-danger px-1&quot; data-rellax-percentage=&quot;0.5&quot; data-rellax-speed=&quot;-1.5&quot;&gt;C&lt;/div&gt;
+  &lt;div class=&quot;rellax display-1 text-success px-1&quot; data-rellax-percentage=&quot;0.5&quot; data-rellax-speed=&quot;1.25&quot;&gt;O&lt;/div&gt;
+  &lt;div class=&quot;rellax display-1 text-primary px-1&quot; data-rellax-percentage=&quot;0.5&quot; data-rellax-speed=&quot;-1&quot;&gt;N&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Cursor position parallax -->
+        <section id="parallax-cursor" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Cursor position parallax</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <div class="position-relative py-5 px-3">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary opacity-10"></div>
+                        <div class="position-relative d-flex justify-content-center zindex-5 py-md-4">
+                            <div class="parallax" style="max-width: 648px;">
+                                <div class="parallax-layer" data-depth="0.1">
+                                    <img src="~/assets/img/landing/online-courses/hero/layer01.png" alt="Layer">
+                                </div>
+                                <div class="parallax-layer" data-depth="0.13">
+                                    <img src="~/assets/img/landing/online-courses/hero/layer02.png" alt="Layer">
+                                </div>
+                                <div class="parallax-layer zindex-5" data-depth="-0.12">
+                                    <img src="~/assets/img/landing/online-courses/hero/layer03.png" alt="Layer">
+                                </div>
+                                <div class="parallax-layer zindex-3" data-depth="0.27">
+                                    <img src="~/assets/img/landing/online-courses/hero/layer04.png" alt="Layer">
+                                </div>
+                                <div class="parallax-layer zindex-1" data-depth="-0.18">
+                                    <img src="~/assets/img/landing/online-courses/hero/layer05.png" alt="Layer">
+                                </div>
+                                <div class="parallax-layer zindex-1" data-depth="0.1">
+                                    <img src="~/assets/img/landing/online-courses/hero/layer06.png" alt="Layer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Cursor position parallax --&gt;
+&lt;div class=&quot;parallax&quot; style=&quot;max-width: 648px;&quot;&gt;
+  &lt;div class=&quot;parallax-layer&quot; data-depth=&quot;0.1&quot;&gt;
+    &lt;img src=&quot;assets/img/landing/online-courses/hero/layer01.png&quot; alt=&quot;Layer&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;parallax-layer&quot; data-depth=&quot;0.13&quot;&gt;
+    &lt;img src=&quot;assets/img/landing/online-courses/hero/layer02.png&quot; alt=&quot;Layer&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;parallax-layer zindex-5&quot; data-depth=&quot;-0.12&quot;&gt;
+    &lt;img src=&quot;assets/img/landing/online-courses/hero/layer03.png&quot; alt=&quot;Layer&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;parallax-layer zindex-3&quot; data-depth=&quot;0.27&quot;&gt;
+    &lt;img src=&quot;assets/img/landing/online-courses/hero/layer04.png&quot; alt=&quot;Layer&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;parallax-layer zindex-1&quot; data-depth=&quot;-0.18&quot;&gt;
+    &lt;img src=&quot;assets/img/landing/online-courses/hero/layer05.png&quot; alt=&quot;Layer&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;parallax-layer zindex-1&quot; data-depth=&quot;0.1&quot;&gt;
+    &lt;img src=&quot;assets/img/landing/online-courses/hero/layer06.png&quot; alt=&quot;Layer&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3D tilt effect -->
+        <section id="parallax-tilt" class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">3D tilt effect</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview4" data-bs-toggle="tab" role="tab" aria-controls="preview4" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html4" data-bs-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview4" role="tabpanel">
+                    <div class="tilt-3d position-relative bg-gradient-primary ratio ratio-4x3 mx-auto" data-tilt data-tilt-glare data-tilt-max-glare="0.4" style="max-width: 500px;">
+                        <div class="tilt-3d-inner d-flex flex-column align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-center p-3">
+                            <h4 class="text-light text-shadow mb-0">Hover and move your mouse</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- 3D tilt effect --&gt;
+&lt;div class=&quot;tilt-3d position-relative bg-gradient-primary ratio ratio-4x3 mx-auto&quot; data-tilt data-tilt-glare data-tilt-max-glare=&quot;0.4&quot; style=&quot;max-width: 500px;&quot;&gt;
+  &lt;div class=&quot;tilt-3d-inner d-flex flex-column align-items-center justify-content-center position-absolute top-0 start-0 w-100 h-100 text-center p-3&quot;&gt;
+    &lt;h4 class=&quot;text-light text-shadow mb-0&quot;&gt;Hover and move your mouse&lt;/h4&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Jump to anchor navigation -->
+<aside id="jumpToNav" class="side-nav side-nav-end d-none d-xxl-block position-fixed top-0 end-0 vh-100 py-5" style="width: 20rem;">
+    <h3 class="fs-lg mt-5 pt-5">Jump to</h3>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#parallax-background" class="nav-link" data-scroll data-scroll-offset="-6">Background image</a>
+        </li>
+        <li class="nav-item">
+            <a href="#parallax-element" class="nav-link" data-scroll data-scroll-offset="-6">Element parallax</a>
+        </li>
+        <li class="nav-item">
+            <a href="#parallax-cursor" class="nav-link" data-scroll data-scroll-offset="-6">Cursor position parallax</a>
+        </li>
+        <li class="nav-item">
+            <a href="#parallax-tilt" class="nav-link" data-scroll data-scroll-offset="-6">3D tilt effect</a>
+        </li>
+    </ul>
+</aside>
+
+@section scripts{
+
+    <script src="~/assets/vendor/prismjs/components/prism-core.min.js"></script>
+    <script src="~/assets/vendor/prismjs/components/prism-markup.min.js"></script>
+    <script src="~/assets/vendor/prismjs/components/prism-clike.min.js"></script>
+    <script src="~/assets/vendor/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="~/assets/vendor/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="~/assets/vendor/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script>
+}

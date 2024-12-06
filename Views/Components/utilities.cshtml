@@ -1,0 +1,389 @@
+﻿
+@{
+    ViewBag.Title = "utilities";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Silicon utilities</h1>
+                <p class="text-muted fs-lg mb-2">Custom Silicon classes with a purpose to reduce the frequency of highly repetitive declarations.</p>
+            </div>
+            <span class="badge bg-warning mb-2">Silicon component</span>
+        </div>
+
+
+        <!-- Faded background colors -->
+        <section id="bg-faded" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Faded background colors</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <div class="bg-faded-primary p-4 text-center mb-4">
+                        <h5 class="text-primary mb-0 py-2">Primary faded background</h5>
+                    </div>
+                    <div class="bg-secondary p-4 text-center mb-4">
+                        <h5 class="mb-0 py-2">Secondary background</h5>
+                    </div>
+                    <div class="bg-faded-success p-4 text-center mb-4">
+                        <h5 class="text-success mb-0 py-2">Success faded background</h5>
+                    </div>
+                    <div class="bg-faded-warning p-4 text-center mb-4">
+                        <h5 class="text-warning mb-0 py-2">Warning faded background</h5>
+                    </div>
+                    <div class="bg-faded-danger p-4 text-center mb-4">
+                        <h5 class="text-danger mb-0 py-2">Danger faded background</h5>
+                    </div>
+                    <div class="bg-faded-info p-4 text-center mb-4">
+                        <h5 class="text-info mb-0 py-2">Info faded background</h5>
+                    </div>
+                    <div class="bg-faded-dark p-4 text-center">
+                        <h5 class="text-dark mb-0 py-2">Dark faded background</h5>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary faded background --&gt;
+&lt;div class=&quot;bg-faded-primary&quot;&gt;...&lt;/div&gt;
+
+&lt;!-- Secondary background --&gt;
+&lt;div class=&quot;bg-secondary&quot;&gt;...&lt;/div&gt;
+
+&lt;!-- Success faded background --&gt;
+&lt;div class=&quot;bg-faded-success&quot;&gt;...&lt;/div&gt;
+
+&lt;!-- Warning faded background --&gt;
+&lt;div class=&quot;bg-faded-warning&quot;&gt;...&lt;/div&gt;
+
+&lt;!-- Danger faded background --&gt;
+&lt;div class=&quot;bg-faded-danger&quot;&gt;...&lt;/div&gt;
+
+&lt;!-- Info faded background --&gt;
+&lt;div class=&quot;bg-faded-info&quot;&gt;...&lt;/div&gt;
+
+&lt;!-- Dark faded background --&gt;
+&lt;div class=&quot;bg-faded-dark&quot;&gt;...&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Gradient background -->
+        <section id="bg-gradient" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Gradient background</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <div class="bg-gradient-primary p-4 text-center">
+                        <h5 class="text-light mb-0 py-2">Gradient background</h5>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Gradient background --&gt;
+&lt;div class=&quot;bg-gradient-primary&quot;&gt;...&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Translucent image overlay -->
+        <section id="image-overlay" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Translucent image overlay</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <div class="row g-3">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="position-relative bg-size-cover py-5" style="background-image: url(../assets/img/blog/podcasts/02.jpg);">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-60"></span>
+                                <div class="position-relative fw-bold text-white text-shadow text-center zindex-5 py-5">Primary overlay</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="position-relative bg-size-cover py-5" style="background-image: url(../assets/img/blog/podcasts/02.jpg);">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-success opacity-60"></span>
+                                <div class="position-relative fw-bold text-white text-shadow text-center zindex-5 py-5">Success overlay</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="position-relative bg-size-cover py-5" style="background-image: url(../assets/img/blog/podcasts/02.jpg);">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-warning opacity-60"></span>
+                                <div class="position-relative fw-bold text-white text-shadow text-center zindex-5 py-5">Warning overlay</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="position-relative bg-size-cover py-5" style="background-image: url(../assets/img/blog/podcasts/02.jpg);">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-danger opacity-60"></span>
+                                <div class="position-relative fw-bold text-white text-shadow text-center zindex-5 py-5">Danger overlay</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="position-relative bg-size-cover py-5" style="background-image: url(../assets/img/blog/podcasts/02.jpg);">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-info opacity-60"></span>
+                                <div class="position-relative fw-bold text-white text-shadow text-center zindex-5 py-5">Info overlay</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="position-relative bg-size-cover py-5" style="background-image: url(../assets/img/blog/podcasts/02.jpg);">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-60"></span>
+                                <div class="position-relative fw-bold text-white text-shadow text-center zindex-5 py-5">Dark overlay</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="position-relative bg-white bg-size-cover py-5" style="background-image: url(../assets/img/blog/podcasts/02.jpg);">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-white opacity-60"></span>
+                                <div class="position-relative fw-bold text-dark text-center zindex-5 py-5">White overlay</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="position-relative bg-size-cover py-5" style="background-image: url(../assets/img/blog/podcasts/02.jpg);">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary opacity-60"></span>
+                                <div class="position-relative fw-bold text-white text-shadow text-center zindex-5 py-5">Gradient overlay</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary overlay --&gt;
+&lt;div class=&quot;position-relative bg-size-cover py-5&quot; style=&quot;background-image: url(assets/img/blog/podcasts/02.jpg);&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-60&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;position-relative fw-bold text-white text-shadow text-center zindex-5 py-5&quot;&gt;Primary overlay&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Success overlay --&gt;
+&lt;div class=&quot;position-relative bg-size-cover py-5&quot; style=&quot;background-image: url(assets/img/blog/podcasts/02.jpg);&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-success opacity-60&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;position-relative fw-bold text-white text-shadow text-center zindex-5 py-5&quot;&gt;Success overlay&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Warning overlay --&gt;
+&lt;div class=&quot;position-relative bg-size-cover py-5&quot; style=&quot;background-image: url(assets/img/blog/podcasts/02.jpg);&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-warning opacity-60&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;position-relative fw-bold text-white text-shadow text-center zindex-5 py-5&quot;&gt;Warning overlay&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Danger overlay --&gt;
+&lt;div class=&quot;position-relative bg-size-cover py-5&quot; style=&quot;background-image: url(assets/img/blog/podcasts/02.jpg);&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-danger opacity-60&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;position-relative fw-bold text-white text-shadow text-center zindex-5 py-5&quot;&gt;Danger overlay&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Info overlay --&gt;
+&lt;div class=&quot;position-relative bg-size-cover py-5&quot; style=&quot;background-image: url(assets/img/blog/podcasts/02.jpg);&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-info opacity-60&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;position-relative fw-bold text-white text-shadow text-center zindex-5 py-5&quot;&gt;Info overlay&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Dark overlay --&gt;
+&lt;div class=&quot;position-relative bg-size-cover py-5&quot; style=&quot;background-image: url(assets/img/blog/podcasts/02.jpg);&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-60&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;position-relative fw-bold text-white text-shadow text-center zindex-5 py-5&quot;&gt;Dark overlay&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- White overlay --&gt;
+&lt;div class=&quot;position-relative bg-white bg-size-cover py-5&quot; style=&quot;background-image: url(assets/img/blog/podcasts/02.jpg);&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-white opacity-60&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;position-relative fw-bold text-dark text-center zindex-5 py-5&quot;&gt;White overlay&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Gradient overlay --&gt;
+&lt;div class=&quot;position-relative bg-size-cover py-5&quot; style=&quot;background-image: url(assets/img/blog/podcasts/02.jpg);&quot;&gt;
+  &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-gradient-primary opacity-60&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;position-relative fw-bold text-white text-shadow text-center zindex-5 py-5&quot;&gt;Gradient overlay&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Gradient text -->
+        <section id="gradient-text" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Gradient text</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview4" data-bs-toggle="tab" role="tab" aria-controls="preview4" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html4" data-bs-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview4" role="tabpanel">
+                    <h2 class="display-4 mb-0"><span class="text-gradient-primary">I'm a gradient text</span></h2>
+                </div>
+                <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Gradient text --&gt;
+&lt;h2 class=&quot;display-4 mb-0&quot;&gt;&lt;span class=&quot;text-gradient-primary&quot;&gt;I'm a gradient text&lt;/span&gt;&lt;/h2&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Text shadow -->
+        <section id="text-shadow" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Text shadow</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview5" data-bs-toggle="tab" role="tab" aria-controls="preview5" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html5" data-bs-toggle="tab" role="tab" aria-controls="html5" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview5" role="tabpanel">
+                    <h2 class="display-4 text-white text-shadow mb-0">Text shadow</h2>
+                </div>
+                <div class="tab-pane fade" id="html5" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Text shadow example --&gt;
+&lt;h2 class=&quot;display-4 text-white text-shadow mb-0&quot;&gt;Text shadow&lt;/h2&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Opacity -->
+        <section id="opacity" class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Opacity</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview6" data-bs-toggle="tab" role="tab" aria-controls="preview6" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html6" data-bs-toggle="tab" role="tab" aria-controls="html6" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview6" role="tabpanel">
+                    <div class="d-flex flex-wrap pt-2">
+                        <span class="text-dark opacity-10 mb-3 me-4">Opacity 10%</span>
+                        <span class="text-dark opacity-15 mb-3 me-4">Opacity 15%</span>
+                        <span class="text-dark opacity-25 mb-3 me-4">Opacity 25%</span>
+                        <span class="text-dark opacity-35 mb-3 me-4">Opacity 35%</span>
+                        <span class="text-dark opacity-40 mb-3 me-4">Opacity 40%</span>
+                        <span class="text-dark opacity-50 mb-3 me-4">Opacity 50%</span>
+                        <span class="text-dark opacity-60 mb-3 me-4">Opacity 60%</span>
+                        <span class="text-dark opacity-70 mb-3 me-4">Opacity 70%</span>
+                        <span class="text-dark opacity-75 mb-3 me-4">Opacity 75%</span>
+                        <span class="text-dark opacity-80 mb-3 me-4">Opacity 80%</span>
+                        <span class="text-dark opacity-90 mb-3 me-4">Opacity 90%</span>
+                        <span class="text-dark opacity-100 mb-3">Opacity 100%</span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html6" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Opacity --&gt;
+&lt;div class=&quot;opacity-10&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-15&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-25&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-35&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-40&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-50&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-60&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-70&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-75&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-80&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-90&quot;&gt;...&lt;/div&gt;
+&lt;div class=&quot;opacity-100&quot;&gt;...&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Jump to anchor navigation -->
+<aside id="jumpToNav" class="side-nav side-nav-end d-none d-xxl-block position-fixed top-0 end-0 vh-100 py-5" style="width: 20rem;">
+    <h3 class="fs-lg mt-5 pt-5">Jump to</h3>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#bg-faded" class="nav-link" data-scroll data-scroll-offset="-6">Faded background colors</a>
+        </li>
+        <li class="nav-item">
+            <a href="#bg-gradient" class="nav-link" data-scroll data-scroll-offset="-6">Gradient background</a>
+        </li>
+        <li class="nav-item">
+            <a href="#image-overlay" class="nav-link" data-scroll data-scroll-offset="-6">Translucent image overlay</a>
+        </li>
+        <li class="nav-item">
+            <a href="#gradient-text" class="nav-link" data-scroll data-scroll-offset="-6">Gradient text</a>
+        </li>
+        <li class="nav-item">
+            <a href="#text-shadow" class="nav-link" data-scroll data-scroll-offset="-6">Text shadow</a>
+        </li>
+        <li class="nav-item">
+            <a href="#opacity" class="nav-link" data-scroll data-scroll-offset="-6">Opacity</a>
+        </li>
+    </ul>
+</aside>

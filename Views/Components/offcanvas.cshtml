@@ -1,0 +1,370 @@
+﻿
+@{
+    ViewBag.Title = "offcanvas";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Offcanvas</h1>
+                <p class="text-muted fs-lg mb-2">Build hidden sidebars into your project for navigation, shopping carts, widgets etc.</p>
+            </div>
+            <a href="https://getbootstrap.com/docs/5.3/components/offcanvas/" class="btn btn-link px-0" target="_blank" rel="noopener">
+                Bootstrap docs
+                <i class="bx bx-link-external fs-lg ms-2"></i>
+            </a>
+        </div>
+
+
+        <!-- Left offcanvas example-->
+        <div class="offcanvas offcanvas-start" id="offcanvasLeft" tabindex="-1">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Left offcanvas</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" data-simplebar>
+                <p>Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.</p>
+            </div>
+        </div>
+
+        <!-- Right offcanvas example-->
+        <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Right offcanvas</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" data-simplebar>
+                <p>Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.</p>
+            </div>
+        </div>
+
+        <!-- Top offcanvas example-->
+        <div class="offcanvas offcanvas-top" id="offcanvasTop" tabindex="-1">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Top offcanvas</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" data-simplebar>
+                <p>Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.</p>
+            </div>
+        </div>
+
+        <!-- Bottom offcanvas example-->
+        <div class="offcanvas offcanvas-bottom" id="offcanvasBottom" tabindex="-1">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Bottom offcanvas</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" data-simplebar>
+                <p>Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.</p>
+            </div>
+        </div>
+
+
+        <!-- Offcanvas components -->
+        <section id="offcanvas-components" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Offcanvas components</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <div class="offcanvas offcanvas-start border border-light shadow-sm mt-2" data-offcanvas-show="true" id="offcanvas" tabindex="-1" style="position: static; transform: none; visibility: visible;">
+                        <div class="offcanvas-header border-bottom">
+                            <h3 class="offcanvas-title fs-lg">Menu</h3>
+                            <button class="btn-close" type="button" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body py-3 px-2">
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Our Works</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Contacts</a></li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-header d-flex border-top">
+                            <button class="btn btn-outline-primary btn-sm w-100 me-2" type="button">
+                                <i class="bx bx-log-in fs-base me-2"></i>
+                                Sign In
+                            </button>
+                            <button class="btn btn-primary btn-sm w-100" type="button">
+                                <i class="bx bx-user fs-base me-2"></i>
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Offcanvas --&gt;
+&lt;div class=&quot;offcanvas offcanvas-start&quot; id=&quot;offcanvas&quot; tabindex=&quot;-1&quot;&gt;
+
+  &lt;!-- Header --&gt;
+  &lt;div class=&quot;offcanvas-header border-bottom&quot;&gt;
+    &lt;h3 class=&quot;offcanvas-title fs-lg&quot;&gt;Menu&lt;/h3&gt;
+    &lt;button class=&quot;btn-close&quot; type=&quot;button&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Body --&gt;
+  &lt;div class=&quot;offcanvas-body py-3 px-2&quot;&gt;
+    &lt;ul class=&quot;nav flex-column&quot;&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link active&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Services&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Our Works&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Our Team&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot;&gt;
+      &lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Contacts&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+  &lt;!-- Footer --&gt;
+  &lt;div class=&quot;offcanvas-header d-flex border-top&quot;&gt;
+    &lt;button class=&quot;btn btn-outline-primary btn-sm w-100 me-2&quot; type=&quot;button&quot;&gt;
+      &lt;i class=&quot;bx bx-log-in fs-base me-2&quot;&gt;&lt;/i&gt;
+      Sign In
+    &lt;/button&gt;
+    &lt;button class=&quot;btn btn-primary btn-sm w-100&quot; type=&quot;button&quot;&gt;
+      &lt;i class=&quot;bx bx-user fs-base me-2&quot;&gt;&lt;/i&gt;
+      Sign Up
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Placement -->
+        <section id="offcanvas-placement" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Placement</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <button class="btn btn-outline-secondary me-2 my-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft">Toggle left offcanvas</button>
+                    <button class="btn btn-outline-secondary me-2 my-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Toggle right offcanvas</button>
+                    <button class="btn btn-outline-secondary me-2 my-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">Toggle top offcanvas</button>
+                    <button class="btn btn-outline-secondary my-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">Toggle bottom offcanvas</button>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Offcanvas position: Left --&gt;
+
+&lt;!-- Toogle button --&gt;
+&lt;button class=&quot;btn btn-outline-secondary&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasLeft&quot;&gt;Toggle left offcanvas&lt;/button&gt;
+
+&lt;!-- Offcanvas --&gt;
+&lt;div class=&quot;offcanvas offcanvas-start&quot; id=&quot;offcanvasLeft&quot; tabindex=&quot;-1&quot;&gt;
+  &lt;div class=&quot;offcanvas-header border-bottom&quot;&gt;
+    &lt;h5 class=&quot;offcanvas-title&quot;&gt;Left offcanvas&lt;/h5&gt;
+    &lt;button class=&quot;btn-close&quot; type=&quot;button&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;offcanvas-body&quot;&gt;
+    &lt;p&gt;Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- Offcanvas position: Right --&gt;
+
+&lt;!-- Toogle button --&gt;
+&lt;button class=&quot;btn btn-outline-secondary&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasRight&quot;&gt;Toggle right offcanvas&lt;/button&gt;
+
+&lt;!-- Offcanvas --&gt;
+&lt;div class=&quot;offcanvas offcanvas-end&quot; id=&quot;offcanvasRight&quot; tabindex=&quot;-1&quot;&gt;
+  &lt;div class=&quot;offcanvas-header border-bottom&quot;&gt;
+    &lt;h5 class=&quot;offcanvas-title&quot;&gt;Right offcanvas&lt;/h5&gt;
+    &lt;button class=&quot;btn-close&quot; type=&quot;button&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;offcanvas-body&quot;&gt;
+    &lt;p&gt;Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- Offcanvas position: Top --&gt;
+
+&lt;!-- Toogle button --&gt;
+&lt;button class=&quot;btn btn-outline-secondary&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasTop&quot;&gt;Toggle top offcanvas&lt;/button&gt;
+
+&lt;!-- Offcanvas --&gt;
+&lt;div class=&quot;offcanvas offcanvas-top&quot; id=&quot;offcanvasTop&quot; tabindex=&quot;-1&quot;&gt;
+  &lt;div class=&quot;offcanvas-header border-bottom&quot;&gt;
+    &lt;h5 class=&quot;offcanvas-title&quot;&gt;Top offcanvas&lt;/h5&gt;
+    &lt;button class=&quot;btn-close&quot; type=&quot;button&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;offcanvas-body&quot;&gt;
+    &lt;p&gt;Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;!-- Offcanvas position: Bottom --&gt;
+
+&lt;!-- Toogle button --&gt;
+&lt;button class=&quot;btn btn-outline-secondary&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#offcanvasBottom&quot;&gt;Toggle bottom offcanvas&lt;/button&gt;
+
+&lt;!-- Offcanvas --&gt;
+&lt;div class=&quot;offcanvas offcanvas-bottom&quot; id=&quot;offcanvasBottom&quot; tabindex=&quot;-1&quot;&gt;
+  &lt;div class=&quot;offcanvas-header border-bottom&quot;&gt;
+    &lt;h5 class=&quot;offcanvas-title&quot;&gt;Bottom offcanvas&lt;/h5&gt;
+    &lt;button class=&quot;btn-close&quot; type=&quot;button&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;offcanvas-body&quot;&gt;
+    &lt;p&gt;Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Mobile menu offcanvas (responsive) -->
+        <section id="offcanvas-mobile" class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Mobile menu offcanvas (responsive)</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <iframe class="w-100 shadow mt-2" src="navbar-offcanvas.html" height="500" style="max-width: 375px;" title="Navbar with offcanvas example"></iframe>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Navbar with offcanvas menu on mobile --&gt;
+&lt;header class=&quot;navbar navbar-expand-lg bg-light shadow-sm&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;navbar-brand flex-shrink-0&quot;&gt;
+      &lt;img src=&quot;assets/img/logo.svg&quot; width=&quot;47&quot; alt=&quot;Silicon&quot;&gt;
+      Silicon
+    &lt;/a&gt;
+    &lt;button type=&quot;button&quot; class=&quot;navbar-toggler ms-auto&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;
+      &lt;span class=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;offcanvas offcanvas-end&quot; id=&quot;navbarNav&quot;&gt;
+      &lt;div class=&quot;offcanvas-header shadow-sm&quot;&gt;
+        &lt;h6 class=&quot;offcanvas-title&quot;&gt;Menu&lt;/h6&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-close&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;ul class=&quot;navbar-nav offcanvas-body pt-3&quot;&gt;
+        &lt;li class=&quot;nav-item active&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;nav-link&quot;&gt;Link&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item dropdown&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;nav-link dropdown-toggle&quot; role=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Dropdown&lt;/a&gt;
+          &lt;ul class=&quot;dropdown-menu&quot;&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action link&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;dropdown&quot;&gt;
+              &lt;a href=&quot;#&quot; class=&quot;dropdown-item dropdown-toggle&quot; role=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Dropdown&lt;/a&gt;
+              &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                &lt;li&gt;
+                  &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Action link&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Yet another link&lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Another action&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;#&quot; class=&quot;dropdown-item&quot;&gt;Something else here&lt;/a&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a href=&quot;#&quot; class=&quot;nav-link disabled&quot; tabindex=&quot;-1&quot; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Jump to anchor navigation -->
+<aside id="jumpToNav" class="side-nav side-nav-end d-none d-xxl-block position-fixed top-0 end-0 vh-100 py-5" style="width: 20rem;">
+    <h3 class="fs-lg mt-5 pt-5">Jump to</h3>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#offcanvas-components" class="nav-link" data-scroll data-scroll-offset="-6">Offcanvas components</a>
+        </li>
+        <li class="nav-item">
+            <a href="#offcanvas-placement" class="nav-link" data-scroll data-scroll-offset="-6">Placement</a>
+        </li>
+        <li class="nav-item">
+            <a href="#offcanvas-mobile" class="nav-link" data-scroll data-scroll-offset="-6">Mobile menu offcanvas (responsive)</a>
+        </li>
+    </ul>
+</aside>

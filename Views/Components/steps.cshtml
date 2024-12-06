@@ -1,0 +1,603 @@
+﻿
+@{
+    ViewBag.Title = "steps";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Steps</h1>
+                <p class="text-muted fs-lg mb-2">Component is designed to showcase numbered steps of the process or timeline.</p>
+            </div>
+            <span class="badge bg-warning mb-2">Silicon component</span>
+        </div>
+
+
+        <!-- Horizontal layout -->
+        <section id="steps-horizontal" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Horizontal layout</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <div class="steps steps-horizontal-md">
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">1</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Choose your course</h5>
+                                <p class="fs-sm mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">2</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Learn by doing</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">3</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Get instant expert feedback</h5>
+                                <p class="fs-sm mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Horizontal steps --&gt;
+&lt;!-- Convert steps to horizontal layout on certain breakpoint by adding steps-horizontal-sm, steps-horizontal-md, steps-horizontal-lg, steps-horizontal-xl, steps-horizontal-xxl --&gt;
+&lt;div class=&quot;steps steps-horizontal-md&quot;&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Choose your course&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Learn by doing&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Get instant expert feedback&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Aligment -->
+        <section id="steps-alignment" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Aligment</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <div class="steps steps-horizontal-md steps-center pb-md-4 mb-5">
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">1</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Choose your course</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">2</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Learn by doing</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">3</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Get instant expert feedback</h5>
+                                <p class="fs-sm mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="steps steps-horizontal-md steps-end">
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">1</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Choose your course</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">2</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Learn by doing</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">3</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Get instant expert feedback</h5>
+                                <p class="fs-sm mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Center aligned steps --&gt;
+&lt;div class=&quot;steps steps-horizontal-md steps-center&quot;&gt;
+  ...
+&lt;/div&gt;
+
+&lt;!-- Right aligned steps --&gt;
+&lt;div class=&quot;steps steps-horizontal-md steps-end&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Completed step -->
+        <section id="steps-completed" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Completed step</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <div class="steps steps-horizontal-md">
+                        <div class="step">
+                            <div class="step-number bg-light">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 rounded-circle bg-faded-success"></span>
+                                <div class="step-number-inner bg-success">
+                                    <i class="bx bx-check fs-1 text-white"></i>
+                                </div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Choose your course</h5>
+                                <p class="fs-sm mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">2</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Learn by doing</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">3</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Get instant expert feedback</h5>
+                                <p class="fs-sm mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorpser potenti elementum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Completed step example --&gt;
+&lt;div class=&quot;steps steps-horizontal-md&quot;&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number bg-light&quot;&gt;
+      &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 rounded-circle bg-faded-success&quot;&gt;&lt;/span&gt;
+      &lt;div class=&quot;step-number-inner bg-success&quot;&gt;
+        &lt;i class=&quot;bx bx-check fs-1 text-white&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Choose your course&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Vertical layout -->
+        <section id="steps-vertical" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Vertical layout</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview4" data-bs-toggle="tab" role="tab" aria-controls="preview4" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html4" data-bs-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview4" role="tabpanel">
+                    <div class="steps" style="max-width: 42rem;">
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">1</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Choose your course</h5>
+                                <p class="fs-sm mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">2</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Learn by doing</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">3</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Get instant expert feedback</h5>
+                                <p class="fs-sm mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Vertical steps --&gt;
+&lt;div class=&quot;steps&quot;&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Choose your course&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Learn by doing&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Get instant expert feedback&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Small size -->
+        <section id="steps-small" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Small size</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview5" data-bs-toggle="tab" role="tab" aria-controls="preview5" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html5" data-bs-toggle="tab" role="tab" aria-controls="html5" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview5" role="tabpanel">
+                    <div class="steps steps-sm steps-horizontal-md">
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">1</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Choose your course</h5>
+                                <p class="fs-sm mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">2</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Learn by doing</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">
+                                <div class="step-number-inner">3</div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Get instant expert feedback</h5>
+                                <p class="fs-sm mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html5" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Small horizontal steps --&gt;
+&lt;!-- Convert steps to horizontal layout on certain breakpoint by adding steps-horizontal-sm, steps-horizontal-md, steps-horizontal-lg, steps-horizontal-xl, steps-horizontal-xxl --&gt;
+&lt;div class=&quot;steps steps-sm steps-horizontal-md&quot;&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Choose your course&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Learn by doing&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Get instant expert feedback&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Icons instead of numbers -->
+        <section id="steps-icons" class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Icons instead of numbers</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview6" data-bs-toggle="tab" role="tab" aria-controls="preview6" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html6" data-bs-toggle="tab" role="tab" aria-controls="html6" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview6" role="tabpanel">
+                    <div class="steps steps-horizontal-md">
+                        <div class="step">
+                            <div class="step-number text-primary">
+                                <div class="step-number-inner">
+                                    <i class="bx bx-search-alt fs-1"></i>
+                                </div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Research &amp; Analysis</h5>
+                                <p class="fs-sm mb-0">Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number text-primary">
+                                <div class="step-number-inner">
+                                    <i class="bx bx-layout fs-1"></i>
+                                </div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Prototyping</h5>
+                                <p class="fs-sm mb-0">Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number text-primary">
+                                <div class="step-number-inner">
+                                    <i class="bx bx-devices fs-1"></i>
+                                </div>
+                            </div>
+                            <div class="step-body">
+                                <h5 class="mb-2">Pixel-perfect UI Design</h5>
+                                <p class="fs-sm mb-0">Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html6" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Horizontal steps with icons instead of numbers --&gt;
+&lt;!-- Convert steps to horizontal layout on certain breakpoint by adding steps-horizontal-sm, steps-horizontal-md, steps-horizontal-lg, steps-horizontal-xl, steps-horizontal-xxl --&gt;
+&lt;div class=&quot;steps steps-horizontal-md&quot;&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number text-primary&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;
+        &lt;i class=&quot;bx bx-search-alt fs-1&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Research &amp;amp; Analysis&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Nulla faucibus mauris pellentesque blandit faucibus non. Sit ut et at suspendisse gravida hendrerit tempus placerat ac nunc dapibus.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number text-primary&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;
+        &lt;i class=&quot;bx bx-layout fs-1&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Prototyping&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Tristique sed pharetra feugiat tempor sagittis. Ultricies eu bibendum adipiscing lacinia. Quisque praesent aliquam tempus phasellus ut integer.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Step --&gt;
+  &lt;div class=&quot;step&quot;&gt;
+    &lt;div class=&quot;step-number text-primary&quot;&gt;
+      &lt;div class=&quot;step-number-inner&quot;&gt;
+        &lt;i class=&quot;bx bx-devices fs-1&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;step-body&quot;&gt;
+      &lt;h5 class=&quot;mb-2&quot;&gt;Pixel-perfect UI Design&lt;/h5&gt;
+      &lt;p class=&quot;fs-sm mb-0&quot;&gt;Duis euismod enim, facilisis risus tellus pharetra lectus diam neque. Nec ultrices mi faucibus est. Magna ullamcorper potenti elementum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Jump to anchor navigation -->
+<aside id="jumpToNav" class="side-nav side-nav-end d-none d-xxl-block position-fixed top-0 end-0 vh-100 py-5" style="width: 20rem;">
+    <h3 class="fs-lg mt-5 pt-5">Jump to</h3>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#steps-horizontal" class="nav-link" data-scroll data-scroll-offset="-6">Horizontal layout</a>
+        </li>
+        <li class="nav-item">
+            <a href="#steps-alignment" class="nav-link" data-scroll data-scroll-offset="-6">Alignment</a>
+        </li>
+        <li class="nav-item">
+            <a href="#steps-completed" class="nav-link" data-scroll data-scroll-offset="-6">Completed step</a>
+        </li>
+        <li class="nav-item">
+            <a href="#steps-vertical" class="nav-link" data-scroll data-scroll-offset="-6">Vertical layout</a>
+        </li>
+        <li class="nav-item">
+            <a href="#steps-small" class="nav-link" data-scroll data-scroll-offset="-6">Small size</a>
+        </li>
+        <li class="nav-item">
+            <a href="#steps-icons" class="nav-link" data-scroll data-scroll-offset="-6">Icons instead of numbers</a>
+        </li>
+    </ul>
+</aside>

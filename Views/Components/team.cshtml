@@ -1,0 +1,237 @@
+﻿
+@{
+    ViewBag.Title = "team";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Team</h1>
+                <p class="text-muted fs-lg mb-2">Component designed to showcase team members. Comes in different styles.</p>
+            </div>
+            <span class="badge bg-warning mb-2">Silicon component</span>
+        </div>
+
+
+        <!-- Style 1 -->
+        <section id="team-style1" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Style 1</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <div class="card card-hover border-0 bg-transparent" style="max-width: 306px;">
+                        <div class="position-relative">
+                            <img src="../assets/img/team/25.jpg" class="rounded-3" alt="Albert Flores">
+                            <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+                                <span class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"></span>
+                                <div class="position-relative d-flex zindex-2">
+                                    <a href="#" class="btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2" aria-label="Facebook">
+                                        <i class="bx bxl-facebook"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2" aria-label="LinkedIn">
+                                        <i class="bx bxl-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-icon btn-secondary btn-twitter btn-sm bg-white" aria-label="Twitter">
+                                        <i class="bx bxl-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-3 pb-1">
+                            <h3 class="fs-lg fw-semibold pt-1 mb-2">Albert Flores</h3>
+                            <p class="fs-sm mb-0">Principal Consultant, Twitch</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Team Style 1 --&gt;
+&lt;div class=&quot;card card-hover border-0 bg-transparent&quot;&gt;
+  &lt;div class=&quot;position-relative&quot;&gt;
+    &lt;img src=&quot;assets/img/team/25.jpg&quot; class=&quot;rounded-3&quot; alt=&quot;Albert Flores&quot;&gt;
+    &lt;div class=&quot;card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3&quot;&gt;
+      &lt;span class=&quot;position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3&quot;&gt;&lt;/span&gt;
+      &lt;div class=&quot;position-relative d-flex zindex-2&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-secondary btn-facebook btn-sm bg-white me-2&quot; aria-label=&quot;Facebook&quot;&gt;
+          &lt;i class=&quot;bx bxl-facebook&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-secondary btn-linkedin btn-sm bg-white me-2&quot; aria-label=&quot;LinkedIn&quot;&gt;
+          &lt;i class=&quot;bx bxl-linkedin&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-secondary btn-twitter btn-sm bg-white&quot; aria-label=&quot;Twitter&quot;&gt;
+          &lt;i class=&quot;bx bxl-twitter&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;card-body text-center p-3&quot;&gt;
+    &lt;h3 class=&quot;fs-lg fw-semibold pt-1 mb-2&quot;&gt;Albert Flores&lt;/h3&gt;
+    &lt;p class=&quot;fs-sm mb-0&quot;&gt;Principal Consultant, Twitch&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Style 2: Vertical -->
+        <section id="team-style2-vertical" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Style 2: Vertical</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <div class="card card-body card-hover bg-light border-0 text-center" style="max-width: 300px;">
+                        <img src="../assets/img/team/11.jpg" class="d-block rounded-circle mx-auto mb-3" width="162" alt="Cameron Williamson">
+                        <h5 class="fw-medium fs-lg mb-1">Cameron Williamson</h5>
+                        <p class="fs-sm mb-3">Creative Director</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-icon btn-outline-secondary btn-facebook btn-sm me-2" aria-label="Facebook">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary btn-dribbble btn-sm me-2" aria-label="Dribbble">
+                                <i class="bx bxl-dribbble"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary btn-linkedin btn-sm" aria-label="LinkedIn">
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Team Style 2: Vertical --&gt;
+&lt;div class=&quot;card card-body card-hover bg-light border-0 text-center&quot;&gt;
+  &lt;img src=&quot;assets/img/team/11.jpg&quot; class=&quot;d-block rounded-circle mx-auto mb-3&quot; width=&quot;162&quot; alt=&quot;Cameron Williamson&quot;&gt;
+  &lt;h5 class=&quot;fw-medium fs-lg mb-1&quot;&gt;Cameron Williamson&lt;/h5&gt;
+  &lt;p class=&quot;fs-sm mb-3&quot;&gt;Creative Director&lt;/p&gt;
+  &lt;div class=&quot;d-flex justify-content-center&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-outline-secondary btn-facebook btn-sm me-2&quot; aria-label=&quot;Facebook&quot;&gt;
+      &lt;i class=&quot;bx bxl-facebook&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-outline-secondary btn-dribbble btn-sm me-2&quot; aria-label=&quot;Dribbble&quot;&gt;
+      &lt;i class=&quot;bx bxl-dribbble&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-outline-secondary btn-linkedin btn-sm&quot; aria-label=&quot;LinkedIn&quot;&gt;
+      &lt;i class=&quot;bx bxl-linkedin&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Style 2: Horizontal -->
+        <section id="team-style2-horizontal" class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Style 2: Horizontal</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <div class="card card-body d-flex flex-row align-items-center card-hover bg-light border-0" style="max-width: 400px;">
+                        <img src="../assets/img/team/10.jpg" class="d-block rounded-circle" width="162" alt="Darrell Steward">
+                        <div class="ps-4">
+                            <h5 class="fw-medium fs-lg mb-1">Darrell Steward</h5>
+                            <p class="fs-sm mb-3">Lead Developer</p>
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-icon btn-outline-secondary btn-facebook btn-sm me-2" aria-label="Facebook">
+                                    <i class="bx bxl-facebook"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-outline-secondary btn-stack-overflow btn-sm me-2" aria-label="Stack Overflow">
+                                    <i class="bx bxl-stack-overflow"></i>
+                                </a>
+                                <a href="#" class="btn btn-icon btn-outline-secondary btn-github btn-sm" aria-label="GitHub">
+                                    <i class="bx bxl-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Team Style 2: Horizontal --&gt;
+&lt;div class=&quot;card card-body d-flex flex-row align-items-center card-hover bg-light border-0&quot;&gt;
+  &lt;img src=&quot;assets/img/team/10.jpg&quot; class=&quot;d-block rounded-circle&quot; width=&quot;162&quot; alt=&quot;Darrell Steward&quot;&gt;
+  &lt;div class=&quot;ps-4&quot;&gt;
+    &lt;h5 class=&quot;fw-medium fs-lg mb-1&quot;&gt;Darrell Steward&lt;/h5&gt;
+    &lt;p class=&quot;fs-sm mb-3&quot;&gt;Lead Developer&lt;/p&gt;
+    &lt;div class=&quot;d-flex&quot;&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-outline-secondary btn-facebook btn-sm me-2&quot; aria-label=&quot;Facebook&quot;&gt;
+        &lt;i class=&quot;bx bxl-facebook&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-outline-secondary btn-stack-overflow btn-sm me-2&quot; aria-label=&quot;Stack Overflow&quot;&gt;
+        &lt;i class=&quot;bx bxl-stack-overflow&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;#&quot; class=&quot;btn btn-icon btn-outline-secondary btn-github btn-sm&quot; aria-label=&quot;GitHub&quot;&gt;
+        &lt;i class=&quot;bx bxl-github&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Jump to anchor navigation -->
+<aside id="jumpToNav" class="side-nav side-nav-end d-none d-xxl-block position-fixed top-0 end-0 vh-100 py-5" style="width: 20rem;">
+    <h3 class="fs-lg mt-5 pt-5">Jump to</h3>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#team-style1" class="nav-link" data-scroll data-scroll-offset="-6">Style 1</a>
+        </li>
+        <li class="nav-item">
+            <a href="#team-style2-vertical" class="nav-link" data-scroll data-scroll-offset="-6">Style 2: Vertical</a>
+        </li>
+        <li class="nav-item">
+            <a href="#team-style2-horizontal" class="nav-link" data-scroll data-scroll-offset="-6">Style 2: Horizontal</a>
+        </li>
+    </ul>
+</aside>

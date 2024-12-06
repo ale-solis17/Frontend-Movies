@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @Html.Partial("~/Views/Shared/title_meta.cshtml")
+
+    @RenderSection("styles", required: false)
+</head>
+<body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+
+    <main class="page-wrapper">
+
+        @RenderBody()
+
+    </main>
+
+
+    @RenderSection("footer", required: false)
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    @RenderSection("scripts", required: false)
+
+    <script src="~/assets/js/theme.min.js"></script>
+</body>
+</html>

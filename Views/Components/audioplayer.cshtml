@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "audioplayer";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Audio player</h1>
+                <p class="text-muted fs-lg mb-2">HTML5 audio player that has consistent UI across all browsers and devices.</p>
+            </div>
+            <span class="badge bg-warning mb-2">Silicon component</span>
+        </div>
+
+        <!-- Example -->
+        <section class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Example</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <div class="card p-lg-4 p-md-2 mb-4 mb-lg-5">
+                        <div class="audio-player card-body p-2 p-sm-4">
+                            <audio src="../assets/audio/sample.wav" preload="auto"></audio>
+                            <button type="button" class="ap-play-button btn btn-icon btn-primary shadow-primary" aria-label="Play/pause"></button>
+                            <span class="ap-current-time flex-shr fw-medium mx-3 mx-lg-4">0:00</span>
+                            <input type="range" class="ap-seek-slider" max="100" value="0">
+                            <span class="ap-duration flex-shr fw-medium mx-3 mx-lg-4">0:00</span>
+                            <div class="dropup">
+                                <button type="button" class="ap-volume-button btn btn-icon btn-secondary" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false" aria-label="Volume">
+                                    <i class="bx bx-volume-full"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-dark my-1">
+                                    <input type="range" class="ap-volume-slider" max="100" value="100">
+                                </div>
+                            </div>
+                            <a href="../assets/audio/sample.wav" download="audio-sample" class="btn btn-icon btn-secondary ms-2" aria-label="Download">
+                                <i class="bx bx-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Audio player markup --&gt;
+&lt;div class=&quot;card p-lg-4 p-md-2 mb-4 mb-lg-5&quot;&gt;
+  &lt;div class=&quot;audio-player card-body p-2 p-sm-4&quot;&gt;
+    
+    &lt;!-- Audio tag with the link to the audio file --&gt;
+    &lt;audio  src=&quot;assets/audio/sample.wav&quot; preload=&quot;auto&quot;&gt;&lt;/audio&gt;
+
+    &lt;!-- Custom player markup --&gt;
+    &lt;button type=&quot;button&quot; class=&quot;ap-play-button btn btn-icon btn-primary shadow-primary&quot; aria-label=&quot;Play/pause&quot;&gt;&lt;/button&gt;
+    &lt;span class=&quot;ap-current-time flex-shr fw-medium mx-3 mx-lg-4&quot;&gt;0:00&lt;/span&gt;
+    &lt;input type=&quot;range&quot; class=&quot;ap-seek-slider&quot; max=&quot;100&quot; value=&quot;0&quot;&gt;
+    &lt;span class=&quot;ap-duration flex-shr fw-medium mx-3 mx-lg-4&quot;&gt;0:00&lt;/span&gt;
+    &lt;div class=&quot;dropup&quot;&gt;
+      &lt;button type=&quot;button&quot; class=&quot;ap-volume-button btn btn-icon btn-secondary&quot; data-bs-toggle=&quot;dropdown&quot; data-bs-auto-close=&quot;outside&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Volume&quot;&gt;
+        &lt;i class=&quot;bx bx-volume-full&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+      &lt;div class=&quot;dropdown-menu dropdown-menu-dark my-1&quot;&gt;
+        &lt;input type=&quot;range&quot; class=&quot;ap-volume-slider&quot; max=&quot;100&quot; value=&quot;100&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href=&quot;assets/audio/sample.wav&quot; download=&quot;audio-sample&quot; class=&quot;btn btn-icon btn-secondary ms-2&quot; aria-label=&quot;Download&quot;&gt;
+      &lt;i class=&quot;bx bx-download&quot;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+

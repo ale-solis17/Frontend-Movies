@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "popovers";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Popovers</h1>
+                <p class="text-muted fs-lg mb-2">A pop-up box that appears when the user clicks/hovers on an element.</p>
+            </div>
+            <a href="https://getbootstrap.com/docs/5.3/components/popovers/" class="btn btn-link px-0" target="_blank" rel="noopener">
+                Bootstrap docs
+                <i class="bx bx-link-external fs-lg ms-2"></i>
+            </a>
+        </div>
+
+
+        <!-- Static example -->
+        <section class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4 pb-lg-2">Static example</h2>
+            <div class="example-popover clearfix">
+                <div class="popover bs-popover-top bs-popover-top-demo" role="tooltip">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover top</h3>
+                    <div class="popover-body">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem.</div>
+                </div>
+                <div class="popover bs-popover-end bs-popover-end-demo" role="tooltip">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover right</h3>
+                    <div class="popover-body">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem.</div>
+                </div>
+                <div class="popover bs-popover-bottom bs-popover-bottom-demo mt-3" role="tooltip">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover bottom</h3>
+                    <div class="popover-body">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem.</div>
+                </div>
+                <div class="popover bs-popover-start bs-popover-start-demo" role="tooltip">
+                    <div class="popover-arrow"></div>
+                    <h3 class="popover-header">Popover left</h3>
+                    <div class="popover-body">Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem.</div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Live demo -->
+        <section class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Live demo</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <button class="btn btn-outline-secondary me-2 my-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" title="Popover on top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.">Popover on top</button>
+                    <button class="btn btn-outline-secondary me-2 my-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="hover" title="Popover on right" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.">Popover on right</button>
+                    <button class="btn btn-outline-secondary me-2 my-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="hover" title="Popover on bottom" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.">Popover on bottom</button>
+                    <button class="btn btn-outline-secondary my-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="hover" title="Popover on left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.">Popover on left</button>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Popover on top --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;top&quot; data-bs-trigger=&quot;hover&quot; title=&quot;Popover on top&quot; data-bs-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.&quot;&gt;Popover on top&lt;/button&gt;
+
+&lt;!-- Popover on right --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;right&quot; data-bs-trigger=&quot;hover&quot; title=&quot;Popover on right&quot; data-bs-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.&quot;&gt;Popover on right&lt;/button&gt;
+
+&lt;!-- Popover on bottom --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;bottom&quot; data-bs-trigger=&quot;hover&quot; title=&quot;Popover on bottom&quot; data-bs-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.&quot;&gt;Popover on right&lt;/button&gt;
+
+&lt;!-- Popover on left --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;left&quot; data-bs-trigger=&quot;hover&quot; title=&quot;Popover on left&quot; data-bs-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.&quot;&gt;Popover on right&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Toggle on click / hover -->
+        <section class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Toggle on click / hover</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <button class="btn btn-outline-secondary me-2 my-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" title="Popover on click" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.">Toggle popover on click</button>
+                    <button class="btn btn-outline-primary my-1" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="hover" title="Popover on hover" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.">Toggle popover on hover</button>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Toggle popover on click (click is default trigger) --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;top&quot; title=&quot;Popover on click&quot; data-bs-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.&quot;&gt;Toggle popover on click&lt;/button&gt;
+
+&lt;!-- Toggle popover on hover --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot; data-bs-container=&quot;body&quot; data-bs-toggle=&quot;popover&quot; data-bs-placement=&quot;top&quot; data-bs-trigger=&quot;hover&quot; title=&quot;Popover on hover&quot; data-bs-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus ornare sem.&quot;&gt;Toggle popover on hover&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

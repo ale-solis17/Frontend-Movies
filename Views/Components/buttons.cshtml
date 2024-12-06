@@ -1,0 +1,608 @@
+﻿
+@{
+    ViewBag.Title = "buttons";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Buttons</h1>
+                <p class="text-muted fs-lg mb-2">Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+            </div>
+            <a href="https://getbootstrap.com/docs/5.3/components/buttons/" class="btn btn-link px-0" target="_blank" rel="noopener">
+                Bootstrap docs
+                <i class="bx bx-link-external fs-lg ms-2"></i>
+            </a>
+        </div>
+
+
+        <!-- Solid (default) -->
+        <section id="buttons-solid" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Solid (default)</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <button class="btn btn-primary my-1 me-1" type="button">Primary</button>
+                    <button class="btn btn-secondary my-1 me-1" type="button">Secondary</button>
+                    <button class="btn btn-success my-1 me-1" type="button">Success</button>
+                    <button class="btn btn-danger my-1 me-1" type="button">Danger</button>
+                    <button class="btn btn-warning my-1 me-1" type="button">Warning</button>
+                    <button class="btn btn-info my-1 me-1" type="button">Info</button>
+                    <div class="d-inline-block my-1 me-1 p-2 bg-dark">
+                        <button class="btn btn-light" type="button">Light</button>
+                    </div>
+                    <button class="btn btn-dark my-1 me-1" type="button">Dark</button>
+                    <button class="btn btn-link my-1" type="button">Link</button>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+
+&lt;!-- Secondary solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+
+&lt;!-- Success solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+
+&lt;!-- Danger solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+
+&lt;!-- Warning solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+
+&lt;!-- Info solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+
+&lt;!-- Light solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Info&lt;/button&gt;
+
+&lt;!-- Dark solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;
+
+&lt;!-- Link button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Outline -->
+        <section id="buttons-outline" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Outline</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <button class="btn btn-outline-primary my-1 me-1" type="button">Primary</button>
+                    <button class="btn btn-outline-secondary my-1 me-1" type="button">Secondary</button>
+                    <button class="btn btn-outline-success my-1 me-1" type="button">Success</button>
+                    <button class="btn btn-outline-danger my-1 me-1" type="button">Danger</button>
+                    <button class="btn btn-outline-warning my-1 me-1" type="button">Warning</button>
+                    <button class="btn btn-outline-info my-1 me-1" type="button">Info</button>
+                    <div class="d-inline-block my-1 me-1 p-2 bg-dark">
+                        <button class="btn btn-outline-light" type="button">Light</button>
+                    </div>
+                    <button class="btn btn-outline-dark my-1" type="button">Dark</button>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Primary&lt;/button&gt;
+
+&lt;!-- Secondary outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-secondary&quot;&gt;Secondary&lt;/button&gt;
+
+&lt;!-- Success outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-success&quot;&gt;Success&lt;/button&gt;
+
+&lt;!-- Danger outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-danger&quot;&gt;Danger&lt;/button&gt;
+
+&lt;!-- Warning outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-warning&quot;&gt;Warning&lt;/button&gt;
+
+&lt;!-- Info outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-info&quot;&gt;Info&lt;/button&gt;
+
+&lt;!-- Light outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-light&quot;&gt;Info&lt;/button&gt;
+
+&lt;!-- Dark outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-dark&quot;&gt;Dark&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Buttons with shadow -->
+        <section id="buttons-shadow" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Buttons with shadow</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <button class="btn btn-primary shadow-primary my-1 me-1" type="button">Primary</button>
+                    <button class="btn btn-secondary shadow-secondary my-1 me-1" type="button">Secondary</button>
+                    <button class="btn btn-success shadow-success my-1 me-1" type="button">Success</button>
+                    <button class="btn btn-danger shadow-danger my-1 me-1" type="button">Danger</button>
+                    <button class="btn btn-warning shadow-warning my-1 me-1" type="button">Warning</button>
+                    <button class="btn btn-info shadow-info my-1 me-1" type="button">Info</button>
+                    <button class="btn btn-light shadow-secondary my-1 me-1" type="button">Light</button>
+                    <button class="btn btn-dark shadow-dark my-1" type="button">Dark</button>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary button with shadow --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary shadow-primary&quot;&gt;Primary&lt;/button&gt;
+
+&lt;!-- Secondary button with shadow --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary shadow-secondary&quot;&gt;Secondary&lt;/button&gt;
+
+&lt;!-- Success button with shadow --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-success shadow-success&quot;&gt;Success&lt;/button&gt;
+
+&lt;!-- Danger button with shadow --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger shadow-danger&quot;&gt;Danger&lt;/button&gt;
+
+&lt;!-- Warning button with shadow --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-warning shadow-warning&quot;&gt;Warning&lt;/button&gt;
+
+&lt;!-- Info button with shadow --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-info shadow-info&quot;&gt;Info&lt;/button&gt;
+
+&lt;!-- Light button with shadow --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-light shadow-secondary&quot;&gt;Info&lt;/button&gt;
+
+&lt;!-- Dark button with shadow --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-dark shadow-dark&quot;&gt;Dark&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Gradient buttons -->
+        <section id="buttons-gradient" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Gradient buttons</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview9" data-bs-toggle="tab" role="tab" aria-controls="preview9" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html9" data-bs-toggle="tab" role="tab" aria-controls="html9" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview9" role="tabpanel">
+                    <button class="btn btn-primary bg-gradient my-1 me-1" type="button">Primary</button>
+                    <button class="btn btn-success bg-gradient my-1 me-1" type="button">Success</button>
+                    <button class="btn btn-danger bg-gradient my-1 me-1" type="button">Danger</button>
+                    <button class="btn btn-warning bg-gradient my-1 me-1" type="button">Warning</button>
+                    <button class="btn btn-info bg-gradient my-1 me-1" type="button">Info</button>
+                    <button class="btn btn-dark bg-gradient my-1" type="button">Dark</button>
+                </div>
+                <div class="tab-pane fade" id="html9" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Primary gradient button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary bg-gradient&quot;&gt;Primary&lt;/button&gt;
+
+&lt;!-- Success gradient button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-success bg-gradient&quot;&gt;Success&lt;/button&gt;
+
+&lt;!-- Danger gradient button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger bg-gradient&quot;&gt;Danger&lt;/button&gt;
+
+&lt;!-- Warning gradient button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-warning bg-gradient&quot;&gt;Warning&lt;/button&gt;
+
+&lt;!-- Info gradient button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-info bg-gradient&quot;&gt;Info&lt;/button&gt;
+
+&lt;!-- Dark gradient button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-dark bg-gradient&quot;&gt;Dark&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Icons -->
+        <section id="buttons-icons" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Icons</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview4" data-bs-toggle="tab" role="tab" aria-controls="preview4" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html4" data-bs-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview4" role="tabpanel">
+                    <button class="btn btn-outline-secondary my-1 me-2" type="button">
+                        <i class="bx bx-user fs-lg me-2"></i>
+                        Profile
+                    </button>
+                    <button class="btn btn-secondary btn-icon my-1 me-2" type="button" aria-label="Upload">
+                        <i class="bx bx-upload"></i>
+                    </button>
+                    <button class="btn btn-outline-danger btn-icon my-1 me-2" type="button" aria-label="Dismiss">
+                        <i class="bx bx-error-circle"></i>
+                    </button>
+                    <button class="btn btn-success btn-icon my-1 me-2" type="button" aria-label="Confirm">
+                        <i class="bx bx-check-circle"></i>
+                    </button>
+                    <button class="btn btn-warning btn-icon rounded-circle my-1 me-2" type="button" aria-label="Rate">
+                        <i class="bx bx-star"></i>
+                    </button>
+                    <button class="btn btn-outline-info btn-icon rounded-circle my-1 me-2" type="button" aria-label="Notify">
+                        <i class="bx bx-bell"></i>
+                    </button>
+                </div>
+                <div class="tab-pane fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Secondary outline button with text and icon --&gt;
+&lt;button class=&quot;btn btn-outline-secondary&quot; type=&quot;button&quot;&gt;
+  &lt;i class=&quot;bx bx-user fs-lg me-2&quot;&gt;&lt;/i&gt;
+  Profile
+&lt;/button&gt;
+
+&lt;!-- Secondary solid icon button --&gt;
+&lt;button class=&quot;btn btn-secondary btn-icon&quot; type=&quot;button&quot; aria-label=&quot;Upload&quot;&gt;
+  &lt;i class=&quot;bx bx-upload&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Danger outline icon button --&gt;
+&lt;button class=&quot;btn btn-outline-danger btn-icon&quot; type=&quot;button&quot; aria-label=&quot;Dismiss&quot;&gt;
+  &lt;i class=&quot;bx bx-error-circle&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Success solid icon button --&gt;
+&lt;button class=&quot;btn btn-success btn-icon&quot; type=&quot;button&quot; aria-label=&quot;Confirm&quot;&gt;
+  &lt;i class=&quot;bx bx-check-circle&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Warning circle solid icon button --&gt;
+&lt;button class=&quot;btn btn-warning btn-icon rounded-circle&quot; type=&quot;button&quot; aria-label=&quot;Rate&quot;&gt;
+  &lt;i class=&quot;bx bx-star&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;!-- Info circle outline icon button --&gt;
+&lt;button class=&quot;btn btn-outline-info btn-icon rounded-circle&quot; type=&quot;button&quot; aria-label=&quot;Notify&quot;&gt;
+  &lt;i class=&quot;bx bx-bell&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Market buttons -->
+        <section id="buttons-market" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Market buttons</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview5" data-bs-toggle="tab" role="tab" aria-controls="preview5" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html5" data-bs-toggle="tab" role="tab" aria-controls="html5" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview5" role="tabpanel">
+                    <a href="#" class="btn btn-dark btn-lg px-3 py-2 my-1 me-2">
+                        <img src="../assets/img/market/appstore-light.svg" class="light-mode-img" width="124" alt="App Store">
+                        <img src="../assets/img/market/appstore-dark.svg" class="dark-mode-img" width="124" alt="App Store">
+                    </a>
+                    <a href="#" class="btn btn-dark btn-lg px-3 py-2 my-1 me-2">
+                        <img src="../assets/img/market/googleplay-light.svg" class="light-mode-img" width="139" alt="Google Play">
+                        <img src="../assets/img/market/googleplay-dark.svg" class="dark-mode-img" width="139" alt="Google Play">
+                    </a>
+                </div>
+                <div class="tab-pane fade" id="html5" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- App Store button --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-dark btn-lg px-3 py-2&quot;&gt;
+  &lt;img src=&quot;assets/img/market/appstore-light.svg&quot; class=&quot;light-mode-img&quot; width=&quot;124&quot; alt=&quot;App Store&quot;&gt;
+  &lt;img src=&quot;assets/img/market/appstore-dark.svg&quot; class=&quot;dark-mode-img&quot; width=&quot;124&quot; alt=&quot;App Store&quot;&gt;
+&lt;/a&gt;
+
+&lt;!-- Google Play button --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn-dark btn-lg px-3 py-2&quot;&gt;
+  &lt;img src=&quot;assets/img/market/googleplay-light.svg&quot; class=&quot;light-mode-img&quot; width=&quot;139&quot; alt=&quot;Google Play&quot;&gt;
+  &lt;img src=&quot;assets/img/market/googleplay-dark.svg&quot; class=&quot;dark-mode-img&quot; width=&quot;139&quot; alt=&quot;Google Play&quot;&gt;
+&lt;/a&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Shapes -->
+        <section id="buttons-shapes" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Shapes</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview6" data-bs-toggle="tab" role="tab" aria-controls="preview6" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html6" data-bs-toggle="tab" role="tab" aria-controls="html6" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview6" role="tabpanel">
+                    <button class="btn btn-primary my-1 me-2" type="button">Rounded</button>
+                    <button class="btn btn-primary rounded-pill my-1 me-2" type="button">Pill button</button>
+                    <button class="btn btn-primary rounded-0 my-1" type="button">Square</button>
+                    <div class="pt-2"></div>
+                    <button class="btn btn-outline-primary my-1 me-2" type="button">Rounded</button>
+                    <button class="btn btn-outline-primary rounded-pill my-1 me-2" type="button">Pill button</button>
+                    <button class="btn btn-outline-primary rounded-0 my-1" type="button">Square</button>
+                </div>
+                <div class="tab-pane fade" id="html6" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Rounded solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Rounded&lt;/button&gt;
+
+&lt;!-- Pill solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary rounded-pill&quot;&gt;Pill button&lt;/button&gt;
+
+&lt;!-- Square solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary rounded-0&quot;&gt;Square&lt;/button&gt;
+
+&lt;!-- Rounded outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Rounded&lt;/button&gt;
+
+&lt;!-- Pill outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary rounded-pill&quot;&gt;Pill button&lt;/button&gt;
+
+&lt;!-- Square outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary rounded-0&quot;&gt;Square&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sizes -->
+        <section id="buttons-sizes" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Sizes</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview7" data-bs-toggle="tab" role="tab" aria-controls="preview7" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html7" data-bs-toggle="tab" role="tab" aria-controls="html7" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview7" role="tabpanel">
+                    <button class="btn btn-primary btn-lg mb-2 me-1" type="button">Large button</button>
+                    <button class="btn btn-primary mb-2 me-1" type="button">Normal button</button>
+                    <button class="btn btn-primary btn-sm mb-2" type="button">Small button</button>
+                    <div class="pt-2"></div>
+                    <button class="btn btn-outline-primary btn-lg mb-2 me-1" type="button">Large button</button>
+                    <button class="btn btn-outline-primary mb-2 me-1" type="button">Normal button</button>
+                    <button class="btn btn-outline-primary btn-sm mb-2" type="button">Small button</button>
+                    <div class="row mx-n1 pt-2">
+                        <div class="col-sm-6 px-1">
+                            <button class="btn btn-primary w-100 mb-3 mb-sm-0" type="button">Block level button</button>
+                        </div>
+                        <div class="col-sm-6 px-1">
+                            <button class="btn btn-outline-primary w-100 mb-3 mb-sm-0" type="button">Block level button</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html7" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Large solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-lg&quot;&gt;Large button&lt;/button&gt;
+
+&lt;!-- Normal solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Normal button&lt;/button&gt;
+
+&lt;!-- Small solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Small button&lt;/button&gt;
+
+&lt;!-- Large outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary btn-lg&quot;&gt;Large button&lt;/button&gt;
+
+&lt;!-- Normal outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary&quot;&gt;Normal button&lt;/button&gt;
+
+&lt;!-- Small outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary btn-sm&quot;&gt;Small button&lt;/button&gt;
+
+&lt;!-- Block solid button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary w-100&quot;&gt;Block level button&lt;/button&gt;
+
+&lt;!-- Block outline button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary w-100&quot;&gt;Block level button&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- States -->
+        <section id="buttons-states" class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">States</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview8" data-bs-toggle="tab" role="tab" aria-controls="preview8" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html8" data-bs-toggle="tab" role="tab" aria-controls="html8" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview8" role="tabpanel">
+                    <button class="btn btn-primary active my-1 me-1" type="button">Active</button>
+                    <button class="btn btn-secondary active my-1 me-1" type="button">Active</button>
+                    <button class="btn btn-primary disabled my-1 me-1" type="button">Disabled</button>
+                    <button class="btn btn-secondary disabled my-1 me-1" type="button">Disabled</button>
+                    <button class="btn btn-primary my-1 me-1" type="button" data-bs-toggle="button">Button toggle</button>
+                    <button class="btn btn-primary pe-none my-1 me-1" type="button">
+                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true">
+                            <span class="visually-hidden">Loading...</span>
+                        </span>
+                        Loading
+                    </button>
+                    <button class="btn btn-secondary pe-none my-1" type="button">
+                        <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true">
+                            <span class="visually-hidden">Loading...</span>
+                        </span>
+                        Loading
+                    </button>
+                </div>
+                <div class="tab-pane fade" id="html8" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Active primary button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary active&quot;&gt;Active&lt;/button&gt;
+
+&lt;!-- Active secondary button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary active&quot;&gt;Active&lt;/button&gt;
+
+&lt;!-- Disabled primary button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary disabled&quot;&gt;Disabled&lt;/button&gt;
+
+&lt;!-- Disabled secondary button --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary disabled&quot;&gt;Disabled&lt;/button&gt;
+
+&lt;!-- Button toggle --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;button&quot;&gt;Button toggle&lt;/button&gt;
+
+&lt;!-- Loading state: Primary button + border spinner --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary pe-none&quot;&gt;
+  &lt;span class=&quot;spinner-border spinner-border-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Loading...&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;
+
+&lt;!-- Loading state: Secondary button + growing spinner --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary pe-none&quot;&gt;
+  &lt;span class=&quot;spinner-grow spinner-grow-sm&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;span class=&quot;visually-hidden&quot;&gt;Loading...&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Jump to anchor navigation -->
+<aside id="jumpToNav" class="side-nav side-nav-end d-none d-xxl-block position-fixed top-0 end-0 vh-100 py-5" style="width: 20rem;">
+    <h3 class="fs-lg mt-5 pt-5">Jump to</h3>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#buttons-solid" class="nav-link" data-scroll data-scroll-offset="-6">Solid (default)</a>
+        </li>
+        <li class="nav-item">
+            <a href="#buttons-outline" class="nav-link" data-scroll data-scroll-offset="-6">Outline</a>
+        </li>
+        <li class="nav-item">
+            <a href="#buttons-shadow" class="nav-link" data-scroll data-scroll-offset="-6">Buttons with shadow</a>
+        </li>
+        <li class="nav-item">
+            <a href="#buttons-gradient" class="nav-link" data-scroll data-scroll-offset="-6">Gradient buttons</a>
+        </li>
+        <li class="nav-item">
+            <a href="#buttons-icons" class="nav-link" data-scroll data-scroll-offset="-6">Icons</a>
+        </li>
+        <li class="nav-item">
+            <a href="#buttons-market" class="nav-link" data-scroll data-scroll-offset="-6">Market buttons</a>
+        </li>
+        <li class="nav-item">
+            <a href="#buttons-shapes" class="nav-link" data-scroll data-scroll-offset="-6">Shapes</a>
+        </li>
+        <li class="nav-item">
+            <a href="#buttons-sizes" class="nav-link" data-scroll data-scroll-offset="-6">Sizes</a>
+        </li>
+        <li class="nav-item">
+            <a href="#buttons-states" class="nav-link" data-scroll data-scroll-offset="-6">States</a>
+        </li>
+    </ul>
+</aside>

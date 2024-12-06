@@ -1,0 +1,244 @@
+﻿
+@{
+    ViewBag.Title = "images";
+    Layout = "~/Views/Shared/componentsLayout.cshtml";
+}
+
+<main class="docs-container pt-5">
+    <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-2 pb-lg-4">
+
+        <!-- Page title -->
+        <div class="d-sm-flex align-items-end justify-content-between ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 mb-n3">
+            <div class="me-4">
+                <h1 class="pb-1">Images &amp; figures</h1>
+                <p class="text-muted fs-lg mb-2">Image styles and figure component for displaying images and text.</p>
+            </div>
+            <a href="https://getbootstrap.com/docs/5.3/content/images" class="btn btn-link px-0" target="_blank" rel="noopener">
+                Bootstrap docs
+                <i class="bx bx-link-external fs-lg ms-2"></i>
+            </a>
+        </div>
+
+
+        <!-- Image shapes -->
+        <section id="image-shapes" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Image shapes</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview1" data-bs-toggle="tab" role="tab" aria-controls="preview1" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html1" data-bs-toggle="tab" role="tab" aria-controls="html1" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview1" role="tabpanel">
+                    <div class="row g-3 gx-sm-4" style="max-width: 50rem;">
+                        <div class="col-sm-4 col-6">
+                            <img src="../assets/img/team/01.jpg" alt="Square image">
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <img class="rounded-3" src="../assets/img/team/02.jpg" alt="Rounded image">
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <img class="rounded-circle" src="../assets/img/team/03.jpg" alt="Circle image">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html1" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Square image (default) --&gt;
+&lt;img src=&quot;assets/img/team/01.jpg&quot; alt=&quot;Square image&quot;&gt;
+
+&lt;!-- Rounded image --&gt;
+&lt;img src=&quot;assets/img/team/02.jpg&quot; class=&quot;rounded-3&quot; alt=&quot;Rounded image&quot;&gt;
+
+&lt;!-- Circle image --&gt;
+&lt;img src=&quot;assets/img/team/03.jpg&quot; class=&quot;rounded-circle&quot; alt=&quot;Circle image&quot;&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Thumbnails -->
+        <section id="image-thumbnails" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Thumbnails</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview2" data-bs-toggle="tab" role="tab" aria-controls="preview2" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html2" data-bs-toggle="tab" role="tab" aria-controls="html2" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview2" role="tabpanel">
+                    <div class="row g-3 gx-sm-4" style="max-width: 50rem;">
+                        <div class="col-sm-4 col-6">
+                            <img src="../assets/img/team/08.jpg" class="img-thumbnail rounded-0" alt="Square thumbnail">
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <img class="img-thumbnail" src="../assets/img/team/06.jpg" alt="Rounded thumbnail">
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <img class="img-thumbnail rounded-circle" src="../assets/img/team/07.jpg" alt="Circle thumbnail">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html2" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Square thumbnail --&gt;
+&lt;img src=&quot;assets/img/team/08.jpg&quot; class=&quot;img-thumbnail rounded-0&quot; alt=&quot;Square thumbnail&quot;&gt;
+
+&lt;!-- Rounded thumbnail --&gt;
+&lt;img src=&quot;assets/img/team/06.jpg&quot; class=&quot;img-thumbnail&quot; alt=&quot;Rounded thumbnail&quot;&gt;
+
+&lt;!-- Circle thumbnail --&gt;
+&lt;img src=&quot;assets/img/team/07.jpg&quot; class=&quot;img-thumbnail rounded-circle&quot; alt=&quot;Circle thumbnail&quot;&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Figures with caption -->
+        <section id="image-figures" class="border-bottom py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Figures with caption</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview3" data-bs-toggle="tab" role="tab" aria-controls="preview3" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html3" data-bs-toggle="tab" role="tab" aria-controls="html3" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content pt-1">
+                <div class="tab-pane fade show active" id="preview3" role="tabpanel">
+                    <div class="row g-3 gx-sm-4" style="max-width: 50rem;">
+                        <div class="col-sm-4 col-6">
+                            <figure class="figure mb-sm-0">
+                                <img class="figure-img" src="../assets/img/team/01.jpg" alt="Figure with caption">
+                                <figcaption class="figure-caption">Caption on the left</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <figure class="figure mb-sm-0">
+                                <img class="figure-img" src="../assets/img/team/02.jpg" alt="Figure with caption">
+                                <figcaption class="figure-caption text-center">Caption in the center</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-sm-4 col-6">
+                            <figure class="figure mb-0">
+                                <img class="figure-img" src="../assets/img/team/03.jpg" alt="Figure with caption">
+                                <figcaption class="figure-caption text-end">Caption on the right</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="html3" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Caption on the left --&gt;
+&lt;figure class=&quot;figure&quot;&gt;
+  &lt;img src=&quot;assets/img/team/01.jpg&quot; class=&quot;figure-img&quot; alt=&quot;...&quot;&gt;
+  &lt;figcaption class=&quot;figure-caption&quot;&gt;Caption on the left&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Caption in the center --&gt;
+&lt;figure class=&quot;figure&quot;&gt;
+  &lt;img src=&quot;assets/img/team/02.jpg&quot; class=&quot;figure-img&quot; alt=&quot;...&quot;&gt;
+  &lt;figcaption class=&quot;figure-caption text-center&quot;&gt;Caption in the center&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Caption on the right --&gt;
+&lt;figure class=&quot;figure&quot;&gt;
+  &lt;img src=&quot;assets/img/team/03.jpg&quot; class=&quot;figure-img&quot; alt=&quot;...&quot;&gt;
+  &lt;figcaption class=&quot;figure-caption text-end&quot;&gt;Caption on the right&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Image swap on hover -->
+        <section id="image-swap" class="py-5 ps-lg-2 ps-xxl-0">
+            <h2 class="h4">Image swap on hover</h2>
+            <div class="d-table">
+                <ul class="nav nav-tabs-alt" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#preview4" data-bs-toggle="tab" role="tab" aria-controls="preview4" aria-selected="true">
+                            <i class="bx bx-show-alt fs-base opacity-70 me-2"></i>
+                            Preview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#html4" data-bs-toggle="tab" role="tab" aria-controls="html4" aria-selected="false">
+                            <i class="bx bx-code-alt fs-base opacity-70 me-2"></i>
+                            HTML
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="preview4" role="tabpanel">
+                    <div class="swap-image my-n4">
+                        <img src="../assets/img/landing/app-showcase-3/integrations/angular-gray.svg" class="swap-from" width="196" alt="Angular">
+                        <div class="swap-to">
+                            <img src="../assets/img/landing/app-showcase-3/integrations/angular-color-light.svg" class="light-mode-img" width="196" alt="Angular">
+                            <img src="../assets/img/landing/app-showcase-3/integrations/angular-color-dark.svg" class="dark-mode-img" width="196" alt="Angular">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane pt-1 fade" id="html4" role="tabpanel">
+                    <pre class="line-numbers"><code class="lang-html">&lt;!-- Image swap on hover --&gt;
+&lt;div class=&quot;swap-image&quot;&gt;
+  &lt;img src=&quot;assets/img/landing/app-showcase-3/integrations/angular-gray.svg&quot; class=&quot;swap-from&quot; width=&quot;196&quot; alt=&quot;Angular&quot;&gt;
+  &lt;div class=&quot;swap-to&quot;&gt;
+    &lt;img src=&quot;assets/img/landing/app-showcase-3/integrations/angular-color-light.svg&quot; class=&quot;light-mode-img&quot; width=&quot;196&quot; alt=&quot;Angular&quot;&gt;
+    &lt;img src=&quot;assets/img/landing/app-showcase-3/integrations/angular-color-dark.svg&quot; class=&quot;dark-mode-img&quot; width=&quot;196&quot; alt=&quot;Angular&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- Jump to anchor navigation -->
+<aside id="jumpToNav" class="side-nav side-nav-end d-none d-xxl-block position-fixed top-0 end-0 vh-100 py-5" style="width: 20rem;">
+    <h3 class="fs-lg mt-5 pt-5">Jump to</h3>
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="#image-shapes" class="nav-link" data-scroll data-scroll-offset="-6">Image shapes</a>
+        </li>
+        <li class="nav-item">
+            <a href="#image-thumbnails" class="nav-link" data-scroll data-scroll-offset="-6">Thumbnails</a>
+        </li>
+        <li class="nav-item">
+            <a href="#image-figures" class="nav-link" data-scroll data-scroll-offset="-6">Figures with caption</a>
+        </li>
+        <li class="nav-item">
+            <a href="#image-swap" class="nav-link" data-scroll data-scroll-offset="-6">Image swap on hover</a>
+        </li>
+    </ul>
+</aside>
