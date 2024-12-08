@@ -1,1 +1,61 @@
-﻿.idea
+﻿# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# ASP.NET
+bin/
+obj/
+**/obj/
+/packages
+**/packages
+*.rsuser
+*.rsuserbin
+*.userprefs
+*.csproj.user
+*.csproj.DotSettings
+*.sln.DotSettings
+
+# Build results
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Cc]ache/
+[Tt]emp/
+*.tmp
+
+# Web files
+**/*.publish.xml
+*.publish.xml
+
+# NuGet
+*.nupkg
+*.nuget
+
+# Include folders a build output in library repositories
+# only if they are meant to be versioned
+#/path/to/lib/
+*.dll
+*.exe
+*.app
+
+# Azure Web Apps
+*.azurewebsites.net
+
+# Database
+*.mdf
+*.ldf
+
+# Rider
+.idea/
+
+# Resharper
+.ReSharper*/
+
+# Uncomment if using Docker
+# **/[sS]ub[dD]irectory/**/.Dockerfile
+# **/[sS]ub[dD]irectory/**/Dockerfile
