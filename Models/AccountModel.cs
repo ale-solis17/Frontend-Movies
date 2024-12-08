@@ -52,5 +52,9 @@ namespace Silicon.Models
             [Compare("Password", ErrorMessage = "Las contraseñas no coinciden")]
             public string ConfirmPassword { get; set; }
         }
+        public class LoginModel
+        {
+
+        }
     }
 }

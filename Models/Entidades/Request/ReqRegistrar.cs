@@ -7,6 +7,6 @@ namespace Silicon.Models.Entidades.Request
 {
     public class ReqRegistrar
     {
-        public Usuario usuario {  get; set; }
+        public Usuario usuario;
     }
 }

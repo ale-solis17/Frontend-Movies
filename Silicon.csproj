@@ -125,9 +125,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\Entidades\Error.cs" />
     <Compile Include="Models\Entidades\Request\ReqLogin.cs" />
     <Compile Include="Models\Entidades\Request\ReqRegistrar.cs" />
     <Compile Include="Models\Entidades\Response\ResBase.cs" />
+    <Compile Include="Models\Entidades\Response\ResLogin.cs" />
     <Compile Include="Models\Entidades\Response\ResRegistrar.cs" />
     <Compile Include="Models\Entidades\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
