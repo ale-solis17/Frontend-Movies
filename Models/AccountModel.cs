@@ -8,16 +8,16 @@ namespace Silicon.Models
 {
     public class AccountModel
     {
-        public RegisterModel Register { get; set; }
-        public LoginModel Login { get; set; } 
+        public signupModel signup { get; set; }
+        public signinModel signin { get; set; } 
 
         public AccountModel() 
         {
-            Register = new RegisterModel(); 
-            Login = new LoginModel();
+            signup = new signupModel(); 
+            signin = new signinModel();
         }
 
-        public class RegisterModel 
+        public class signupModel 
         {
             [Required(ErrorMessage = "Por favor escribe tu nombre!")]
             [Display(Name = "Nombre")]
@@ -52,7 +52,7 @@ namespace Silicon.Models
             [Compare("Password", ErrorMessage = "Las contraseñas no coinciden")]
             public string ConfirmPassword { get; set; }
         }
-        public class LoginModel
+        public class signinModel
         {
             [Required(ErrorMessage = "El correo electrónico es obligatorio")]
             [EmailAddress(ErrorMessage = "El formato del correo electrónico no es válido")]

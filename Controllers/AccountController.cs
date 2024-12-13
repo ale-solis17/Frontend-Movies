@@ -52,7 +52,7 @@ namespace Silicon.Controllers
             return View();
         }
         [System.Web.Mvc.HttpPost]
-        public async Task<ActionResult> Login(AccountModel.RegisterModel model)
+        public async Task<ActionResult> signin(AccountModel.signupModel model)
         {
             if (ModelState.IsValid)
             {
@@ -69,7 +69,7 @@ namespace Silicon.Controllers
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
                     using (HttpClient client = new HttpClient())
                     {
-                        var response = await client.PostAsync("https://localhost:44363/api/usuario/login", jsonContent);
+                        var response = await client.PostAsync("https://localhost:54579/api/usuario/login", jsonContent);
                         if (response.IsSuccessStatusCode)
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
@@ -108,7 +108,7 @@ namespace Silicon.Controllers
                     ModelState.AddModelError("", "Ha ocurrido un error inesperado. Por favor, intente más tarde.");
                 }
             }
-            return View(model);
+            return View();
         }
         [System.Web.Mvc.HttpGet]
         public ActionResult signup()
@@ -117,7 +117,7 @@ namespace Silicon.Controllers
         }
         [System.Web.Mvc.HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(AccountModel.RegisterModel model)
+        public async Task<ActionResult> signup(AccountModel.signupModel model)
         {
             if (ModelState.IsValid)
             {
@@ -136,7 +136,7 @@ namespace Silicon.Controllers
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
                     using (HttpClient client = new HttpClient())
                     {
-                        var response = await client.PostAsync("https://localhost:44363/api/usuario/insertar", jsonContent);
+                        var response = await client.PostAsync("https://localhost:54579/api/usuario/crear", jsonContent);
                         if (response.IsSuccessStatusCode)
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
@@ -147,7 +147,7 @@ namespace Silicon.Controllers
                                 ViewBag.SuccessMessage = "Usuario registrado exitosamente";
                                 ViewBag.ShowSuccess = true;
                                 TempData["SuccessMessage"] = "Registro exitoso. Por favor revise su correo electrónico para confirmar su cuenta.";
-                                return RedirectToAction("Login");
+                                return RedirectToAction("signin");
                             }
                             else
                             {
