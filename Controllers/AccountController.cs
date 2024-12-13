@@ -13,7 +13,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace Silicon.Controllers
-{
+{//Espñana
     public class AccountController : Controller
     {
         // Usa System.Web.Mvc.HttpGetAttribute, no System.Web.Http.HttpGetAttribute
