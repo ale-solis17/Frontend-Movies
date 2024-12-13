@@ -136,7 +136,8 @@ namespace Silicon.Controllers
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
                     using (HttpClient client = new HttpClient())
                     {
-                        var response = await client.PostAsync("https://localhost:54579/api/usuario/crear", jsonContent);
+                        var response = await client.PostAsync("http://localhost:54579/api/usuario/crear", jsonContent);
+                        
                         if (response.IsSuccessStatusCode)
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
