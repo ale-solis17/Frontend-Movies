@@ -131,7 +131,9 @@
     <Compile Include="Models\Entidades\Response\ResBase.cs" />
     <Compile Include="Models\Entidades\Response\ResLogin.cs" />
     <Compile Include="Models\Entidades\Response\ResRegistrar.cs" />
+    <Compile Include="Models\Entidades\Sesion.cs" />
     <Compile Include="Models\Entidades\Usuario.cs" />
+    <Compile Include="Models\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

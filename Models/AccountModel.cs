@@ -54,7 +54,15 @@ namespace Silicon.Models
         }
         public class LoginModel
         {
+            [Required(ErrorMessage = "El correo electrónico es obligatorio")]
+            [EmailAddress(ErrorMessage = "El formato del correo electrónico no es válido")]
+            [Display(Name = "Correo Electrónico")]
+            public string mail { get; set; }
 
+            [Required(ErrorMessage = "La contraseña es obligatoria")]
+            [Display(Name = "Contraseña")]
+            [DataType(DataType.Password)]
+            public string password { get; set; }
         }
     }
 }

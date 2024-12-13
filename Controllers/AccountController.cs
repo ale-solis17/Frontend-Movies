@@ -46,9 +46,69 @@ namespace Silicon.Controllers
         {
             return View();
         }
+        [System.Web.Mvc.HttpGet]
         public ActionResult signin()
         {
             return View();
+        }
+        [System.Web.Mvc.HttpPost]
+        public async Task<ActionResult> Login(AccountModel.RegisterModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    ReqLogin req = new ReqLogin();
+                    req.usuario = new Usuario();
+
+                    req.usuario.name = null;
+                    req.usuario.lastName = null;
+                    req.usuario.mail = model.Email;
+                    req.usuario.password = model.Password;
+
+                    var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
+                    using (HttpClient client = new HttpClient())
+                    {
+                        var response = await client.PostAsync("https://localhost:44363/api/usuario/login", jsonContent);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var responseContent = await response.Content.ReadAsStringAsync();
+                            ResLogin res = new ResLogin();
+                            res.usuario = new Usuario();
+                            res = JsonConvert.DeserializeObject<ResLogin>(responseContent);
+                            if (res.resultado)
+                            {
+
+
+                                Sesion.Id = res.usuario.id;
+                                Sesion.name = res.usuario.name;
+                                Sesion.lastName = res.usuario.lastName;
+                                Sesion.email = model.Email.ToString();
+                                Sesion.fechaDeInicio = DateTime.Now;
+
+                                return RedirectToAction("index", "Dashboard");
+
+                            }
+                            else
+                            {
+                                foreach (var error in res.errores)
+                                {
+                                    ModelState.AddModelError("", error.error);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "Error de comunicación con el servidor. Por favor, intente más tarde.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Ha ocurrido un error inesperado. Por favor, intente más tarde.");
+                }
+            }
+            return View(model);
         }
         [System.Web.Mvc.HttpGet]
         public ActionResult signup()
