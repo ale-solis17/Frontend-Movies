@@ -132,6 +132,7 @@ namespace Silicon.Controllers
                             mail = model.Email,
                             nickname = model.NickName,
                             password = model.Password
+                            //pollo
                         }
                     };
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
