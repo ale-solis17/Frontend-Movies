@@ -119,6 +119,7 @@ namespace Silicon.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> signup(AccountModel.signupModel model)
         {
+            Console.WriteLine("Hola, mundo!");
             if (ModelState.IsValid)
             {
                 try
@@ -130,7 +131,8 @@ namespace Silicon.Controllers
                             name = model.Name,
                             lastName = model.LastName,
                             mail = model.Email,
-                            password = model.Password
+                            password = model.Password,
+                            nickname = model.NickName
                         }
                     };
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
