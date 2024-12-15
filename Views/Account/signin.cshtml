@@ -51,20 +51,20 @@
         <div class="w-100 align-self-end pt-1 pt-md-4 pb-4" style="max-width: 526px;">
             <h1 class="text-center text-xl-start">Bienvenido</h1>
             <p class="text-center text-xl-start pb-3 mb-3">No tienes una cuenta todavia? <a href="account-signup.html">Registrar.</a></p>
-            <form class="needs-validation mb-2" novalidate>
+            @using (Html.BeginForm("signin", "Account", FormMethod.Post, new { id = "loginForm" }))
+            {
+                @Html.AntiForgeryToken()
                 <div class="position-relative mb-4">
                     @Html.LabelFor(model => model.mail, new { @class = "form-label" })
                     @Html.TextBoxFor(model => model.mail, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.mail, "", new { @class = "text-danger" })
                 </div>
                 <div class="mb-4">
-                    <label for="password" class="form-label fs-base">Contraseña</label>
                     <div class="password-toggle">
-                        <input type="password" id="password" class="form-control form-control-lg" required>
-                        <label class="password-toggle-btn" aria-label="Show/hide password">
-                            <input class="password-toggle-check" type="checkbox">
-                            <span class="password-toggle-indicator"></span>
-                        </label>
+                        @Html.LabelFor(model => model.password, new { @class = "form-label" })
+                        @Html.PasswordFor(model => model.password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                        <span class="password-toggle-indicator"></span>
                         <div class="invalid-feedback position-absolute start-0 top-100">Please enter your password!</div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary shadow-primary btn-lg w-100">Sign in</button>
-            </form>
+            }
             <a href="#" class="btn btn-link btn-lg w-100">Forgot your password?</a>
             <hr class="my-4">
             <h6 class="text-center mb-4">Or sign in with your social network</h6>

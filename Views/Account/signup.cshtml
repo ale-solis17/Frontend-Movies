@@ -39,7 +39,7 @@
     <!-- Sign up form -->
     <div class="container d-flex flex-wrap justify-content-center justify-content-xl-start h-100 pt-5">
         <div class="w-100 align-self-end pt-1 pt-md-4 pb-4" style="max-width: 526px;">
-            <h1 class="text-center text-xl-start">Create Account</h1>
+            <h1 class="text-center text-xl-start">Crear Cuenta</h1>
             @if (ViewBag.ShowSuccess == true)
             {
                 <div class="alert d-flex alert-success" role="alert">
@@ -55,11 +55,11 @@
                     @Html.ValidationSummary(false)
                 </div>
             }
-            <p class="text-center text-xl-start pb-3 mb-3">Already have an account? <a href="/account/signin">Sign in here.</a></p>
-        @using (Html.BeginForm("signup", "Account", FormMethod.Post, new { id = "loginForm" }))
-        {
-            @Html.AntiForgeryToken()
-               <div class="row">
+            <p class="text-center text-xl-start pb-3 mb-3">Ya tienes una cuenta? <a href="/account/signin">Ingresar.</a></p>
+            @using (Html.BeginForm("signup", "Account", FormMethod.Post, new { id = "loginForm" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="row">
                     <div class="col-sm-6">
                         <div class="position-relative mb-4">
                             @Html.LabelFor(m => m.Name)

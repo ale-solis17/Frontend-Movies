@@ -78,15 +78,15 @@ namespace Silicon.Controllers
                             res = JsonConvert.DeserializeObject<ResLogin>(responseContent);
                             if (res.resultado)
                             {
-
-
+                                Console.WriteLine("Hola");
+                                
                                 Sesion.Id = res.usuario.id;
                                 Sesion.name = res.usuario.name;
                                 Sesion.lastName = res.usuario.lastName;
                                 Sesion.email = model.Email.ToString();
                                 Sesion.fechaDeInicio = DateTime.Now;
 
-                                return RedirectToAction("index", "Dashboard");
+                                return RedirectToAction("blog", "Landing");
 
                             }
                             else
@@ -119,7 +119,6 @@ namespace Silicon.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> signup(AccountModel.signupModel model)
         {
-            Console.WriteLine("Hola, mundo!");
             if (ModelState.IsValid)
             {
                 try
@@ -131,8 +130,9 @@ namespace Silicon.Controllers
                             name = model.Name,
                             lastName = model.LastName,
                             mail = model.Email,
-                            password = model.Password,
-                            nickname = model.NickName
+                            nickname = model.NickName,
+                            password = model.Password
+                            
                         }
                     };
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
@@ -149,7 +149,6 @@ namespace Silicon.Controllers
                                 // En lugar de redireccionar, mostramos el mensaje de éxito
                                 ViewBag.SuccessMessage = "Usuario registrado exitosamente";
                                 ViewBag.ShowSuccess = true;
-                                TempData["SuccessMessage"] = "Registro exitoso. Por favor revise su correo electrónico para confirmar su cuenta.";
                                 return RedirectToAction("signin");
                             }
                             else
