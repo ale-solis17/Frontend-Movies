@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Silicon.Models
 {
-    public class BlogModel
+    public class Blog
     {
         public ComentarioModel Comentario { get; set; }
 
-        public BlogModel()
+        public Blog()
         {
             Comentario = new ComentarioModel();
         }

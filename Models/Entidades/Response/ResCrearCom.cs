@@ -5,8 +5,7 @@ using System.Web;
 
 namespace Silicon.Models.Entidades
 {
-    public class ReqRegistrar
+    public class ResCrearCom : ResBase
     {
-        public Usuario usuario;
     }
 }

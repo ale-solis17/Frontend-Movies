@@ -5,8 +5,8 @@ using System.Web;
 
 namespace Silicon.Models.Entidades
 {
-    public class ReqRegistrar
+    public class ReqCrearCom
     {
-        public Usuario usuario;
+        public Comentario comentario;
     }
 }

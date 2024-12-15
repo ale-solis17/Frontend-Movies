@@ -1,4 +1,4 @@
-﻿namespace Silicon.Models.Entidades.Request
+﻿namespace Silicon.Models.Entidades
 {
     public class ReqLogin
     {

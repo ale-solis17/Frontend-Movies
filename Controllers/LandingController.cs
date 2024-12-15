@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Silicon.Models.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,7 @@ namespace Silicon.Controllers
         // GET: Landing
         public ActionResult blog()
         {
-            return View();
+                return View();
         }
         public ActionResult conference()
         {
