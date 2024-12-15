@@ -11,7 +11,6 @@ namespace Silicon.Models.Entidades
         public static string name { get; set; }
         public static string lastName { get; set; }
         public static string email { get; set; }
-        public static string password { get; set; }
 
         public static DateTime ultimaAccion { get; set; }
         public static DateTime fechaDeInicio { get; set; }
@@ -31,7 +30,6 @@ namespace Silicon.Models.Entidades
             Sesion.name = null;
             Sesion.lastName = null;
             Sesion.email = null;
-            Sesion.password = null;
         }
     }
 }

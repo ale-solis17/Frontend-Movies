@@ -78,15 +78,15 @@ namespace Silicon.Controllers
                             res = JsonConvert.DeserializeObject<ResLogin>(responseContent);
                             if (res.resultado)
                             {
-
-
+                                Console.WriteLine("Hola");
+                                
                                 Sesion.Id = res.usuario.id;
                                 Sesion.name = res.usuario.name;
                                 Sesion.lastName = res.usuario.lastName;
                                 Sesion.email = model.Email.ToString();
                                 Sesion.fechaDeInicio = DateTime.Now;
 
-                                return RedirectToAction("index", "Dashboard");
+                                return RedirectToAction("blog", "Landing");
 
                             }
                             else
@@ -132,7 +132,7 @@ namespace Silicon.Controllers
                             mail = model.Email,
                             nickname = model.NickName,
                             password = model.Password
-                            //pollo
+                            
                         }
                     };
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
