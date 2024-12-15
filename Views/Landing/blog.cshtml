@@ -5,6 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
+
+
 @section styles{
 
 
@@ -15,8 +18,8 @@
 <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
     <div class="container px-3">
         <a href="/" class="navbar-brand pe-3">
-            <img src="~/assets/img/logo.svg" width="47" alt="Silicon">
-            Silicon
+            <img src="~/assets/img/logoo.jpg" width="47" alt="Silicon">
+            ¡Alerta De Spoiler!
         </a>
         <div id="navbarNav" class="offcanvas offcanvas-end">
             <div class="offcanvas-header border-bottom">
@@ -26,12 +29,7 @@
             <div class="offcanvas-body">
                 @Html.Partial("~/Views/Shared/header.cshtml")
             </div>
-            <div class="offcanvas-header border-top">
-                <a href="#!" class="btn btn-primary w-100" target="_blank" rel="noopener">
-                    <i class="bx bx-cart fs-4 lh-1 me-1"></i>
-                    &nbsp;Buy now
-                </a>
-            </div>
+
         </div>
         <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
             <input type="checkbox" class="form-check-input" id="theme-mode">
@@ -41,10 +39,6 @@
         <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="#!" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
-            <i class="bx bx-cart fs-5 lh-1 me-1"></i>
-            &nbsp;Buy now
-        </a>
     </div>
 </header>
 
@@ -65,7 +59,7 @@
                 <li class="breadcrumb-item">
                     <a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Blog Homepage</li>
+                <li class="breadcrumb-item active" aria-current="page">Reviews</li>
             </ol>
         </nav>
 
@@ -74,34 +68,21 @@
             <div class="col-lg-6 col-md-7 pb-3 pb-md-0 mb-4 mb-md-5">
                 <div class="mb-3 fs-lg text-light">
                     <img src="~/assets/img/blog/flame.svg" width="24" alt="Flame icon" class="mt-n1 me-1">
-                    Hot Topic
+                    ¡Nuevo estreno!
                 </div>
-                <h1 class="display-5 pb-md-3">This Long-Awaited Technology May Finally Change the World</h1>
+                <h1 class="display-5 pb-md-3">¡Vive la magia, intriga y amistad en Wicked, el musical que redefine la historia de Oz!</h1>
                 <div class="d-flex flex-wrap mb-md-5 mb-4 pb-md-2 text-white">
                     <div class="border-end border-light h-100 mb-2 pe-3 me-3">
-                        <span class="badge bg-faded-light fs-base">Technology</span>
-                    </div>
-                    <div class="border-end border-light mb-2 pe-3 me-3 opacity-70">12 hours ago</div>
-                    <div class="d-flex align-items-center mb-2 text-nowrap">
-                        <div class="d-flex align-items-center me-3 opacity-70">
-                            <i class="bx bx-like fs-lg me-1"></i>
-                            <span class="fs-sm">8</span>
-                        </div>
-                        <div class="d-flex align-items-center me-3 opacity-70">
-                            <i class="bx bx-comment fs-lg me-1"></i>
-                            <span class="fs-sm">4</span>
-                        </div>
-                        <div class="d-flex align-items-center opacity-70">
-                            <i class="bx bx-share-alt fs-lg me-1"></i>
-                            <span class="fs-sm">2</span>
-                        </div>
+                        <span class="badge bg-faded-light fs-base">Musical</span>
                     </div>
                 </div>
                 <a href="/blog/blogsingle" class="btn btn-lg btn-primary">
-                    Read article
+                    Agregar comentario
                     <i class="bx bx-right-arrow-alt ms-2 me-n1 lead"></i>
                 </a>
             </div>
+
+
 
             <!-- Articles slider -->
             <div class="col-lg-4 offset-lg-2 col-md-5">
@@ -122,29 +103,6 @@
                                 <!-- Article -->
                                 <div class="col">
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Digital</a>
-                                                <span class="fs-sm text-muted">1 day ago</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">Mobile App Generates Data for the Energy Management</a>
-                                            </h3>
-                                        </div>
-                                        <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">8</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">4</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">2</span>
-                                            </div>
-                                        </div>
                                     </article>
                                 </div>
 
@@ -153,11 +111,11 @@
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
                                         <div class="card-body pb-0">
                                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Business</a>
+                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Acción</a>
                                                 <span class="fs-sm text-muted">May 24, 2023</span>
                                             </div>
                                             <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">How the Millennial Lifestyle Changes as Service Prices Rise</a>
+                                                <a href="/blog/blogsingle" class="stretched-link">¡La pareja más explosiva del cómic está de vuelta! Deadpool y Wolverine: acción, humor y caos en su máxima expresión.</a>
                                             </h3>
                                         </div>
                                         <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
@@ -182,11 +140,11 @@
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
                                         <div class="card-body pb-0">
                                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Digital</a>
+                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Drama</a>
                                                 <span class="fs-sm text-muted">May 25, 2023</span>
                                             </div>
                                             <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">Inclusive Marketing: Why and How Does it Work?</a>
+                                                <a href="/blog/blogsingle" class="stretched-link">Gladiador: La lucha por la justicia y la venganza se desatan en la antigua Roma. Un hombre, un imperio, una batalla épica. </a>
                                             </h3>
                                         </div>
                                         <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
@@ -197,93 +155,6 @@
                                             <div class="d-flex align-items-center me-3">
                                                 <i class="bx bx-comment fs-lg me-1"></i>
                                                 <span class="fs-sm">0</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">2</span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <!-- Article -->
-                                <div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Technology</a>
-                                                <span class="fs-sm text-muted">May 26, 2023</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">A Study on Smartwatch Design Qualities and People’s Preferences</a>
-                                            </h3>
-                                        </div>
-                                        <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">7</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">4</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">1</span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <!-- Article -->
-                                <div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Startups</a>
-                                                <span class="fs-sm text-muted">May 27, 2023</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">Why UX Design Matters and How it Affects Ranking</a>
-                                            </h3>
-                                        </div>
-                                        <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">5</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">3</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">9</span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <!-- Article -->
-                                <div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Web</a>
-                                                <span class="fs-sm text-muted">May 28, 2023</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">This Week in Search: New Limits and Exciting Features</a>
-                                            </h3>
-                                        </div>
-                                        <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">3</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">5</span>
                                             </div>
                                             <div class="d-flex align-items-center">
                                                 <i class="bx bx-share-alt fs-lg me-1"></i>
@@ -303,10 +174,10 @@
 </section>
 
 
-<!-- Popular posts (Carousel) -->
+<!-- Reseñas recientes -->
 <section class="bg-secondary py-5 mb-lg-5">
     <div class="container pt-2 pt-lg-4 pt-xl-5">
-        <h2 class="h1 mb-4 pb-lg-3 pt-lg-1 pb-1 text-center">Popular Posts</h2>
+        <h2 class="h1 mb-4 pb-lg-3 pt-lg-1 pb-1 text-center">Reseñas Recientes</h2>
     </div>
     <div class="pb-lg-5 mb-xl-3">
         <div class="swiper" data-swiper-options='{
@@ -540,36 +411,42 @@
 
 <!-- Latest posts -->
 <section class="container mb-5 pt-5 pb-lg-5">
-    <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Latest Posts</h2>
+    <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Temas</h2>
 
     <!-- Category tabs -->
     <ul class="nav nav-tabs justify-content-center mb-lg-5 mb-4 pb-lg-2">
         <li class="nav-item">
-            <a href="#" class="nav-link active">All Topics</a>
+            <a href="#" class="nav-link active">Todos los géneros</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Digital</a>
+            <a href="#" class="nav-link">Terror</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Marketing</a>
+            <a href="#" class="nav-link">Comedia</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Success Stories</a>
+            <a href="#" class="nav-link">Romance</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Startups</a>
+            <a href="#" class="nav-link">Musical</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Events</a>
+            <a href="#" class="nav-link">Acción</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Technology</a>
+            <a href="#" class="nav-link">Aventura</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Business</a>
+            <a href="#" class="nav-link">Drama</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Processes &amp; Tools</a>
+            <a href="#" class="nav-link">Fantasía</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Ciencia Ficción</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Suspenso</a>>
         </li>
     </ul>
 
@@ -579,7 +456,7 @@
         <!-- Blog item -->
         <article class="card border-0 shadow-sm overflow-hidden mb-4">
             <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/01.jpg); min-height: 15rem;">
+                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/01.jpg'); min-height: 15rem;">
                     <a href="/blog/blogsingle" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
                     <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
                         <i class="bx bx-bookmark"></i>
@@ -624,7 +501,7 @@
         <!-- Article -->
         <article class="card border-0 shadow-sm overflow-hidden mb-4">
             <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/06.jpg); min-height: 15rem;">
+                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/06.jpg'); min-height: 15rem;">
                     <a href="/blog/blogsingle" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
                     <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
                         <i class="bx bx-bookmark"></i>
@@ -666,300 +543,203 @@
             </div>
         </article>
 
-        <!-- Article -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-            <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/05.jpg); min-height: 15rem;">
-                    <a href="/blog/blogsingle" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                    <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
-                        <i class="bx bx-bookmark"></i>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Digital</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">Oct 9, 2023</span>
-                        </div>
-                        <h3 class="h4">
-                            <a href="/blog/blogsingle">Inclusive Marketing: Why and How Does it Work?</a>
-                        </h3>
-                        <p>Nunc aliquet scelerisque pellentesque imperdiet tortor elit, dictum. Tristique odio at dignissim viverra aliquet eleifend erat. Tellus, at arcu, egestas praesent. Varius aliquet pharetra adipiscing tincidunt orci nec neque.</p>
-                        <hr class="my-4">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                                <img src="~/assets/img/avatar/04.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                                Jane Cooper
-                            </a>
-                            <div class="d-flex align-items-center text-muted">
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-like fs-lg me-1"></i>
-                                    <span class="fs-sm">5</span>
-                                </div>
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-comment fs-lg me-1"></i>
-                                    <span class="fs-sm">0</span>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bx-share-alt fs-lg me-1"></i>
-                                    <span class="fs-sm">2</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
 
-        <!-- Article -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-            <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/09.jpg); min-height: 15rem;">
-                    <a href="/blog/blogsingle" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                    <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
-                        <i class="bx bx-bookmark"></i>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Strategy</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2023</span>
-                        </div>
-                        <h3 class="h4">
-                            <a href="/blog/blogsingle">This Long-Awaited Technology May Finally Change the World</a>
-                        </h3>
-                        <p>Sapien, nulla placerat in at. Vitae tincidunt quam ornare massa porttitor. Neque a vitae feugiat in sit habitant integer. Cursus et at pulvinar sed neque vitae. Aliquam vitae hac phasellus purus lectus facilisi. Vitae vel ac quam.</p>
-                        <hr class="my-4">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                                <img src="~/assets/img/avatar/02.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                                Ralph Edwards
-                            </a>
-                            <div class="d-flex align-items-center text-muted">
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-like fs-lg me-1"></i>
-                                    <span class="fs-sm">8</span>
-                                </div>
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-comment fs-lg me-1"></i>
-                                    <span class="fs-sm">7</span>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bx-share-alt fs-lg me-1"></i>
-                                    <span class="fs-sm">4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
     </div>
 
     <!-- Load more btn -->
-    <a href="#" class="btn btn-lg btn-outline-primary w-100">
-        <i class="bx bx-down-arrow-alt me-2 lh-1 lead"></i>
-        Show more
+    <a href="#" class="btn btn-lg btn-secondary w-100">
+        Agregar Reseña
     </a>
 </section>
 
 
 <!-- Latest podcasts -->
-<section class="container mb-5 pt-3 pb-lg-5">
+<!--<section class="container mb-5 pt-3 pb-lg-5">
     <div class="row">
         <div class="col-xl-3">
             <div class="d-xl-block d-flex align-items-center justify-content-between mb-xl-0 mb-4 pb-xl-0 pb-3">
                 <h2 class="h1 mb-xl-4 mb-0 pb-xl-3">Latest Podcasts</h2>
                 <a href="#" class="btn btn-primary ms-xl-0 ms-4">All podcasts</a>
             </div>
+        </div>-->
+<!-- Carousel -->
+<!--<div class="col-xl-9">
+    <div class="swiper" data-swiper-options='{
+      "slidesPerView": 1,
+      "spaceBetween": 24,
+      "loop": true,
+      "pagination": {
+        "el": ".swiper-pagination",
+        "clickable": true
+      },
+      "breakpoints": {
+        "576": {
+          "slidesPerView": 2
+        },
+        "768": {
+          "slidesPerView": 3
+        },
+        "1000": {
+          "slidesPerView": 3
+        }
+      }
+    }'>
+        <div class="swiper-wrapper">-->
+<!-- Item -->
+<!--<article class="swiper-slide h-auto pb-3">
+    <div class="d-block position-relative rounded-3 mb-3">
+        <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Read later">
+            <i class="bx bx-bookmark"></i>
+        </a>
+        <img src="~/assets/img/avatar/06.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
+        <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:25:43</span>
+        <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
+        <img src="~/assets/img/blog/podcasts/04.jpg" class="rounded-3" alt="Image">
+    </div>
+    <div class="d-flex align-items-center mb-2">
+        <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Digital</a>
+        <span class="fs-sm text-muted border-start ps-3 ms-3">2 hours ago</span>
+    </div>
+    <h3 class="h5">
+        <a href="/blog/podcast">IOS and the Changing landscape of Data Privacy</a>
+    </h3>
+    <div class="d-flex align-items-center text-muted">
+        <div class="d-flex align-items-center me-3">
+            <i class="bx bx-like fs-lg me-1"></i>
+            <span class="fs-sm">4</span>
         </div>
-
-        <!-- Carousel -->
-        <div class="col-xl-9">
-            <div class="swiper" data-swiper-options='{
-              "slidesPerView": 1,
-              "spaceBetween": 24,
-              "loop": true,
-              "pagination": {
-                "el": ".swiper-pagination",
-                "clickable": true
-              },
-              "breakpoints": {
-                "576": {
-                  "slidesPerView": 2
-                },
-                "768": {
-                  "slidesPerView": 3
-                },
-                "1000": {
-                  "slidesPerView": 3
-                }
-              }
-            }'>
-                <div class="swiper-wrapper">
-
-                    <!-- Item -->
-                    <article class="swiper-slide h-auto pb-3">
-                        <div class="d-block position-relative rounded-3 mb-3">
-                            <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Read later">
-                                <i class="bx bx-bookmark"></i>
-                            </a>
-                            <img src="~/assets/img/avatar/06.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
-                            <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:25:43</span>
-                            <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
-                            <img src="~/assets/img/blog/podcasts/04.jpg" class="rounded-3" alt="Image">
-                        </div>
-                        <div class="d-flex align-items-center mb-2">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Digital</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">2 hours ago</span>
-                        </div>
-                        <h3 class="h5">
-                            <a href="/blog/podcast">IOS and the Changing landscape of Data Privacy</a>
-                        </h3>
-                        <div class="d-flex align-items-center text-muted">
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bx bx-like fs-lg me-1"></i>
-                                <span class="fs-sm">4</span>
-                            </div>
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bx bx-comment fs-lg me-1"></i>
-                                <span class="fs-sm">2</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                <span class="fs-sm">0</span>
-                            </div>
-                        </div>
-                        <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                            <i class="bx bx-play-circle fs-lg me-2"></i>
-                            Listen now
-                        </a>
-                    </article>
-
-                    <!-- Item -->
-                    <article class="swiper-slide h-auto pb-3">
-                        <div class="d-block position-relative rounded-3 mb-3">
-                            <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Read later">
-                                <i class="bx bx-bookmark"></i>
-                            </a>
-                            <img src="~/assets/img/avatar/05.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
-                            <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">1:12:05</span>
-                            <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
-                            <img src="~/assets/img/blog/podcasts/05.jpg" class="rounded-3" alt="Image">
-                        </div>
-                        <div class="d-flex align-items-center mb-2">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Processes &amp; Tools</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">10 hours ago</span>
-                        </div>
-                        <h3 class="h5">
-                            <a href="/blog/podcast">Behavioral Science and Digital Marketing</a>
-                        </h3>
-                        <div class="d-flex align-items-center text-muted">
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bx bx-like fs-lg me-1"></i>
-                                <span class="fs-sm">9</span>
-                            </div>
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bx bx-comment fs-lg me-1"></i>
-                                <span class="fs-sm">5</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                <span class="fs-sm">6</span>
-                            </div>
-                        </div>
-                        <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                            <i class="bx bx-play-circle fs-lg me-2"></i>
-                            Listen now
-                        </a>
-                    </article>
-
-                    <!-- Item -->
-                    <article class="swiper-slide h-auto pb-3">
-                        <div class="d-block position-relative rounded-3 mb-3">
-                            <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Read later">
-                                <i class="bx bx-bookmark"></i>
-                            </a>
-                            <img src="~/assets/img/avatar/01.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
-                            <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:32:15</span>
-                            <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
-                            <img src="~/assets/img/blog/podcasts/02.jpg" class="rounded-3" alt="Image">
-                        </div>
-                        <div class="d-flex align-items-center mb-2">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Technology</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">10 hours ago</span>
-                        </div>
-                        <h3 class="h5">
-                            <a href="/blog/podcast">Why You Should Care About Your Competitors</a>
-                        </h3>
-                        <div class="d-flex align-items-center text-muted">
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bx bx-like fs-lg me-1"></i>
-                                <span class="fs-sm">45</span>
-                            </div>
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bx bx-comment fs-lg me-1"></i>
-                                <span class="fs-sm">12</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                <span class="fs-sm">6</span>
-                            </div>
-                        </div>
-                        <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                            <i class="bx bx-play-circle fs-lg me-2"></i>
-                            Listen now
-                        </a>
-                    </article>
-
-                    <!-- Item -->
-                    <article class="swiper-slide h-auto pb-3">
-                        <div class="d-block position-relative rounded-3 mb-3">
-                            <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Read later">
-                                <i class="bx bx-bookmark"></i>
-                            </a>
-                            <img src="~/assets/img/avatar/04.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
-                            <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:48:02</span>
-                            <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
-                            <img src="~/assets/img/blog/podcasts/03.jpg" class="rounded-3" alt="Image">
-                        </div>
-                        <div class="d-flex align-items-center mb-2">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Marketing</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">1 day ago</span>
-                        </div>
-                        <h3 class="h5">
-                            <a href="/blog/podcast">Tips for Marketing Managers: How to Maximise Leads</a>
-                        </h3>
-                        <div class="d-flex align-items-center text-muted">
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bx bx-like fs-lg me-1"></i>
-                                <span class="fs-sm">10</span>
-                            </div>
-                            <div class="d-flex align-items-center me-3">
-                                <i class="bx bx-comment fs-lg me-1"></i>
-                                <span class="fs-sm">4</span>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                <span class="fs-sm">6</span>
-                            </div>
-                        </div>
-                        <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                            <i class="bx bx-play-circle fs-lg me-2"></i>
-                            Listen now
-                        </a>
-                    </article>
-                </div>
-
-                <!-- Pagination (bullets) -->
-                <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+        <div class="d-flex align-items-center me-3">
+            <i class="bx bx-comment fs-lg me-1"></i>
+            <span class="fs-sm">2</span>
+        </div>
+        <div class="d-flex align-items-center">
+            <i class="bx bx-share-alt fs-lg me-1"></i>
+            <span class="fs-sm">0</span>
+        </div>
+    </div>
+    <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
+        <i class="bx bx-play-circle fs-lg me-2"></i>
+        Listen now
+    </a>
+</article>-->
+<!-- Item -->
+<!--<article class="swiper-slide h-auto pb-3">
+    <div class="d-block position-relative rounded-3 mb-3">
+        <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Read later">
+            <i class="bx bx-bookmark"></i>
+        </a>
+        <img src="~/assets/img/avatar/05.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
+        <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">1:12:05</span>
+        <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
+        <img src="~/assets/img/blog/podcasts/05.jpg" class="rounded-3" alt="Image">
+    </div>
+    <div class="d-flex align-items-center mb-2">
+        <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Processes &amp; Tools</a>
+        <span class="fs-sm text-muted border-start ps-3 ms-3">10 hours ago</span>
+    </div>
+    <h3 class="h5">
+        <a href="/blog/podcast">Behavioral Science and Digital Marketing</a>
+    </h3>
+    <div class="d-flex align-items-center text-muted">
+        <div class="d-flex align-items-center me-3">
+            <i class="bx bx-like fs-lg me-1"></i>
+            <span class="fs-sm">9</span>
+        </div>
+        <div class="d-flex align-items-center me-3">
+            <i class="bx bx-comment fs-lg me-1"></i>
+            <span class="fs-sm">5</span>
+        </div>
+        <div class="d-flex align-items-center">
+            <i class="bx bx-share-alt fs-lg me-1"></i>
+            <span class="fs-sm">6</span>
+        </div>
+    </div>
+    <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
+        <i class="bx bx-play-circle fs-lg me-2"></i>
+        Listen now
+    </a>
+</article>-->
+<!-- Item -->
+<!--<article class="swiper-slide h-auto pb-3">
+    <div class="d-block position-relative rounded-3 mb-3">
+        <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Read later">
+            <i class="bx bx-bookmark"></i>
+        </a>
+        <img src="~/assets/img/avatar/01.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
+        <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:32:15</span>
+        <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
+        <img src="~/assets/img/blog/podcasts/02.jpg" class="rounded-3" alt="Image">
+    </div>
+    <div class="d-flex align-items-center mb-2">
+        <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Technology</a>
+        <span class="fs-sm text-muted border-start ps-3 ms-3">10 hours ago</span>
+    </div>
+    <h3 class="h5">
+        <a href="/blog/podcast">Why You Should Care About Your Competitors</a>
+    </h3>
+    <div class="d-flex align-items-center text-muted">
+        <div class="d-flex align-items-center me-3">
+            <i class="bx bx-like fs-lg me-1"></i>
+            <span class="fs-sm">45</span>
+        </div>
+        <div class="d-flex align-items-center me-3">
+            <i class="bx bx-comment fs-lg me-1"></i>
+            <span class="fs-sm">12</span>
+        </div>
+        <div class="d-flex align-items-center">
+            <i class="bx bx-share-alt fs-lg me-1"></i>
+            <span class="fs-sm">6</span>
+        </div>
+    </div>
+    <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
+        <i class="bx bx-play-circle fs-lg me-2"></i>
+        Listen now
+    </a>
+</article>-->
+<!-- Item -->
+<!--<article class="swiper-slide h-auto pb-3">
+        <div class="d-block position-relative rounded-3 mb-3">
+            <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Read later">
+                <i class="bx bx-bookmark"></i>
+            </a>
+            <img src="~/assets/img/avatar/04.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
+            <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:48:02</span>
+            <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
+            <img src="~/assets/img/blog/podcasts/03.jpg" class="rounded-3" alt="Image">
+        </div>
+        <div class="d-flex align-items-center mb-2">
+            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Marketing</a>
+            <span class="fs-sm text-muted border-start ps-3 ms-3">1 day ago</span>
+        </div>
+        <h3 class="h5">
+            <a href="/blog/podcast">Tips for Marketing Managers: How to Maximise Leads</a>
+        </h3>
+        <div class="d-flex align-items-center text-muted">
+            <div class="d-flex align-items-center me-3">
+                <i class="bx bx-like fs-lg me-1"></i>
+                <span class="fs-sm">10</span>
+            </div>
+            <div class="d-flex align-items-center me-3">
+                <i class="bx bx-comment fs-lg me-1"></i>
+                <span class="fs-sm">4</span>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="bx bx-share-alt fs-lg me-1"></i>
+                <span class="fs-sm">6</span>
+            </div>
+        </div>
+        <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
+            <i class="bx bx-play-circle fs-lg me-2"></i>
+            Listen now
+        </a>
+    </article>
+</div>-->
+<!-- Pagination (bullets) -->
+<!--<div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
             </div>
         </div>
     </div>
-</section>
-
-
+</section>-->
 <!-- Subscription CTA -->
 <section class="py-5 bg-secondary">
     <div class="container py-md-3 py-lg-5">
