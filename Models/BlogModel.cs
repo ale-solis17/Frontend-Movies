@@ -50,7 +50,7 @@ namespace Silicon.Models
             [Display(Name = "Fecha de Publicación")]
             [DataType(DataType.DateTime)]
             //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-            public System.DateTime PublicationDate { get; set; };
+            public System.DateTime PublicationDate { get; set; }
         }
     }
 }
