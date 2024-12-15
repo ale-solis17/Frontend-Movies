@@ -1,12 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using static Silicon.Models.AccountModel;
-using System.Web.UI.WebControls;
-using System.Web.Mvc;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Silicon.Models
@@ -44,13 +36,11 @@ namespace Silicon.Models
             [Required(ErrorMessage = "Debes estar registrado para dejar un comentario.")]
             [Display(Name = "ID de Usuario")]
             public int UserId { get; set; }
-
-
-
+            
             [Display(Name = "Fecha de Publicación")]
             [DataType(DataType.DateTime)]
             //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-            public System.DateTime PublicationDate { get; set; };
+            public System.DateTime PublicationDate { get; set; }
         }
     }
 }
