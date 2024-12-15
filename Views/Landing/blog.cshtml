@@ -1,12 +1,11 @@
-﻿
+﻿@model Silicon.Models.
+
 @{
     ViewBag.Title = "blog";
     ViewBag.ActiveItem = "landing";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 @section styles{
-
 
     <link rel="stylesheet" media="screen" href="~/assets/vendor/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" media="screen" href="~/assets/vendor/swiper/swiper-bundle.min.css">
@@ -65,7 +64,7 @@
                 <li class="breadcrumb-item">
                     <a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Blog Homepage</li>
+                <li class="breadcrumb-item active" aria-current="page">Reviews</li>
             </ol>
         </nav>
 
@@ -74,34 +73,21 @@
             <div class="col-lg-6 col-md-7 pb-3 pb-md-0 mb-4 mb-md-5">
                 <div class="mb-3 fs-lg text-light">
                     <img src="~/assets/img/blog/flame.svg" width="24" alt="Flame icon" class="mt-n1 me-1">
-                    Hot Topic
+                    ¡Nuevo estreno!
                 </div>
-                <h1 class="display-5 pb-md-3">This Long-Awaited Technology May Finally Change the World</h1>
+                <h1 class="display-5 pb-md-3">¡Vive la magia, intriga y amistad en Wicked, el musical que redefine la historia de Oz!</h1>
                 <div class="d-flex flex-wrap mb-md-5 mb-4 pb-md-2 text-white">
                     <div class="border-end border-light h-100 mb-2 pe-3 me-3">
-                        <span class="badge bg-faded-light fs-base">Technology</span>
-                    </div>
-                    <div class="border-end border-light mb-2 pe-3 me-3 opacity-70">12 hours ago</div>
-                    <div class="d-flex align-items-center mb-2 text-nowrap">
-                        <div class="d-flex align-items-center me-3 opacity-70">
-                            <i class="bx bx-like fs-lg me-1"></i>
-                            <span class="fs-sm">8</span>
-                        </div>
-                        <div class="d-flex align-items-center me-3 opacity-70">
-                            <i class="bx bx-comment fs-lg me-1"></i>
-                            <span class="fs-sm">4</span>
-                        </div>
-                        <div class="d-flex align-items-center opacity-70">
-                            <i class="bx bx-share-alt fs-lg me-1"></i>
-                            <span class="fs-sm">2</span>
-                        </div>
+                        <span class="badge bg-faded-light fs-base">Musical</span>
                     </div>
                 </div>
                 <a href="/blog/blogsingle" class="btn btn-lg btn-primary">
-                    Read article
+                    Agregar reseña
                     <i class="bx bx-right-arrow-alt ms-2 me-n1 lead"></i>
                 </a>
             </div>
+
+
 
             <!-- Articles slider -->
             <div class="col-lg-4 offset-lg-2 col-md-5">
@@ -122,29 +108,6 @@
                                 <!-- Article -->
                                 <div class="col">
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Digital</a>
-                                                <span class="fs-sm text-muted">1 day ago</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">Mobile App Generates Data for the Energy Management</a>
-                                            </h3>
-                                        </div>
-                                        <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">8</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">4</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">2</span>
-                                            </div>
-                                        </div>
                                     </article>
                                 </div>
 
@@ -153,11 +116,11 @@
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
                                         <div class="card-body pb-0">
                                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Business</a>
+                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Acción</a>
                                                 <span class="fs-sm text-muted">May 24, 2023</span>
                                             </div>
                                             <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">How the Millennial Lifestyle Changes as Service Prices Rise</a>
+                                                <a href="/blog/blogsingle" class="stretched-link">¡La pareja más explosiva del cómic está de vuelta! Deadpool y Wolverine: acción, humor y caos en su máxima expresión.</a>
                                             </h3>
                                         </div>
                                         <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
@@ -182,11 +145,11 @@
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
                                         <div class="card-body pb-0">
                                             <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Digital</a>
+                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Drama</a>
                                                 <span class="fs-sm text-muted">May 25, 2023</span>
                                             </div>
                                             <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">Inclusive Marketing: Why and How Does it Work?</a>
+                                                <a href="/blog/blogsingle" class="stretched-link">Gladiador: La lucha por la justicia y la venganza se desatan en la antigua Roma. Un hombre, un imperio, una batalla épica. </a>
                                             </h3>
                                         </div>
                                         <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
@@ -197,93 +160,6 @@
                                             <div class="d-flex align-items-center me-3">
                                                 <i class="bx bx-comment fs-lg me-1"></i>
                                                 <span class="fs-sm">0</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">2</span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <!-- Article -->
-                                <div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Technology</a>
-                                                <span class="fs-sm text-muted">May 26, 2023</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">A Study on Smartwatch Design Qualities and People’s Preferences</a>
-                                            </h3>
-                                        </div>
-                                        <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">7</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">4</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">1</span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <!-- Article -->
-                                <div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Startups</a>
-                                                <span class="fs-sm text-muted">May 27, 2023</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">Why UX Design Matters and How it Affects Ranking</a>
-                                            </h3>
-                                        </div>
-                                        <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">5</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">3</span>
-                                            </div>
-                                            <div class="d-flex align-items-center">
-                                                <i class="bx bx-share-alt fs-lg me-1"></i>
-                                                <span class="fs-sm">9</span>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-
-                                <!-- Article -->
-                                <div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Web</a>
-                                                <span class="fs-sm text-muted">May 28, 2023</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                <a href="/blog/blogsingle" class="stretched-link">This Week in Search: New Limits and Exciting Features</a>
-                                            </h3>
-                                        </div>
-                                        <div class="card-footer d-flex align-items-center py-4 text-muted border-top-0">
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-like fs-lg me-1"></i>
-                                                <span class="fs-sm">3</span>
-                                            </div>
-                                            <div class="d-flex align-items-center me-3">
-                                                <i class="bx bx-comment fs-lg me-1"></i>
-                                                <span class="fs-sm">5</span>
                                             </div>
                                             <div class="d-flex align-items-center">
                                                 <i class="bx bx-share-alt fs-lg me-1"></i>
@@ -303,10 +179,10 @@
 </section>
 
 
-<!-- Popular posts (Carousel) -->
+<!-- Reseñas recientes -->
 <section class="bg-secondary py-5 mb-lg-5">
     <div class="container pt-2 pt-lg-4 pt-xl-5">
-        <h2 class="h1 mb-4 pb-lg-3 pt-lg-1 pb-1 text-center">Popular Posts</h2>
+        <h2 class="h1 mb-4 pb-lg-3 pt-lg-1 pb-1 text-center">Reseñas Recientes</h2>
     </div>
     <div class="pb-lg-5 mb-xl-3">
         <div class="swiper" data-swiper-options='{
@@ -540,36 +416,42 @@
 
 <!-- Latest posts -->
 <section class="container mb-5 pt-5 pb-lg-5">
-    <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Latest Posts</h2>
+    <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Temas</h2>
 
     <!-- Category tabs -->
     <ul class="nav nav-tabs justify-content-center mb-lg-5 mb-4 pb-lg-2">
         <li class="nav-item">
-            <a href="#" class="nav-link active">All Topics</a>
+            <a href="#" class="nav-link active">Todos los géneros</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Digital</a>
+            <a href="#" class="nav-link">Terror</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Marketing</a>
+            <a href="#" class="nav-link">Comedia</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Success Stories</a>
+            <a href="#" class="nav-link">Romance</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Startups</a>
+            <a href="#" class="nav-link">Musical</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Events</a>
+            <a href="#" class="nav-link">Acción</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Technology</a>
+            <a href="#" class="nav-link">Aventura</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Business</a>
+            <a href="#" class="nav-link">Drama</a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">Processes &amp; Tools</a>
+            <a href="#" class="nav-link">Fantasía</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Ciencia Ficción</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Suspenso</a>>
         </li>
     </ul>
 
@@ -666,101 +548,12 @@
             </div>
         </article>
 
-        <!-- Article -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-            <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/05.jpg); min-height: 15rem;">
-                    <a href="/blog/blogsingle" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                    <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
-                        <i class="bx bx-bookmark"></i>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Digital</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">Oct 9, 2023</span>
-                        </div>
-                        <h3 class="h4">
-                            <a href="/blog/blogsingle">Inclusive Marketing: Why and How Does it Work?</a>
-                        </h3>
-                        <p>Nunc aliquet scelerisque pellentesque imperdiet tortor elit, dictum. Tristique odio at dignissim viverra aliquet eleifend erat. Tellus, at arcu, egestas praesent. Varius aliquet pharetra adipiscing tincidunt orci nec neque.</p>
-                        <hr class="my-4">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                                <img src="~/assets/img/avatar/04.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                                Jane Cooper
-                            </a>
-                            <div class="d-flex align-items-center text-muted">
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-like fs-lg me-1"></i>
-                                    <span class="fs-sm">5</span>
-                                </div>
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-comment fs-lg me-1"></i>
-                                    <span class="fs-sm">0</span>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bx-share-alt fs-lg me-1"></i>
-                                    <span class="fs-sm">2</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
 
-        <!-- Article -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-            <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/09.jpg); min-height: 15rem;">
-                    <a href="/blog/blogsingle" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                    <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
-                        <i class="bx bx-bookmark"></i>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Strategy</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2023</span>
-                        </div>
-                        <h3 class="h4">
-                            <a href="/blog/blogsingle">This Long-Awaited Technology May Finally Change the World</a>
-                        </h3>
-                        <p>Sapien, nulla placerat in at. Vitae tincidunt quam ornare massa porttitor. Neque a vitae feugiat in sit habitant integer. Cursus et at pulvinar sed neque vitae. Aliquam vitae hac phasellus purus lectus facilisi. Vitae vel ac quam.</p>
-                        <hr class="my-4">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                                <img src="~/assets/img/avatar/02.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                                Ralph Edwards
-                            </a>
-                            <div class="d-flex align-items-center text-muted">
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-like fs-lg me-1"></i>
-                                    <span class="fs-sm">8</span>
-                                </div>
-                                <div class="d-flex align-items-center me-3">
-                                    <i class="bx bx-comment fs-lg me-1"></i>
-                                    <span class="fs-sm">7</span>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="bx bx-share-alt fs-lg me-1"></i>
-                                    <span class="fs-sm">4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
     </div>
 
     <!-- Load more btn -->
-    <a href="#" class="btn btn-lg btn-outline-primary w-100">
-        <i class="bx bx-down-arrow-alt me-2 lh-1 lead"></i>
-        Show more
+    <a href="#" class="btn btn-lg btn-secondary w-100">
+        Agregar Reseña
     </a>
 </section>
 
