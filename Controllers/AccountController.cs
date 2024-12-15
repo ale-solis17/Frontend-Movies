@@ -130,6 +130,7 @@ namespace Silicon.Controllers
                             name = model.Name,
                             lastName = model.LastName,
                             mail = model.Email,
+                            nickname = model.NickName,
                             password = model.Password
                         }
                     };
@@ -146,7 +147,6 @@ namespace Silicon.Controllers
                                 // En lugar de redireccionar, mostramos el mensaje de éxito
                                 ViewBag.SuccessMessage = "Usuario registrado exitosamente";
                                 ViewBag.ShowSuccess = true;
-                                TempData["SuccessMessage"] = "Registro exitoso. Por favor revise su correo electrónico para confirmar su cuenta.";
                                 return RedirectToAction("signin");
                             }
                             else

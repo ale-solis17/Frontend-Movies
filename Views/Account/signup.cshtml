@@ -65,7 +65,7 @@
                     @Html.ValidationSummary(false)
                 </div>
             }
-            <p class="text-center text-xl-start pb-3 mb-3">Ya tienes una cuenta? <a href="/account/signin">Registrate aquí.</a></p>
+            <p class="text-center text-xl-start pb-3 mb-3">Ya tienes una cuenta? <a href="/account/signin">Ingresar.</a></p>
             @using (Html.BeginForm("signup", "Account", FormMethod.Post, new { id = "loginForm" }))
             {
                 @Html.AntiForgeryToken()
