@@ -7,6 +7,6 @@ namespace Silicon.Models.Entidades
 {
     public class ResLogin : ResBase
     {
-        public Usuario usuario;
+        public Usuario usuario {get;set;}
     }
 }

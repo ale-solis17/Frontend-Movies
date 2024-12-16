@@ -53,7 +53,7 @@
             <p class="text-center text-xl-start pb-3 mb-3">No tienes una cuenta todavia? <a href="account-signup.html">Registrar.</a></p>
             @using (Html.BeginForm("signin", "Account", FormMethod.Post, new { id = "loginForm" }))
             {
-                @Html.AntiForgeryToken()
+                
                 <div class="position-relative mb-4">
                     @Html.LabelFor(model => model.mail, new { @class = "form-label" })
                     @Html.TextBoxFor(model => model.mail, new { @class = "form-control" })
@@ -65,7 +65,6 @@
                         @Html.PasswordFor(model => model.password, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
                         <span class="password-toggle-indicator"></span>
-                        <div class="invalid-feedback position-absolute start-0 top-100">Please enter your password!</div>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary shadow-primary btn-lg w-100">Sign in</button>

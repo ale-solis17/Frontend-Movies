@@ -50,7 +50,6 @@ namespace Silicon.Controllers
             return View();
         }
         [System.Web.Mvc.HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<ActionResult> signin(AccountModel.signinModel model)
         {
             Console.WriteLine($"Mail: {model.mail}, Password: {model.password}");
@@ -74,10 +73,14 @@ namespace Silicon.Controllers
                         if (response.IsSuccessStatusCode)
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
-                            ResLogin res = new ResLogin();
-                            res.usuario = new Usuario();
+                            Console.WriteLine(responseContent);
+                            ResLogin res = new ResLogin
+                            {
+                                usuario = new Usuario()
+                            };
                             res = JsonConvert.DeserializeObject<ResLogin>(responseContent);
-                            if (res.resultado)
+                            
+                            if (res.respuesta)
                             {
                                
                                 
@@ -94,7 +97,7 @@ namespace Silicon.Controllers
                             {
                                 foreach (var error in res.errores)
                                 {
-                                    ModelState.AddModelError("", error.error);
+                                    ModelState.AddModelError("", error);
                                 }
                             }
                         }
@@ -145,7 +148,7 @@ namespace Silicon.Controllers
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
                             var res = JsonConvert.DeserializeObject < ResRegistrar >(responseContent);
-                            if (res.resultado)
+                            if (res.respuesta)
                             {
                                 // En lugar de redireccionar, mostramos el mensaje de éxito
                                 ViewBag.SuccessMessage = "Usuario registrado exitosamente";
@@ -156,7 +159,7 @@ namespace Silicon.Controllers
                             {
                                 foreach (var error in res.errores)
                                 {
-                                    ModelState.AddModelError("", error.error);
+                                    ModelState.AddModelError("", error);
                                 }
                             }
                         }

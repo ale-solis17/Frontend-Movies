@@ -2,6 +2,6 @@
 {
     public class ReqLogin
     {
-        public Usuario usuario;
+        public Usuario usuario { get; set; }
     }
 }

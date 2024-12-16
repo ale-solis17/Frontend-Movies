@@ -74,7 +74,7 @@ namespace Silicon.Controllers
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
                             var res = JsonConvert.DeserializeObject<ResCrearCom>(responseContent);
-                            if (res.resultado)
+                            if (res.respuesta)
                             {
                                 // En lugar de redireccionar, mostramos el mensaje de éxito
                                 ViewBag.SuccessMessage = "Comentario Publicado";
@@ -85,7 +85,7 @@ namespace Silicon.Controllers
                             {
                                 foreach (var error in res.errores)
                                 {
-                                    ModelState.AddModelError("", error.error);
+                                    ModelState.AddModelError("", error);
                                 }
                             }
                         }
