@@ -4,9 +4,8 @@ namespace Silicon.Models.Entidades
 {
     public class Pelicula
     {
-        public long id { get; set; }
+        public long idMovie { get; set; }
         public string name { get; set; }
-        public decimal rating { get; set; }
         public string director {  get; set; }
         public int duracion { get; set; }
         public DateTime creacion { get; set; }
