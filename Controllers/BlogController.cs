@@ -37,8 +37,7 @@ namespace Silicon.Controllers
             return View();
         }
         [System.Web.Mvc.HttpPost]
-        [Authorize]
-        public async Task<ActionResult> potcast(BlogModel.ComentarioModel model)
+        public async Task<ActionResult> podcast(BlogModel.PeliculaEspecificaModel model)
         {
             if (ModelState.IsValid)
             {
@@ -46,16 +45,7 @@ namespace Silicon.Controllers
                 {
                     ReqCrearCom req = new ReqCrearCom
                     {
-                        comentario = new Comentario
-                        {
-                            idPelicula = model.MovieId,
-                            idUsuario = model.UserId,
-                            comentario = model.Comment,
-                            creationDate = DateTime.Now,
-                            rating = model.Rating
-                            
-
-                        }
+                        comentario = new Comentario()
                     };
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
                     using (HttpClient client = new HttpClient())

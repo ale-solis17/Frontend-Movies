@@ -11,25 +11,26 @@ namespace Silicon.Models.Entidades
         public static string name { get; set; }
         public static string lastName { get; set; }
         public static string email { get; set; }
-
-        public static DateTime ultimaAccion { get; set; }
+        public static string nickname { get; set; }
+        
         public static DateTime fechaDeInicio { get; set; }
 
         public static bool ComprobarSesion()
         {
-            if (Sesion.Id == 0)
+            if (Id == 0)
             {
                 return false;
             }
             return true;
         }
 
-        public static void cerrarSesion()
+        public static void CerrarSesion()
         {
-            Sesion.Id = 0;
-            Sesion.name = null;
-            Sesion.lastName = null;
-            Sesion.email = null;
+            Id = 0;
+            name = null;
+            lastName = null;
+            email = null;
+            
         }
     }
 }
