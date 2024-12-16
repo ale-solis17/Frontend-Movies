@@ -4,14 +4,8 @@ namespace Silicon.Models
 {
     public class AccountModel
     {
-        public signupModel signup { get; set; }
-        public signinModel signin { get; set; } 
-
-        public AccountModel() 
-        {
-            signup = new signupModel(); 
-            signin = new signinModel();
-        }
+        public signupModel signup { get; set; } = new signupModel();
+        public signinModel signin { get; set; } = new signinModel();
 
         public class signupModel 
         {

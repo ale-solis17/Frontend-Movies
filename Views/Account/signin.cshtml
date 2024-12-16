@@ -9,8 +9,8 @@
 <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
     <div class="container px-3">
         <a href="/" class="navbar-brand pe-3">
-            <img src="~/assets/img/logo.svg" width="47" alt="Silicon">
-            Silicon
+            <img src="~/assets/img/logooo.png" width="47" alt="Silicon">
+            ¡Alerta De Spoiler!
         </a>
         <div id="navbarNav" class="offcanvas offcanvas-end">
             <div class="offcanvas-header border-bottom">
@@ -53,7 +53,7 @@
             <p class="text-center text-xl-start pb-3 mb-3">No tienes una cuenta todavia? <a href="account-signup.html">Registrar.</a></p>
             @using (Html.BeginForm("signin", "Account", FormMethod.Post, new { id = "loginForm" }))
             {
-                @Html.AntiForgeryToken()
+                
                 <div class="position-relative mb-4">
                     @Html.LabelFor(model => model.mail, new { @class = "form-label" })
                     @Html.TextBoxFor(model => model.mail, new { @class = "form-control" })
@@ -65,13 +65,6 @@
                         @Html.PasswordFor(model => model.password, new { @class = "form-control" })
                         @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
                         <span class="password-toggle-indicator"></span>
-                        <div class="invalid-feedback position-absolute start-0 top-100">Please enter your password!</div>
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <div class="form-check">
-                        <input type="checkbox" id="remember" class="form-check-input">
-                        <label for="remember" class="form-check-label fs-base">Remember me</label>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary shadow-primary btn-lg w-100">Sign in</button>

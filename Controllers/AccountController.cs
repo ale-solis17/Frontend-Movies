@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Silicon.Models;
 using Silicon.Models.Entidades;
-using Silicon.Models.Entidades.Request;
-using Silicon.Models.Entidades.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,10 +50,12 @@ namespace Silicon.Controllers
             return View();
         }
         [System.Web.Mvc.HttpPost]
-        public async Task<ActionResult> signin(AccountModel.signupModel model)
+        public async Task<ActionResult> signin(AccountModel.signinModel model)
         {
+            Console.WriteLine($"Mail: {model.mail}, Password: {model.password}");
             if (ModelState.IsValid)
             {
+
                 try
                 {
                     ReqLogin req = new ReqLogin();
@@ -63,37 +63,41 @@ namespace Silicon.Controllers
 
                     req.usuario.name = null;
                     req.usuario.lastName = null;
-                    req.usuario.mail = model.Email;
-                    req.usuario.password = model.Password;
+                    req.usuario.mail = model.mail;
+                    req.usuario.password = model.password;
 
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
                     using (HttpClient client = new HttpClient())
                     {
-                        var response = await client.PostAsync("https://localhost:54579/api/usuario/login", jsonContent);
+                        var response = await client.PostAsync("http://localhost:54579/api/usuario/login", jsonContent);
                         if (response.IsSuccessStatusCode)
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
-                            ResLogin res = new ResLogin();
-                            res.usuario = new Usuario();
-                            res = JsonConvert.DeserializeObject<ResLogin>(responseContent);
-                            if (res.resultado)
+                            Console.WriteLine(responseContent);
+                            ResLogin res = new ResLogin
                             {
-                                Console.WriteLine("Hola");
+                                usuario = new Usuario()
+                            };
+                            res = JsonConvert.DeserializeObject<ResLogin>(responseContent);
+                            
+                            if (res.respuesta)
+                            {
+                               
                                 
                                 Sesion.Id = res.usuario.id;
                                 Sesion.name = res.usuario.name;
                                 Sesion.lastName = res.usuario.lastName;
-                                Sesion.email = model.Email.ToString();
+                                Sesion.email = model.mail.ToString();
                                 Sesion.fechaDeInicio = DateTime.Now;
 
-                                return RedirectToAction("blog", "Landing");
+                                return RedirectToAction("blog","Landing");
 
                             }
                             else
                             {
                                 foreach (var error in res.errores)
                                 {
-                                    ModelState.AddModelError("", error.error);
+                                    ModelState.AddModelError("", error);
                                 }
                             }
                         }
@@ -144,7 +148,7 @@ namespace Silicon.Controllers
                         {
                             var responseContent = await response.Content.ReadAsStringAsync();
                             var res = JsonConvert.DeserializeObject < ResRegistrar >(responseContent);
-                            if (res.resultado)
+                            if (res.respuesta)
                             {
                                 // En lugar de redireccionar, mostramos el mensaje de éxito
                                 ViewBag.SuccessMessage = "Usuario registrado exitosamente";
@@ -155,7 +159,7 @@ namespace Silicon.Controllers
                             {
                                 foreach (var error in res.errores)
                                 {
-                                    ModelState.AddModelError("", error.error);
+                                    ModelState.AddModelError("", error);
                                 }
                             }
                         }

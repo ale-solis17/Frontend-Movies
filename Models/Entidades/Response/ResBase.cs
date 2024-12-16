@@ -5,7 +5,7 @@ namespace Silicon.Models.Entidades
 {
     public class ResBase
     {
-        public bool resultado { get; set; }
-        public List<Error> errores { get; set; }
+        public bool respuesta { get; set; }
+        public List<string> errores { get; set; }
     }
 }

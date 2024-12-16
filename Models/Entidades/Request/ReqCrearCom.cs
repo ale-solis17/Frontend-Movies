@@ -5,9 +5,8 @@ using System.Web;
 
 namespace Silicon.Models.Entidades
 {
-    public class Error
+    public class ReqCrearCom
     {
-        public int codigo { get; set; }
-        public string error { get; set; }
+        public Comentario comentario;
     }
 }
