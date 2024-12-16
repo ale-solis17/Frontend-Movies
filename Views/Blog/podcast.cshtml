@@ -1,4 +1,4 @@
-﻿
+﻿@model Silicon.Models.BlogModel.ComentarioModel
 @{
     ViewBag.Title = "podcast";
     ViewBag.ActiveItem = "pages";
@@ -125,24 +125,16 @@
 
                 <!-- Audio player -->
                 <div class="audio-player card-body p-2 p-sm-4">
-                    <audio src="~/assets/audio/sample.wav" preload="auto"></audio>
-                    <button type="button" class="ap-play-button btn btn-icon btn-primary shadow-primary" aria-label="Play/pause"></button>
-                    <span class="ap-current-time flex-shr fw-medium mx-3 mx-lg-4">0:00</span>
-                    <input type="range" class="ap-seek-slider" max="100" value="0">
-                    <span class="ap-duration flex-shr fw-medium mx-3 mx-lg-4">0:00</span>
-                    <div class="dropup">
-                        <button type="button" class="ap-volume-button btn btn-icon btn-secondary" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false" aria-label="Volume">
-                            <i class="bx bx-volume-full"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-dark my-1">
-                            <input type="range" class="ap-volume-slider" max="100" value="100">
-                        </div>
+                    @Html.Label("Puntuación: ", new { @class = "form-label" })
+                    <div id="starRating">
+                        @for (int i = 1; i <= 5; i++)
+                        {
+                            <i class="bx bx-star text-muted opacity-75" data-value="5"></i>
+                        }
                     </div>
-                    <a href="~/assets/audio/sample.wav" download="audio-sample" class="btn btn-icon btn-secondary ms-2" aria-label="Download">
-                        <i class="bx bx-download"></i>
-                    </a>
+                    @Html.ValidationMessage("rating", "", new { @class = "text-danger" })
                 </div>
-            </div>
+                </div>
             <h3 class="h4 mb-4 pt-2 pt-md-0">Timeline</h3>
             <ul class="list-unstyled mb-0">
                 <li class="d-flex mb-2">
@@ -272,33 +264,23 @@
         <div class="col-lg-9">
             <div class="card p-md-5 p-4 border-0 bg-secondary">
                 <div class="card-body w-100 mx-auto px-0" style="max-width: 746px;">
-                    <h2 class="mb-4 pb-3">Leave a Comment</h2>
-                    <form class="row gy-4 needs-validation" novalidate>
+                    <h2 class="mb-4 pb-3">Deja un comentario</h2>
+                    @using (Html.BeginForm("podcast", "Blog", FormMethod.Post, new { id = "loginForm" }))
+                    {
                         <div class="col-sm-6 col-12">
                             <label for="c-name" class="form-label fs-base">Name</label>
                             <input id="c-name" type="text" class="form-control form-control-lg" required>
                             <span class="invalid-tooltip">Please, enter your name.</span>
                         </div>
-                        <div class="col-sm-6 col-12">
-                            <label for="c-email" class="form-label fs-base">Email</label>
-                            <input id="c-email" type="email" class="form-control form-control-lg" required>
-                            <span class="invalid-tooltip">Please, provide a valid email address.</span>
-                        </div>
-                        <div class="col-12">
-                            <label for="c-comment" class="form-label fs-base">Comment</label>
-                            <textarea id="c-comment" class="form-control form-control-lg" rows="3" placeholder="Type your comment here..." required></textarea>
-                            <span class="invalid-tooltip">Please, enter your comment.</span>
-                        </div>
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input id="c-save" type="checkbox" class="form-check-input">
-                                <label for="c-save" class="form-check-label">Save my name and email in this browser for the next time I comment.</label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Post comment</button>
-                        </div>
-                    </form>
+                    <div class="col-12">
+                        @Html.LabelFor(model => model.Comment, "Comentario", new { @class = "form-label" })
+                        @Html.TextAreaFor(model => model.Comment, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })
+                        @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Postear</button>
+                    </div>
+                    }
                 </div>
             </div>
         </div>

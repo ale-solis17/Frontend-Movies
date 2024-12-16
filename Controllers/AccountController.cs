@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Silicon.Models;
 using Silicon.Models.Entidades;
-using Silicon.Models.Entidades.Request;
-using Silicon.Models.Entidades.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,10 +50,13 @@ namespace Silicon.Controllers
             return View();
         }
         [System.Web.Mvc.HttpPost]
-        public async Task<ActionResult> signin(AccountModel.signupModel model)
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> signin(AccountModel.signinModel model)
         {
+            Console.WriteLine($"Mail: {model.mail}, Password: {model.password}");
             if (ModelState.IsValid)
             {
+
                 try
                 {
                     ReqLogin req = new ReqLogin();
@@ -63,8 +64,8 @@ namespace Silicon.Controllers
 
                     req.usuario.name = null;
                     req.usuario.lastName = null;
-                    req.usuario.mail = model.Email;
-                    req.usuario.password = model.Password;
+                    req.usuario.mail = model.mail;
+                    req.usuario.password = model.password;
 
                     var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
                     using (HttpClient client = new HttpClient())
@@ -78,12 +79,12 @@ namespace Silicon.Controllers
                             res = JsonConvert.DeserializeObject<ResLogin>(responseContent);
                             if (res.resultado)
                             {
-                                Console.WriteLine("Hola");
+                               
                                 
                                 Sesion.Id = res.usuario.id;
                                 Sesion.name = res.usuario.name;
                                 Sesion.lastName = res.usuario.lastName;
-                                Sesion.email = model.Email.ToString();
+                                Sesion.email = model.mail.ToString();
                                 Sesion.fechaDeInicio = DateTime.Now;
 
                                 return RedirectToAction("blog","Landing");
