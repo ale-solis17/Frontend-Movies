@@ -122,17 +122,22 @@
     <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
+          <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\BlogModel.cs" />
     <Compile Include="Models\Entidades\Comentario.cs" />
-    <Compile Include="Models\Entidades\Request\ReqCrearCom.cs" />
+    <Compile Include="Models\Entidades\Pelicula.cs" />
     <Compile Include="Models\Entidades\Request\ReqLogin.cs" />
+    <Compile Include="Models\Entidades\Request\ReqMostrarComentarios.cs" />
+    <Compile Include="Models\Entidades\Request\ReqPeliculaEsp.cs" />
     <Compile Include="Models\Entidades\Request\ReqRegistrar.cs" />
-    <Compile Include="Models\Entidades\Response\ResBase.cs" />
+    <Compile Include="Models\Entidades\Request\ReqCrearCom.cs" />
     <Compile Include="Models\Entidades\Response\ResCrearCom.cs" />
+    <Compile Include="Models\Entidades\Response\ResBase.cs" />
     <Compile Include="Models\Entidades\Response\ResLogin.cs" />
+    <Compile Include="Models\Entidades\Response\ResMostrarComentarios.cs" />
+    <Compile Include="Models\Entidades\Response\ResPeliculaEsp.cs" />
     <Compile Include="Models\Entidades\Response\ResRegistrar.cs" />
     <Compile Include="Models\Entidades\Sesion.cs" />
     <Compile Include="Models\Entidades\Usuario.cs" />

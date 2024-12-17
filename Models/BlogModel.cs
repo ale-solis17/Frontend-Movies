@@ -1,46 +1,23 @@
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
+using Silicon.Models.Entidades;
 
 namespace Silicon.Models
 {
     public class BlogModel
     {
-        public ComentarioModel Comentario { get; set; }
-
+        public PeliculaEspecificaModel PeliculaEspecifica { get; set; }
+        
         public BlogModel()
         {
-            Comentario = new ComentarioModel();
+            PeliculaEspecifica = new PeliculaEspecificaModel();
         }
-
-        public class ComentarioModel
+        
+        public class PeliculaEspecificaModel
         {
-            [Key]
-            [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-            [Display(Name = "ID de Comentario")]
-            public int ReviewId { get; set; }
-
-            [Required(ErrorMessage = "Por favor selecciona una película.")]
-            [Display(Name = "ID de Película")]
-            public int MovieId { get; set; }
-
-            [Required(ErrorMessage = "Por favor escribe un comentario.")]
-            [Display(Name = "Comentario")]
-            [StringLength(500, MinimumLength = 5, ErrorMessage = "El comentario debe tener entre 5 y 500 caracteres.")]
-            public string Comment { get; set; }
-
-            [Required(ErrorMessage = "Por favor califica la película.")]
-            [Range(1, 5, ErrorMessage = "La calificación debe estar entre 1 y 5 estrellas.")]
-            [Display(Name = "Calificación")]
-            public int Rating { get; set; }
-
-            [Required(ErrorMessage = "Debes estar registrado para dejar un comentario.")]
-            [Display(Name = "ID de Usuario")]
-            public int UserId { get; set; }
-            
-            [Display(Name = "Fecha de Publicación")]
-            [DataType(DataType.DateTime)]
-            //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-            public System.DateTime PublicationDate { get; set; }
+            // Peliculas
+            public Pelicula pelicula { get; set; }
+            //Comentarios
+            public List<Comentario> comentario { get; set; }
         }
     }
 }

@@ -82,12 +82,11 @@ namespace Silicon.Controllers
                             
                             if (res.respuesta)
                             {
-                               
-                                
                                 Sesion.Id = res.usuario.id;
                                 Sesion.name = res.usuario.name;
                                 Sesion.lastName = res.usuario.lastName;
-                                Sesion.email = model.mail.ToString();
+                                Sesion.email = model.mail;
+                                Sesion.nickname = res.usuario.nickname;
                                 Sesion.fechaDeInicio = DateTime.Now;
 
                                 return RedirectToAction("blog","Landing");
@@ -178,7 +177,7 @@ namespace Silicon.Controllers
         }
         public ActionResult Logout()
         {
-            Sesion.cerrarSesion();
+            Sesion.CerrarSesion();
             return RedirectToAction("Login");
         }
     }

@@ -1,4 +1,5 @@
-﻿@model Silicon.Models.BlogModel.ComentarioModel
+@using Silicon.Models.Entidades
+@model Silicon.Models.BlogModel.PeliculaEspecificaModel
 @{
     ViewBag.Title = "podcast";
     ViewBag.ActiveItem = "pages";
@@ -8,8 +9,8 @@
 <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
     <div class="container px-3">
         <a href="/" class="navbar-brand pe-3">
-            <img src="~/assets/img/logo.svg" width="47" alt="Silicon">
-            Silicon
+            <img src="~/assets/img/logooo.png" width="47" alt="Silicon">
+            ¡Alerta De Spoiler!
         </a>
         <div id="navbarNav" class="offcanvas offcanvas-end">
             <div class="offcanvas-header border-bottom">
@@ -33,10 +34,12 @@
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
         </div>
-        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="#!" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+        <a href="#!" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank"
+           rel="noopener">
             <i class="bx bx-cart fs-5 lh-1 me-1"></i>
             &nbsp;Buy now
         </a>
@@ -66,7 +69,20 @@
         <div class="col-lg-5 col-md-6">
             <div class="ms-xl-5 ms-lg-4 ps-xxl-34">
                 <h3 class="h6 mb-2">
-                    <svg class="me-2 mt-n1" xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none"><path d="M20 12.5003v-1.707c0-4.44199-3.479-8.16099-7.755-8.28999-2.204-.051-4.251.736-5.816 2.256S4 8.31831 4 10.5003v2c-1.103 0-2 .897-2 2v4c0 1.103.897 2 2 2h2v-10c0-1.63699.646-3.16599 1.821-4.30599s2.735-1.739 4.363-1.691c3.208.096 5.816 2.918 5.816 6.28999v9.707h2c1.103 0 2-.897 2-2v-4c0-1.103-.897-2-2-2z" fill="url(#A)" /><path d="M7 12.5003h2v8H7v-8zm8 0h2v8h-2v-8z" fill="url(#A)" /><defs><linearGradient id="A" x1="2" y1="11.5437" x2="22" y2="11.5437" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6366f1" /><stop offset=".5" stop-color="#8b5cf6" /><stop offset="1" stop-color="#d946ef" /></linearGradient></defs></svg>
+                    <svg class="me-2 mt-n1" xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none">
+                        <path
+                            d="M20 12.5003v-1.707c0-4.44199-3.479-8.16099-7.755-8.28999-2.204-.051-4.251.736-5.816 2.256S4 8.31831 4 10.5003v2c-1.103 0-2 .897-2 2v4c0 1.103.897 2 2 2h2v-10c0-1.63699.646-3.16599 1.821-4.30599s2.735-1.739 4.363-1.691c3.208.096 5.816 2.918 5.816 6.28999v9.707h2c1.103 0 2-.897 2-2v-4c0-1.103-.897-2-2-2z"
+                            fill="url(#A)"/>
+                        <path d="M7 12.5003h2v8H7v-8zm8 0h2v8h-2v-8z" fill="url(#A)"/>
+                        <defs>
+                            <linearGradient id="A" x1="2" y1="11.5437" x2="22" y2="11.5437"
+                                            gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#6366f1"/>
+                                <stop offset=".5" stop-color="#8b5cf6"/>
+                                <stop offset="1" stop-color="#d946ef"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
                     Podcast
                 </h3>
                 <h1 class="display-5 pb-md-3">How to Choose a Fantastic SEO Agency</h1>
@@ -90,7 +106,10 @@
                         </div>
                     </div>
                 </div>
-                <p class="mb-0 fs-lg">Massa massa sapien tristique cras enim. Diam at tempus tempus iaculis mattis et. Platea facilisis cursus congue diam in amet. Velit urna cras leo viverra mauris aenean arcu, cursus. Commodo rhoncus sit vulputate maecenas augue amet arcu libero. Lobortis enim, ut dui rutrum tempor at rutrum aenean pharetra. Quis vulputate egestas sed arcu.</p>
+                <p class="mb-0 fs-lg">Massa massa sapien tristique cras enim. Diam at tempus tempus iaculis mattis et.
+                    Platea facilisis cursus congue diam in amet. Velit urna cras leo viverra mauris aenean arcu, cursus.
+                    Commodo rhoncus sit vulputate maecenas augue amet arcu libero. Lobortis enim, ut dui rutrum tempor
+                    at rutrum aenean pharetra. Quis vulputate egestas sed arcu.</p>
             </div>
         </div>
     </div>
@@ -134,92 +153,37 @@
                     </div>
                     @Html.ValidationMessage("rating", "", new { @class = "text-danger" })
                 </div>
-                </div>
-            <h3 class="h4 mb-4 pt-2 pt-md-0">Timeline</h3>
-            <ul class="list-unstyled mb-0">
-                <li class="d-flex mb-2">
-                    <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">00:05:12</span>
-                    Diam erat molestie duis auctor sit quis.
-                </li>
-                <li class="d-flex mb-2">
-                    <span class="flex-shrink-0 fw-medium text-nowrap me-2 text-primary" style="width: 80px;">00:28:19</span>
-                    Non mi eget molestie pretium commodo urna duis facilisis turpis.
-                </li>
-                <li class="d-flex mb-2">
-                    <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">00:45:37</span>
-                    Sit placerat adipiscing interdum libero neque, aliquam nec imperdiet ullamcorper.
-                </li>
-                <li class="d-flex mb-2">
-                    <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">00:56:04</span>
-                    Pulvinar eu porttitor nulla morbi varius tristique leo.
-                </li>
-                <li class="d-flex mb-2">
-                    <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">01:32:17</span>
-                    Cras et gravida iaculis vel at quis euismod.
-                </li>
-                <li class="d-flex mb-2">
-                    <span class="flex-shrink-0 fw-medium text-nowrap me-2" style="width: 80px;">01:50:43</span>
-                    Volutpat malesuada nulla lectus justo tempus est sollicitudin.
-                </li>
-            </ul>
+            </div>
         </div>
     </div>
 </section>
-
 
 <!-- Post comments -->
 <section class="container mb-4 pb-lg-3">
     <h2 class="h1">4 comments</h2>
     <div class="row">
-
         <!-- Comments -->
         <div class="col-lg-9">
-
-            <!-- Comment -->
-            <div class="py-4">
-                <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
-                    <div class="d-flex align-items-center me-3">
-                        <img src="~/assets/img/avatar/03.jpg" class="rounded-circle" width="48" alt="Avatar">
-                        <div class="ps-3">
-                            <h6 class="fw-semibold mb-0">Esther Howard</h6>
-                            <span class="fs-sm text-muted">4 mins ago</span>
-                        </div>
-                    </div>
-                    <a href="#" class="nav-link fs-sm px-0">
-                        <i class="bx bx-share fs-lg me-2"></i>
-                        Reply
-                    </a>
-                </div>
-                <p class="mb-0">Nibh enim porta ut augue felis, donec sit luctus. Quis ullamcorper dolor sit mauris. Hendrerit eu libero, eu tristique sodales ultrices etiam adipiscing. Donec viverra sodales arcu gravida nibh at. Neque lobortis quis porta integer et placerat lectus scelerisque. Velit eget malesuada morbi faucibus at sed euismod. Tortor, eu ut id tincidunt leo placerat luctus.</p>
-            </div>
-
             <hr class="my-2">
-
-            <!-- Comment -->
-            <div class="py-4">
-                <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
-                    <div class="d-flex align-items-center me-3">
-                        <img src="~/assets/img/avatar/02.jpg" class="rounded-circle" width="48" alt="Avatar">
-                        <div class="ps-3">
-                            <h6 class="fw-semibold mb-0">Ralph Edwards</h6>
-                            <span class="fs-sm text-muted">September 9 at 12:48</span>
-                        </div>
-                    </div>
-                    <a href="#" class="nav-link fs-sm px-0">
-                        <i class="bx bx-share fs-lg me-2"></i>
-                        Reply
-                    </a>
-                </div>
-                <p class="mb-0 pb-2">Eget amet, ac scelerisque tellus sed. Sapien duis sit neque pulvinar. Est sit aenean nisl etiam donec mattis ut diam. Luctus massa eu nunc aliquam viverra tempus, eu amet, luctus. Ac faucibus vestibulum eu lacus. Ullamcorper sem ultrices tincidunt pharetra?</p>
-
-                <!-- Comment reply -->
+            <!-- Comments -->
+            @foreach (var comentario in Model.comentario ?? new List<Comentario>())
+            {
                 <div class="position-relative ps-4 mt-4">
                     <span class="position-absolute top-0 start-0 w-1 h-100 bg-primary"></span>
                     <div class="d-flex align-items-center justify-content-between ps-3 pb-2 mb-1">
                         <div class="d-flex align-items-center me-3">
                             <img src="~/assets/img/avatar/05.jpg" class="rounded-circle" width="48" alt="Avatar">
                             <div class="ps-3">
-                                <h6 class="fw-semibold mb-0">Albert Flores</h6>
+                                <h6 class="fw-semibold mb-0">@if (!String.IsNullOrEmpty(comentario.nickname))
+                                                             {
+                                                                 @comentario.nickname
+                                                             }
+                                                             else
+                                                             {
+                                                                 <span>Anonymous</span> 
+                                                             }</h6>
+                                <p>@comentario.nickname</p>
+                                <p>@comentario.comentario</p>
                                 <span class="fs-sm text-muted">16 hours ago</span>
                             </div>
                         </div>
@@ -228,33 +192,21 @@
                             Reply
                         </a>
                     </div>
-                    <p class="ps-3 mb-0"><a href="#" class="fw-semibold text-decoration-none">@("@")Ralph Edwards</a> Vulputate malesuada amet, consequat ullamcorper. Orci, cras maecenas in sit purus pellentesque. Ridiculus blandit pellentesque eget arcu morbi nisl. Morbi volutpat adipiscing sapien sed ut tempor.</p>
+                    <p class="ps-3 mb-0"><a href="#" class="fw-semibold text-decoration-none">@("@")Ralph Edwards</a>
+                        Vulputate malesuada amet, consequat ullamcorper. Orci, cras maecenas in sit purus pellentesque.
+                        Ridiculus blandit pellentesque eget arcu morbi nisl. Morbi volutpat adipiscing sapien sed ut tempor.
+                    </p>
                 </div>
-            </div>
-
-            <hr class="my-2">
-
-            <!-- Comment -->
-            <div class="py-4">
-                <div class="d-flex align-items-center justify-content-between pb-2 mb-1">
-                    <div class="d-flex align-items-center me-3">
-                        <img src="~/assets/img/avatar/07.jpg" class="rounded-circle" width="48" alt="Avatar">
-                        <div class="ps-3">
-                            <h6 class="fw-semibold mb-0">Cameron Williamson</h6>
-                            <span class="fs-sm text-muted">March 24 at 8:20</span>
-                        </div>
-                    </div>
-                    <a href="#" class="nav-link fs-sm px-0">
-                        <i class="bx bx-share fs-lg me-2"></i>
-                        Reply
-                    </a>
-                </div>
-                <p class="mb-0">Mattis id ut sed arcu metus elit faucibus condimentum aliquam. Nam adipiscing diam et suspendisse. Sagittis massa maecenas laoreet nulla amet nunc sagittis, pulvinar neque. Duis imperdiet ipsum suspendisse massa lectus habitasse. Id ante volutpat hendrerit augue parturient eget. Ac vitae posuere leo morbi vitae at hac lectus. Nibh neque quam quis amet mattis sit. Faucibus risus at sit tempus ut.</p>
-            </div>
+            }
         </div>
+        <hr class="my-2">
     </div>
 </section>
 
+<!-- Comments -->
+
+
+<hr class="my-2">
 
 <!-- Comment form + Subscription -->
 <section class="container mb-4 pb-2 mb-md-5 pb-lg-5">
@@ -298,28 +250,33 @@
                         </form>
                     </div>
 
-                    <!-- Sharing -->
-                    <div class="col-lg-12 col-sm-7 col-11">
-                        <h6 class="fs-lg">Don't forget to share it</h6>
-                        <div class="mb-4 pb-lg-3">
-                            <a href="#" class="btn btn-icon btn-secondary btn-linkedin me-2 mb-2" aria-label="LinkedIn">
-                                <i class="bx bxl-linkedin"></i>
-                            </a>
-                            <a href="#" class="btn btn-icon btn-secondary btn-facebook me-2 mb-2" aria-label="Facebook">
-                                <i class="bx bxl-facebook"></i>
-                            </a>
-                            <a href="#" class="btn btn-icon btn-secondary btn-twitter me-2 mb-2" aria-label="Twitter">
-                                <i class="bx bxl-twitter"></i>
-                            </a>
-                            <a href="#" class="btn btn-icon btn-secondary btn-instagram me-2 mb-2" aria-label="Instagram">
-                                <i class="bx bxl-instagram"></i>
-                            </a>
+
+                    @if (Sesion.ComprobarSesion())
+                    {
+                        <div class="col-12 mb-3">
+                            <button type="button" id="btnMostrarLogin"
+                                    class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">
+                                Publicar Comentario
+                            </button>
                         </div>
-                    </div>
+
+                        <div id="loginAlert" class="alert alert-danger d-none">
+                            <strong>Debes iniciar sesión para comentar.</strong>
+                            <a href="/Account/signin" class="btn btn-sm btn-primary ms-2">Iniciar sesión</a>
+                        </div>
+                    }
+                    <script>
+                        document.getElementById("btnMostrarLogin").addEventListener("click", function () {
+                            const loginAlert = document.getElementById("loginAlert");
+                            loginAlert.classList.remove("d-none");
+                        });
+                    </script>
                 </div>
             </div>
         </div>
-    </div>
+
+
+    </div>        <!-- Subscription form + Sharing -->
 </section>
 
 
@@ -355,242 +312,59 @@
               "slidesPerView": 4
             }
           }
-        }'>
-        <div class="swiper-wrapper">
+        }'/>
+    <div class="swiper-wrapper">
 
-            <!-- Item -->
-            <div class="swiper-slide h-auto pb-3">
-                <article>
-                    <div class="d-block position-relative rounded-3 mb-3">
-                        <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Listen later">
-                            <i class="bx bx-bookmark"></i>
-                        </a>
-                        <img src="~/assets/img/avatar/06.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
-                        <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:25:43</span>
-                        <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
-                        <img src="~/assets/img/blog/podcasts/04.jpg" class="rounded-3" alt="Image">
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Digital</a>
-                        <span class="fs-sm text-muted border-start ps-3 ms-3">2 hours ago</span>
-                    </div>
-                    <h3 class="h5">
-                        <a href="/blog/podcast">IOS and the Changing landscape of Data Privacy</a>
-                    </h3>
-                    <div class="d-flex align-items-center text-muted">
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-like fs-lg me-1"></i>
-                            <span class="fs-sm">4</span>
-                        </div>
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-comment fs-lg me-1"></i>
-                            <span class="fs-sm">2</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bx bx-share-alt fs-lg me-1"></i>
-                            <span class="fs-sm">0</span>
-                        </div>
-                    </div>
-                    <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                        <i class="bx bx-play-circle fs-lg me-2"></i>
-                        Listen now
-                    </a>
-                </article>
-            </div>
 
-            <!-- Item -->
-            <div class="swiper-slide h-auto pb-3">
-                <article>
-                    <div class="d-block position-relative rounded-3 mb-3">
-                        <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Listen later">
-                            <i class="bx bx-bookmark"></i>
-                        </a>
-                        <img src="~/assets/img/avatar/05.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
-                        <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">1:12:05</span>
-                        <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
-                        <img src="~/assets/img/blog/podcasts/05.jpg" class="rounded-3" alt="Image">
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Processes &amp; Tools</a>
-                        <span class="fs-sm text-muted border-start ps-3 ms-3">10 hours ago</span>
-                    </div>
-                    <h3 class="h5">
-                        <a href="/blog/podcast">Behavioral Science and Digital Marketing</a>
-                    </h3>
-                    <div class="d-flex align-items-center text-muted">
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-like fs-lg me-1"></i>
-                            <span class="fs-sm">9</span>
-                        </div>
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-comment fs-lg me-1"></i>
-                            <span class="fs-sm">5</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bx bx-share-alt fs-lg me-1"></i>
-                            <span class="fs-sm">6</span>
-                        </div>
-                    </div>
-                    <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                        <i class="bx bx-play-circle fs-lg me-2"></i>
-                        Listen now
+        <!-- Item -->
+        <div class="swiper-slide h-auto pb-3">
+            <article>
+                <div class="d-block position-relative rounded-3 mb-3">
+                    <a href="#"
+                       class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                       data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Listen later">
+                        <i class="bx bx-bookmark"></i>
                     </a>
-                </article>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pb-3">
-                <article>
-                    <div class="d-block position-relative rounded-3 mb-3">
-                        <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Listen later">
-                            <i class="bx bx-bookmark"></i>
-                        </a>
-                        <img src="~/assets/img/avatar/01.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
-                        <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:32:15</span>
-                        <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
-                        <img src="~/assets/img/blog/podcasts/02.jpg" class="rounded-3" alt="Image">
+                    <img src="~/assets/img/avatar/01.jpg"
+                         class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48"
+                         alt="Avatar">
+                    <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:32:15</span>
+                    <a href="/blog/podcast"
+                       class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"
+                       aria-label="Listen podcast"></a>
+                    <img src="~/assets/img/blog/podcasts/02.jpg" class="rounded-3" alt="Image">
+                </div>
+                <div class="d-flex align-items-center mb-2">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Technology</a>
+                    <span class="fs-sm text-muted border-start ps-3 ms-3">10 hours ago</span>
+                </div>
+                <h3 class="h5">
+                    <a href="/blog/podcast">Why You Should Care About Your Competitors</a>
+                </h3>
+                <div class="d-flex align-items-center text-muted">
+                    <div class="d-flex align-items-center me-3">
+                        <i class="bx bx-like fs-lg me-1"></i>
+                        <span class="fs-sm">45</span>
                     </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Technology</a>
-                        <span class="fs-sm text-muted border-start ps-3 ms-3">10 hours ago</span>
+                    <div class="d-flex align-items-center me-3">
+                        <i class="bx bx-comment fs-lg me-1"></i>
+                        <span class="fs-sm">12</span>
                     </div>
-                    <h3 class="h5">
-                        <a href="/blog/podcast">Why You Should Care About Your Competitors</a>
-                    </h3>
-                    <div class="d-flex align-items-center text-muted">
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-like fs-lg me-1"></i>
-                            <span class="fs-sm">45</span>
-                        </div>
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-comment fs-lg me-1"></i>
-                            <span class="fs-sm">12</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bx bx-share-alt fs-lg me-1"></i>
-                            <span class="fs-sm">6</span>
-                        </div>
+                    <div class="d-flex align-items-center">
+                        <i class="bx bx-share-alt fs-lg me-1"></i>
+                        <span class="fs-sm">6</span>
                     </div>
-                    <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                        <i class="bx bx-play-circle fs-lg me-2"></i>
-                        Listen now
-                    </a>
-                </article>
-            </div>
-
-            <!-- Item -->
-            <div class="swiper-slide h-auto pb-3">
-                <article>
-                    <div class="d-block position-relative rounded-3 mb-3">
-                        <a href="#" class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Listen later">
-                            <i class="bx bx-bookmark"></i>
-                        </a>
-                        <img src="~/assets/img/avatar/04.jpg" class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48" alt="Avatar">
-                        <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:48:02</span>
-                        <a href="/blog/podcast" class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3" aria-label="Listen podcast"></a>
-                        <img src="~/assets/img/blog/podcasts/03.jpg" class="rounded-3" alt="Image">
-                    </div>
-                    <div class="d-flex align-items-center mb-2">
-                        <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Marketing</a>
-                        <span class="fs-sm text-muted border-start ps-3 ms-3">1 day ago</span>
-                    </div>
-                    <h3 class="h5">
-                        <a href="/blog/podcast">Tips for Marketing Managers: How to Maximise Leads</a>
-                    </h3>
-                    <div class="d-flex align-items-center text-muted">
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-like fs-lg me-1"></i>
-                            <span class="fs-sm">10</span>
-                        </div>
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-comment fs-lg me-1"></i>
-                            <span class="fs-sm">4</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bx bx-share-alt fs-lg me-1"></i>
-                            <span class="fs-sm">6</span>
-                        </div>
-                    </div>
-                    <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                        <i class="bx bx-play-circle fs-lg me-2"></i>
-                        Listen now
-                    </a>
-                </article>
-            </div>
+                </div>
+                <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
+                    <i class="bx bx-play-circle fs-lg me-2"></i>
+                    Listen now
+                </a>
+            </article>
         </div>
-
         <!-- Pagination (bullets) -->
         <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
     </div>
 </section>
-@section footer{
-
-    <footer class="footer bg-dark border-top border-light pt-5 pb-4 pb-lg-5" data-bs-theme="dark">
-        <div class="container pt-lg-4">
-            <div class="row pb-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-                        <img src="~/assets/img/logo.svg" width="47" alt="Silicon">
-                        Silicon
-                    </div>
-                    <p class="fs-sm text-light opacity-70 pb-lg-3 mb-4">Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.</p>
-                    <form class="needs-validation" novalidate>
-                        <label for="subscr-email" class="form-label">Subscribe to our newsletter</label>
-                        <div class="input-group">
-                            <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
-                            <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-                            <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
-                    <div id="footer-links" class="row">
-                        <div class="col-lg-4">
-                            <h6 class="mb-2">
-                                <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
-                            </h6>
-                            <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
-                                <ul class="nav flex-column pb-lg-1 mb-lg-3">
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Services</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Our Works</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">About</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Blog</a></li>
-                                </ul>
-                                <ul class="nav flex-column mb-2 mb-lg-0">
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-3">
-                            <h6 class="mb-2">
-                                <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
-                            </h6>
-                            <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
-                                <ul class="nav flex-column mb-2 mb-lg-0">
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
-                            <h6 class="mb-2">Contact Us</h6>
-                            <a href="mailto:email@example.com" class="fw-medium">email@example.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
-                <span class="text-light opacity-50">&copy; All rights reserved. Made by </span>
-                <a class="nav-link d-inline-block p-0" href="https://themeforest.net/user/srbthemes" target="_blank" rel="noopener">srbthemes</a>
-            </p>
-        </div>
-    </footer>
-}
 
 @section scripts{
     <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
