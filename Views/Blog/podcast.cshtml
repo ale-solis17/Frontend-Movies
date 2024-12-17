@@ -267,11 +267,7 @@
                     <h2 class="mb-4 pb-3">Deja un comentario</h2>
                     @using (Html.BeginForm("podcast", "Blog", FormMethod.Post, new { id = "loginForm" }))
                     {
-                        <div class="col-sm-6 col-12">
-                            <label for="c-name" class="form-label fs-base">Name</label>
-                            <input id="c-name" type="text" class="form-control form-control-lg" required>
-                            <span class="invalid-tooltip">Please, enter your name.</span>
-                        </div>
+                        
                     <div class="col-12">
                         @Html.LabelFor(model => model.Comment, "Comentario", new { @class = "form-label" })
                         @Html.TextAreaFor(model => model.Comment, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })

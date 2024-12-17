@@ -40,6 +40,7 @@ namespace Silicon.Controllers
         [Authorize]
         public async Task<ActionResult> potcast(BlogModel.ComentarioModel model)
         {
+            Console.WriteLine($"Mail: {model.Comment}, Password: {model.Rating}");
             if (ModelState.IsValid)
             {
                 try
