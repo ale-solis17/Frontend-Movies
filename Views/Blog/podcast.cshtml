@@ -221,9 +221,9 @@
                     {
                         
                     <div class="col-12">
-                        @Html.LabelFor(model => model.Comment, "Comentario", new { @class = "form-label" })
-                        @Html.TextAreaFor(model => model.Comment, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })
-                        @Html.ValidationMessageFor(model => model.Comment, "", new { @class = "text-danger" })
+                        @Html.LabelFor(model => model.comentario, "Comentario", new { @class = "form-label" })
+                        @Html.TextAreaFor(model => model.comentario, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })
+                        @Html.ValidationMessageFor(model => model.comentario, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Postear</button>

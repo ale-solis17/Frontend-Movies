@@ -1,4 +1,4 @@
-﻿@model Silicon.Models.BlogModel
+﻿@model Silicon.Models.LandingModel.FiltrarGeneroModel
 
 
 @{
@@ -146,46 +146,47 @@
     <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Géneros</h2>
 
     <!-- Category tabs -->
-    <ul class="nav nav-tabs justify-content-center mb-lg-5 mb-4 pb-lg-2">
-        <li class="nav-item">
-            <a href="#" class="nav-link active" data-category="all">Todos los géneros</a>
+    @using (Html.BeginForm("blog", "Landing", FormMethod.Post, new { id = "loginForm" }))
+    {
+        <ul class="nav nav-tabs justify-content-center mb-lg-5 mb-4 pb-lg-2">
+            <li class="nav-item">
+            <button type="button" class="btn btn-outline-secondary" value="1">Prueba</button>
         </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="terror">Terror</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="comedia">Comedia</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="romance">Romance</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="musical">Musical</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="accion">Acción</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="aventura">Aventura</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="drama">Drama</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="fantasia">Fantasía</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="ciencia_ficcion">Ciencia Ficción</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-category="suspenso">Suspenso</a>
-        </li>
-    </ul>
 
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="comedia">Comedia</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="romance">Romance</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="musical">Musical</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="accion">Acción</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="aventura">Aventura</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="drama">Drama</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="fantasia">Fantasía</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="ciencia_ficcion">Ciencia Ficción</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" data-category="suspenso">Suspenso</a>
+            </li>
+        </ul>
+    }
 
     <!-- Artículos del blog -->
     <div class="pb-3" id="blogArticles">
         <!-- Artículo -->
+        @foreach(var pelicula in Model.pelicula) { 
         <article class="card border-0 shadow-sm overflow-hidden mb-4" data-category="terror">
             <div class="row g-0">
                 <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/01.jpg'); min-height: 15rem;">
@@ -195,45 +196,23 @@
                 <div class="col-sm-8">
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Terror</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2023</span>
+                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">@pelicula.generos</a>
+                            <span class="fs-sm text-muted border-start ps-3 ms-3">@pelicula.creacion</span>
                         </div>
                         <h3 class="h4">
                             <a href="@Url.Action("Details", "Movies", new { @*id = ModelBlog.MovieId*@ })">
-                                5 Bad Landing Page Examples &amp; How We Would Fix Them
+                               @pelicula.name
                             </a>
                         </h3>
-                        <p>Tellus sagittis dolor pellentesque vel porttitor magna aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi tellus, scelerisque vel metus.</p>
+                        <p>@pelicula.synopsis</p>
                         <hr class="my-4">
                     </div>
                 </div>
             </div>
         </article>
-
+        }
         <!-- Artículo -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4" data-category="comedia">
-            <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/06.jpg'); min-height: 15rem;">
-                    <a href="/blog/blogsingle" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                    <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later" aria-label="Read later">
-                        <i class="bx bx-bookmark"></i>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Comedia</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">Sep 10, 2023</span>
-                        </div>
-                        <h3 class="h4">
-                            <a href="/blog/blogsingle">How Agile is Your Forecasting Process?</a>
-                        </h3>
-                        <p>Nulla fringilla arcu justo augue fringilla in nunc volutpat sit. Dui diam, faucibus vitae ultricies vitae mollis nunc elementum. Et, habitasse porta.</p>
-                        <hr class="my-4">
-                    </div>
-                </div>
-            </div>
-        </article>
+        
 
         <!-- Más artículos -->
     </div>
