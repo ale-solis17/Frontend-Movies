@@ -6,10 +6,12 @@ namespace Silicon.Models
     public class BlogModel
     {
         public PeliculaEspecificaModel PeliculaEspecifica { get; set; }
+        public PeliculaInicioModel PeliculaInicio { get; set; }
         
         public BlogModel()
         {
-            PeliculaEspecifica = new PeliculaEspecificaModel();
+           PeliculaEspecifica = new PeliculaEspecificaModel();
+           PeliculaInicio = new PeliculaInicioModel();
         }
         
         public class PeliculaEspecificaModel
@@ -19,5 +21,11 @@ namespace Silicon.Models
             //Comentarios
             public List<Comentario> comentario { get; set; }
         }
-    }
+
+        public class PeliculaInicioModel
+        {
+            public Pelicula pelicula { get; set; }
+            public List<Comentario> comentario { get; set; }
+   
+   }    }   
 }
