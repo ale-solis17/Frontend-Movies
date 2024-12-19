@@ -6,6 +6,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section styles{
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+}
+
 <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
     <div class="container px-3">
         <a href="/" class="navbar-brand pe-3">
@@ -52,10 +56,7 @@
         <li class="breadcrumb-item">
             <a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
         </li>
-        <li class="breadcrumb-item">
-            <a href="/blog/gridwithsidebar">Blog</a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">Podcast</li>
+        <li class="breadcrumb-item active" aria-current="page">@Model.PeliculaEspecifica.Peliculas.name</li>
     </ol>
 </nav>
 
@@ -76,47 +77,20 @@
 <section class="container mt-4 mb-5 pt-2 pb-lg-5">
     <div class="row gy-4">
         <div class="col-lg-7 col-md-6">
-            <img src="~/assets/img/blog/podcasts/06.jpg" alt="Cover" class="rounded-3">
+            <img src="@Model.PeliculaEspecifica.Peliculas.URL" alt="Cover" class="rounded-3">
         </div>
         <div class="col-lg-5 col-md-6">
             <div class="ms-xl-5 ms-lg-4 ps-xxl-34">
                 <h3 class="h6 mb-2">
-                    <svg class="me-2 mt-n1" xmlns="http://www.w3.org/2000/svg" width="24" height="25" fill="none">
-                        <path
-                            d="M20 12.5003v-1.707c0-4.44199-3.479-8.16099-7.755-8.28999-2.204-.051-4.251.736-5.816 2.256S4 8.31831 4 10.5003v2c-1.103 0-2 .897-2 2v4c0 1.103.897 2 2 2h2v-10c0-1.63699.646-3.16599 1.821-4.30599s2.735-1.739 4.363-1.691c3.208.096 5.816 2.918 5.816 6.28999v9.707h2c1.103 0 2-.897 2-2v-4c0-1.103-.897-2-2-2z"
-                            fill="url(#A)"/>
-                        <path d="M7 12.5003h2v8H7v-8zm8 0h2v8h-2v-8z" fill="url(#A)"/>
-                        <defs>
-                            <linearGradient id="A" x1="2" y1="11.5437" x2="22" y2="11.5437"
-                                            gradientUnits="userSpaceOnUse">
-                                <stop offset="0" stop-color="#6366f1"/>
-                                <stop offset=".5" stop-color="#8b5cf6"/>
-                                <stop offset="1" stop-color="#d946ef"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    P
+                    <i class='bx bx-camera-movie'></i>
+                    Pel&iacute;cula
                 </h3>
-                <h1 class="display-5 pb-md-3">@</h1>
+                <h1 class="display-5 pb-md-3">@Model.PeliculaEspecifica.Peliculas.name</h1>
                 <div class="d-flex align-items-center flex-wrap text-muted mb-lg-5 mb-md-4 mb-3">
                     <div class="fs-xs border-end pe-3 me-3 mb-2">
-                        <span class="badge bg-faded-primary text-primary fs-base">Startups</span>
+                        <span class="badge bg-faded-primary text-primary fs-base">@Model.PeliculaEspecifica.Peliculas.generos</span>
                     </div>
-                    <div class="fs-sm border-end pe-3 me-3 mb-2">10 hours ago</div>
-                    <div class="d-flex mb-2">
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-like fs-base me-1"></i>
-                            <span class="fs-sm">18</span>
-                        </div>
-                        <div class="d-flex align-items-center me-3">
-                            <i class="bx bx-comment fs-base me-1"></i>
-                            <span class="fs-sm">4</span>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bx bx-share-alt fs-base me-1"></i>
-                            <span class="fs-sm">2</span>
-                        </div>
-                    </div>
+                    <div class="fs-sm border-end pe-3 me-3 mb-2">@Model.PeliculaEspecifica.Peliculas.duracion min</div>
                 </div>
                 <p class="mb-0 fs-lg">@Model.PeliculaEspecifica.Peliculas.synopsis</p>
             </div>
@@ -127,49 +101,27 @@
 
 <!-- Post content -->
 <section class="container mb-5 pb-lg-5">
-    <div class="row gy-md-5 gy-4">
-
-        <!-- Author -->
-        <div class="col-lg-3 col-md-4 order-md-2 position-relative">
-            <div class="sticky-top ms-xxl-5 ps-lg-4" style="top: 105px !important;">
-                <div class="d-flex align-items-center position-relative mb-lg-5 mb-4">
-                    <img src="~/assets/img/avatar/06.jpg" class="rounded-circle me-3" width="60" alt="Avatar">
-                    <div>
-                        <h4 class="h6 mb-1">Hosted by</h4>
-                        <a href="#" class="fw-semibold stretched-link">Jenny Wilson</a>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-lg btn-outline-secondary mb-3">
-                    <i class="bx bx-like me-2 lead"></i>
-                    Like it
-                    <span class="badge bg-primary shadow-primary ms-3">8</span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Player + Timeline -->
-        <div class="col-lg-9 col-md-8 order-md-1">
-            <div class="card p-lg-4 p-md-2 mb-4 mb-lg-5">
-
-                <!-- Audio player -->
-                <div class="audio-player card-body p-2 p-sm-4">
-                    @Html.Label("Puntuación: ", new { @class = "form-label" })
-                    <div id="starRating">
-                        @for (int i = 1; i <= 5; i++)
+        <!-- Rating -->
+        <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center">
+            <div class="card border-0 bg-secondary pt-5 pb-1 px-1 pe-sm-3 py-sm-3">
+                <div class="card-body">
+                    <h6 class="fs-lg mb-0">Director:</h6>
+                    <p class="text-body fs-lg mb-3">@Model.PeliculaEspecifica.Peliculas.director</p>
+                    <h6 class="fs-lg mb-0">Rating:</h6>
+                    <div class="card-body border-0 text-nowrap">
+                        @for (int i = 0; i < Model.PeliculaEspecifica.Peliculas.rating; i++)
                         {
-                            <i class="bx bx-star text-muted opacity-75" data-value="5"></i>
+                            <i class="bx bxs-star text-warning"></i>
                         }
                     </div>
-                    @Html.ValidationMessage("rating", "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
-    </div>
 </section>
 
 <!-- Post comments -->
 <section class="container mb-4 pb-lg-3">
-    <h2 class="h1">4 comments</h2>
+    <h2 class="h1">@Model.PeliculaEspecifica.comentario.Count Comentarios</h2>
     <div class="row">
         <!-- Comments -->
         <div class="col-lg-9">
@@ -179,7 +131,7 @@
             {
                 <div class="position-relative ps-4 mt-4">
                     <span class="position-absolute top-0 start-0 w-1 h-100 bg-primary"></span>
-                    <div class="d-flex align-items-center justify-content-between ps-3 pb-2 mb-1">
+                    <div class="align-items-center justify-content-between ps-3 pb-2 mb-1">
                         <div class="d-flex align-items-center me-3">
                             <img src="~/assets/img/avatar/05.jpg" class="rounded-circle" width="48" alt="Avatar">
                             <div class="ps-3">
@@ -193,18 +145,16 @@
                                                              }</h6>
                                 <p>@comentario.nickname</p>
                                 <p>@comentario.comentario</p>
-                                <span class="fs-sm text-muted">16 hours ago</span>
+                                <span class="fs-sm text-muted">@comentario.creationDate</span>
+                            </div>
+                            <div class="card-footer border-0 text-nowrap pt-0">
+                                @for (int i = 0; i < comentario.rating; i++)
+                                {
+                                    <i class="bx bxs-star text-warning"></i>
+                                }
                             </div>
                         </div>
-                        <a href="#" class="nav-link fs-sm px-0">
-                            <i class="bx bx-share fs-lg me-2"></i>
-                            Reply
-                        </a>
                     </div>
-                    <p class="ps-3 mb-0"><a href="#" class="fw-semibold text-decoration-none">@("@")Ralph Edwards</a>
-                        Vulputate malesuada amet, consequat ullamcorper. Orci, cras maecenas in sit purus pellentesque.
-                        Ridiculus blandit pellentesque eget arcu morbi nisl. Morbi volutpat adipiscing sapien sed ut tempor.
-                    </p>
                 </div>
             }
         </div>
@@ -213,9 +163,6 @@
 </section>
 
 <!-- Comments -->
-
-
-<hr class="my-2">
 
 <!-- Comment form + Subscription -->
 <section class="container mb-4 pb-2 mb-md-5 pb-lg-5">
@@ -247,18 +194,6 @@
             <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 70px !important;">
                 <div class="row gy-lg-5 gy-4 justify-content-center text-lg-start text-center">
 
-                    <!-- Subscription form -->
-                    <div class="col-lg-12 col-sm-7 col-11">
-                        <h6 class="fs-lg">Enjoy this post? Join our newsletter</h6>
-                        <form class="needs-validation" novalidate>
-                            <div class="input-group mb-3">
-                                <i class="bx bx-envelope position-absolute start-0 top-50 translate-middle-y zindex-5 ms-3 text-muted d-lg-inline-block d-none"></i>
-                                <input type="email" placeholder="Your Email" class="form-control ps-lg-5 rounded text-lg-start text-center" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
-                        </form>
-                    </div>
-
 
                     @if (Sesion.ComprobarSesion())
                     {
@@ -286,93 +221,6 @@
 
 
     </div>        <!-- Subscription form + Sharing -->
-</section>
-
-
-<!-- Related podcasts (Slider below xl breakpoint) -->
-<section class="container mb-5 pt-md-4">
-    <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between mb-4 pb-1 pb-md-3">
-        <h2 class="h1 mb-sm-0">Related Podcasts</h2>
-        <a href="/blog/gridwithsidebar" class="btn btn-lg btn-outline-primary ms-4">
-            All podcasts
-            <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
-        </a>
-    </div>
-
-    <!-- Carousel -->
-    <div class="swiper" data-swiper-options='{
-          "slidesPerView": 1,
-          "spaceBetween": 24,
-          "pagination": {
-            "el": ".swiper-pagination",
-            "clickable": true
-          },
-          "breakpoints": {
-            "500": {
-              "slidesPerView": 2
-            },
-            "768": {
-              "slidesPerView": 3
-            },
-            "1000": {
-              "slidesPerView": 3
-            },
-            "1200": {
-              "slidesPerView": 4
-            }
-          }
-        }'/>
-    <div class="swiper-wrapper">
-
-
-        <!-- Item -->
-        <div class="swiper-slide h-auto pb-3">
-            <article>
-                <div class="d-block position-relative rounded-3 mb-3">
-                    <a href="#"
-                       class="btn btn-icon btn-light bg-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
-                       data-bs-toggle="tooltip" data-bs-placement="left" title="Listen later" aria-label="Listen later">
-                        <i class="bx bx-bookmark"></i>
-                    </a>
-                    <img src="~/assets/img/avatar/01.jpg"
-                         class="position-absolute top-0 start-0 rounded-circle zindex-2 mt-3 ms-3" width="48"
-                         alt="Avatar">
-                    <span class="badge bg-dark position-absolute bottom-0 end-0 zindex-2 mb-3 me-3">0:32:15</span>
-                    <a href="/blog/podcast"
-                       class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-35 rounded-3"
-                       aria-label="Listen podcast"></a>
-                    <img src="~/assets/img/blog/podcasts/02.jpg" class="rounded-3" alt="Image">
-                </div>
-                <div class="d-flex align-items-center mb-2">
-                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Technology</a>
-                    <span class="fs-sm text-muted border-start ps-3 ms-3">10 hours ago</span>
-                </div>
-                <h3 class="h5">
-                    <a href="/blog/podcast">Why You Should Care About Your Competitors</a>
-                </h3>
-                <div class="d-flex align-items-center text-muted">
-                    <div class="d-flex align-items-center me-3">
-                        <i class="bx bx-like fs-lg me-1"></i>
-                        <span class="fs-sm">45</span>
-                    </div>
-                    <div class="d-flex align-items-center me-3">
-                        <i class="bx bx-comment fs-lg me-1"></i>
-                        <span class="fs-sm">12</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="bx bx-share-alt fs-lg me-1"></i>
-                        <span class="fs-sm">6</span>
-                    </div>
-                </div>
-                <a href="/blog/podcast" class="btn btn-link px-0 mt-3">
-                    <i class="bx bx-play-circle fs-lg me-2"></i>
-                    Listen now
-                </a>
-            </article>
-        </div>
-        <!-- Pagination (bullets) -->
-        <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
-    </div>
 </section>
 
 @section scripts{
