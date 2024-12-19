@@ -83,9 +83,9 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    Podcast
+                    P
                 </h3>
-                <h1 class="display-5 pb-md-3">How to Choose a Fantastic SEO Agency</h1>
+                <h1 class="display-5 pb-md-3">@</h1>
                 <div class="d-flex align-items-center flex-wrap text-muted mb-lg-5 mb-md-4 mb-3">
                     <div class="fs-xs border-end pe-3 me-3 mb-2">
                         <span class="badge bg-faded-primary text-primary fs-base">Startups</span>
@@ -106,10 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="mb-0 fs-lg">Massa massa sapien tristique cras enim. Diam at tempus tempus iaculis mattis et.
-                    Platea facilisis cursus congue diam in amet. Velit urna cras leo viverra mauris aenean arcu, cursus.
-                    Commodo rhoncus sit vulputate maecenas augue amet arcu libero. Lobortis enim, ut dui rutrum tempor
-                    at rutrum aenean pharetra. Quis vulputate egestas sed arcu.</p>
+                <p class="mb-0 fs-lg">@Model.PeliculaEspecifica.Peliculas.synopsis</p>
             </div>
         </div>
     </div>
@@ -166,7 +163,7 @@
         <div class="col-lg-9">
             <hr class="my-2">
             <!-- Comments -->
-            @foreach (var comentario in Model.comentario ?? new List<Comentario>())
+            @foreach (var comentario in Model.PeliculaEspecifica.Comentario ?? new List<Comentario>())
             {
                 <div class="position-relative ps-4 mt-4">
                     <span class="position-absolute top-0 start-0 w-1 h-100 bg-primary"></span>
@@ -221,9 +218,9 @@
                     {
                         
                     <div class="col-12">
-                        @Html.LabelFor(model => model.comentario, "Comentario", new { @class = "form-label" })
-                        @Html.TextAreaFor(model => model.comentario, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })
-                        @Html.ValidationMessageFor(model => model.comentario, "", new { @class = "text-danger" })
+                        @Html.LabelFor(model => model.PeliculaEspecifica.Comentario, "Comentario", new { @class = "form-label" })
+                        @Html.TextAreaFor(model => model.PeliculaEspecifica.Comentario, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })
+                        @Html.ValidationMessageFor(model => model.PeliculaEspecifica.Comentario, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Postear</button>

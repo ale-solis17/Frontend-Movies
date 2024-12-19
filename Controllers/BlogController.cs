@@ -45,7 +45,7 @@ namespace Silicon.Controllers
                 var jsonContent = new StringContent(JsonConvert.SerializeObject(longValue), Encoding.UTF8, "application/json");
                 using (HttpClient client = new HttpClient())
                 {
-                    var response = await client.PostAsync("http://localhost:54579/api/peliculas/especifica", jsonContent);
+                    var response = await client.PostAsync("https://localhost:44377/api/peliculas/especifica", jsonContent);
                     response.EnsureSuccessStatusCode();
 
                     if (response.IsSuccessStatusCode)

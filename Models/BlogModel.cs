@@ -5,26 +5,24 @@ namespace Silicon.Models
 {
     public class BlogModel
     {
-        public PeliculaEspecificaModel PeliculaEspecifica { get; set; }
-        public PeliculaInicioModel PeliculaInicio { get; set; }
-        
+       
         public BlogModel()
         {
-           PeliculaEspecifica = new PeliculaEspecificaModel();
-           PeliculaInicio = new PeliculaInicioModel();
+            PeliculaEspecifica = new PeliculaEspecificaModel();
+            PeliculaInicio = new PeliculaInicioModel();
         }
-        
+
         public class PeliculaEspecificaModel
         {
             // Peliculas
-            public Pelicula pelicula { get; set; }
+            public Pelicula Peliculas { get; set; }
             //Comentarios
-            public List<Comentario> comentario { get; set; }
+            public List<Comentario> Comentario { get; set; }
 
             public PeliculaEspecificaModel()
             {
-                pelicula = new Pelicula();
-                comentario = new List<Comentario>();
+                Peliculas = new Pelicula();
+                Comentario = new List<Comentario>();
             }
         }
 
@@ -32,6 +30,9 @@ namespace Silicon.Models
         {
             public Pelicula pelicula { get; set; }
             public List<Comentario> comentario { get; set; }
-   
-   }    }   
+
+        }
+        public PeliculaEspecificaModel PeliculaEspecifica { get; set; }
+        public PeliculaInicioModel PeliculaInicio { get; set; }
+    }
 }
