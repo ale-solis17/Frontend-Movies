@@ -1,4 +1,4 @@
-﻿@model Silicon.Models.LandingModel
+@model Silicon.Models.LandingModel
 
 
 @{
@@ -63,17 +63,17 @@
             </ol>
         </nav>
 
-        <!-- Featured article -->
-        <div class="row mb-xxl-5 py-md-4 py-lg-5">
+        <div class="row">
+            <!-- Sección de Película -->
             <div class="col-lg-6 col-md-7 pb-3 pb-md-0 mb-4 mb-md-5">
                 <div class="mb-3 fs-lg text-light">
                     <img src="~/assets/img/blog/flame.svg" width="24" alt="Flame icon" class="mt-n1 me-1">
-                    ¡Nuevo estreno!
+                    ¡Recomendaciones!
                 </div>
-                <h1 class="display-5 pb-md-3">¡Vive la magia, intriga y amistad en Wicked, el musical que redefine la historia de Oz!</h1>
+                <h1 class="display-5 pb-md-3">@Model.pelicula.name</h1>
                 <div class="d-flex flex-wrap mb-md-5 mb-4 pb-md-2 text-white">
                     <div class="border-end border-light h-100 mb-2 pe-3 me-3">
-                        <span class="badge bg-faded-light fs-base">Musical</span>
+                        <img src="@Model.pelicula.URL" alt="@Model.pelicula.URL" class="img-fluid" />
                     </div>
                 </div>
             </div>
@@ -81,6 +81,52 @@
 
             <!-- Articles slider -->
             <div class="col-lg-4 offset-lg-2 col-md-5">
+                <div class="swiper overflow-hidden w-100 ms-n2 ms-md-0 pe-3 pe-sm-4" style="max-height: 405px;" data-swiper-options='{
+                 "direction": "vertical",
+                 "slidesPerView": "auto",
+                 "freeMode": true,
+                 "scrollbar": {
+                 "el": ".swiper-scrollbar"
+                 },
+                 "mousewheel": true
+                 }'>
+                    <div class="swiper-wrapper pe-md-2">
+                        <div class="swiper-slide h-auto px-2">
+                            <div class="row row-cols-md-1 row-cols-sm-2 row-cols-1 g-md-4 g-3">
+
+                                @foreach (var comment in Model.comentario)
+                                {
+                                    <!-- Article -->
+                                    <div class="col">
+                                        <article class="card h-100 border-0 shadow-sm card-hover-primary">
+                                            <div class="card-body pb-0">
+                                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                                 
+                                                    <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">
+                                                        @comment.rating?.ToString("0.0") ?? "Sin rating"
+                                                    </a>
+                                               
+                                                    <span class="fs-sm text-muted">
+                                                        @comment.creationDate?.ToString("MMMM dd, yyyy")"
+                                                    </span>
+                                                </div>
+                                             
+                                                <h3 class="h5 mb-0">
+                                                    @comment.comentario
+                                                </h3>
+                                            </div>
+                                        </article>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+
+            <!-- Articles slider -->
+            <!--<div class="col-lg-4 offset-lg-2 col-md-5">
                 <div class="swiper overflow-hidden w-100 ms-n2 ms-md-0 pe-3 pe-sm-4" style="max-height: 405px;" data-swiper-options='{
                 "direction": "vertical",
                 "slidesPerView": "auto",
@@ -93,16 +139,16 @@
                     <div class="swiper-wrapper pe-md-2">
                         <div class="swiper-slide h-auto px-2">
 
-                            <div class="row row-cols-md-1 row-cols-sm-2 row-cols-1 g-md-4 g-3">
+                            <div class="row row-cols-md-1 row-cols-sm-2 row-cols-1 g-md-4 g-3">-->
 
                                 <!-- Article -->
-                                <div class="col">
+                                <!--<div class="col">
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
                                     </article>
-                                </div>
+                                </div>-->
 
                                 <!-- Article -->
-                                <div class="col">
+                                <!--<div class="col">
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
                                         <div class="card-body pb-0">
                                             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -114,10 +160,10 @@
                                             </h3>
                                         </div>
                                     </article>
-                                </div>
+                                </div>-->
 
                                 <!-- Article -->
-                                <div class="col">
+                                <!--<div class="col">
                                     <article class="card h-100 border-0 shadow-sm card-hover-primary">
                                         <div class="card-body pb-0">
                                             <div class="d-flex align-items-center justify-content-between mb-3">
@@ -135,7 +181,7 @@
                     </div>
                     <div class="swiper-scrollbar"></div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </section>

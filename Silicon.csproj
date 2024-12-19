@@ -134,6 +134,7 @@
     <Compile Include="Models\Entidades\Request\ReqLogin.cs" />
     <Compile Include="Models\Entidades\Request\ReqMostrarComentarios.cs" />
     <Compile Include="Models\Entidades\Request\ReqPeliculaEsp.cs" />
+    <Compile Include="Models\Entidades\Request\ReqPeliculaInicio.cs" />
     <Compile Include="Models\Entidades\Request\ReqRegistrar.cs" />
     <Compile Include="Models\Entidades\Request\ReqCrearCom.cs" />
     <Compile Include="Models\Entidades\Response\ResCrearCom.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Models\Entidades\Response\ResLogin.cs" />
     <Compile Include="Models\Entidades\Response\ResMostrarComentarios.cs" />
     <Compile Include="Models\Entidades\Response\ResPeliculaEsp.cs" />
+    <Compile Include="Models\Entidades\Response\ResPeliculaInicio.cs" />
     <Compile Include="Models\Entidades\Response\ResRegistrar.cs" />
     <Compile Include="Models\Entidades\Sesion.cs" />
     <Compile Include="Models\Entidades\Usuario.cs" />

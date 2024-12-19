@@ -99,8 +99,6 @@ namespace Silicon.Controllers
 
             return View(model);
         }
-        
-
         public ActionResult conference()
         {
             return View();
