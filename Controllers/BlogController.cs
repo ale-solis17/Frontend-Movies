@@ -34,110 +34,101 @@ namespace Silicon.Controllers
         }
 
         [System.Web.Mvc.HttpGet]
-        public async Task<ActionResult> podcast(ReqPeliculaEsp req)
+        public async Task<ActionResult> podcast(string idFilter)
         {
-            if ( req.pelicula.id != 0)
+            long longValue = Convert.ToInt64(idFilter ?? "0");
+
+            BlogModel model = new BlogModel();
+
+            try
             {
-                BlogModel.PeliculaEspecificaModel model = new BlogModel.PeliculaEspecificaModel
+                var jsonContent = new StringContent(JsonConvert.SerializeObject(longValue), Encoding.UTF8, "application/json");
+                using (HttpClient client = new HttpClient())
                 {
-                    pelicula = new Pelicula(),
-                    comentario = new List<Comentario>()
-                };
-                try
-                {
-                    var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
-                    using (HttpClient client = new HttpClient())
+                    var response = await client.PostAsync("http://localhost:54579/api/peliculas/especifica", jsonContent);
+                    response.EnsureSuccessStatusCode();
+
+                    if (response.IsSuccessStatusCode)
                     {
-                        var response = await client.PostAsync("http://localhost:54579/api/peliculas/especifica", jsonContent);
-                        response.EnsureSuccessStatusCode();
-
-                        if (response.IsSuccessStatusCode)
+                        var responseContent = await response.Content.ReadAsStringAsync();
+                        var res = JsonConvert.DeserializeObject<ResPeliculaEsp>(responseContent);
+                        if (res.respuesta)
                         {
-                            var responseContent = await response.Content.ReadAsStringAsync();
-                            var res = JsonConvert.DeserializeObject<ResPeliculaEsp>(responseContent);
-                            if (res.respuesta)
+                            //model.pelicula.name = res.pelicula.name;
+                            //model.pelicula.director = res.pelicula.director;
+                            //model.pelicula.duracion = res.pelicula.duracion;
+                            //model.pelicula.creacion = res.pelicula.creacion;
+                            //model.pelicula.synopsis = res.pelicula.synopsis;
+                            //model.pelicula.generos = res.pelicula.generos;
+                            //model.pelicula.URL = res.pelicula.URL;
+
+                            ReqMostrarComentarios reqCom = new ReqMostrarComentarios
                             {
-                                model.pelicula.name = res.pelicula.name;
-                                model.pelicula.director = res.pelicula.director;
-                                model.pelicula.duracion = res.pelicula.duracion;
-                                model.pelicula.creacion = res.pelicula.creacion;
-                                model.pelicula.synopsis = res.pelicula.synopsis;
-                                model.pelicula.generos = res.pelicula.generos;
-                                model.pelicula.URL = res.pelicula.URL;
-
-                                ReqMostrarComentarios reqCom = new ReqMostrarComentarios
-                                {
-                                    Comentario = new Comentario()
-                                };
-                                reqCom.Comentario.idPelicula = req.pelicula.id;
+                                Comentario = new Comentario()
+                            };
+                            //reqCom.Comentario.idPelicula = req.pelicula.id;
                                 
-                                var jsonContentCom = new StringContent(JsonConvert.SerializeObject(reqCom), Encoding.UTF8, "application/json");
-                                using (HttpClient clientCom = new HttpClient())
+                            var jsonContentCom = new StringContent(JsonConvert.SerializeObject(reqCom), Encoding.UTF8, "application/json");
+                            using (HttpClient clientCom = new HttpClient())
+                            {
+                                var responseCom = await clientCom.PostAsync("http://localhost:54579/api/comentario/mostrar", jsonContentCom);
+                                response.EnsureSuccessStatusCode();
+
+                                if (responseCom.IsSuccessStatusCode)
                                 {
-                                    var responseCom = await clientCom.PostAsync("http://localhost:54579/api/comentario/mostrar", jsonContentCom);
-                                    response.EnsureSuccessStatusCode();
-
-                                    if (responseCom.IsSuccessStatusCode)
+                                    var responseContentCom = await responseCom.Content.ReadAsStringAsync();
+                                    var resCom = JsonConvert.DeserializeObject<ResMostrarComentarios>(responseContentCom);
+                                    if (resCom.respuesta)
                                     {
-                                        var responseContentCom = await responseCom.Content.ReadAsStringAsync();
-                                        var resCom = JsonConvert.DeserializeObject<ResMostrarComentarios>(responseContentCom);
-                                        if (resCom.respuesta)
+                                        if (resCom.Comentarios != null)
                                         {
-                                            if (resCom.Comentarios != null)
+                                            foreach (var item in resCom.Comentarios)
                                             {
-                                                foreach (var item in resCom.Comentarios)
+                                                Comentario comentario = new Comentario
                                                 {
-                                                    Comentario comentario = new Comentario
-                                                    {
-                                                        IdComment = item.IdComment,
-                                                        idPelicula = item.idPelicula,
-                                                        nickname = item.nickname,
-                                                        creationDate = item.creationDate,
-                                                        comentario = item.comentario,
-                                                        rating = item.rating
-                                                    };
+                                                    IdComment = item.IdComment,
+                                                    idPelicula = item.idPelicula,
+                                                    nickname = item.nickname,
+                                                    creationDate = item.creationDate,
+                                                    comentario = item.comentario,
+                                                    rating = item.rating
+                                                };
 
-                                                    model.comentario.Add(comentario);
-                                                }
-                                            }
-                                            else
-                                            {
-                                                ModelState.AddModelError("", "No hay comentarios disponibles.");
+                                                //model.comentario.Add(comentario);
                                             }
                                         }
                                         else
                                         {
-                                            foreach (var error in res.errores)
-                                            {
-                                                ModelState.AddModelError("", error);
-                                            }
+                                            ModelState.AddModelError("", "No hay comentarios disponibles.");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        foreach (var error in res.errores)
+                                        {
+                                            ModelState.AddModelError("", error);
                                         }
                                     }
                                 }
                             }
-                            else
+                        }
+                        else
+                        {
+                            ModelState.AddModelError("", "No se pudo obtener la información de la película.");
+                            foreach (var error in res.errores)
                             {
-                                ModelState.AddModelError("", "No se pudo obtener la información de la película.");
-                                foreach (var error in res.errores)
-                                {
-                                    ModelState.AddModelError("", error);
-                                }
+                                ModelState.AddModelError("", error);
                             }
                         }
                     }
                 }
-                catch (Exception e)
-                {
-                    
-                    ModelState.AddModelError("", $"Ha ocurrido un error inesperado: {e.Message}");
-                    
-                    Console.WriteLine(e.StackTrace);
-                }
-
             }
-            else
+            catch (Exception e)
             {
-                ModelState.AddModelError("", "Ha ocurrido un error inesperado. Por favor, intente más tarde.");
+                    
+                ModelState.AddModelError("", $"Ha ocurrido un error inesperado: {e.Message}");
+                    
+                Console.WriteLine(e.StackTrace);
             }
             return View(model: new BlogModel.PeliculaEspecificaModel());
         }

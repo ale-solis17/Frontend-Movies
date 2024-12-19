@@ -7,6 +7,6 @@ namespace Silicon.Models.Entidades
 {
     public class ReqFiltrarGenero
     {
-       public Genero genero {  get; set; }
+       public Genero Generos {  get; set; }
     }
 }

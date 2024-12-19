@@ -18,6 +18,12 @@ namespace Silicon.Models
             public Pelicula pelicula { get; set; }
             //Comentarios
             public List<Comentario> comentario { get; set; }
+
+            public PeliculaEspecificaModel()
+            {
+                pelicula = new Pelicula();
+                comentario = new List<Comentario>();
+            }
         }
     }
 }

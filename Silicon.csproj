@@ -130,6 +130,7 @@
     <Compile Include="Models\Entidades\Genero.cs" />
     <Compile Include="Models\Entidades\Pelicula.cs" />
     <Compile Include="Models\Entidades\Request\ReqFiltrarGenero.cs" />
+    <Compile Include="Models\Entidades\Request\ReqGeneros.cs" />
     <Compile Include="Models\Entidades\Request\ReqLogin.cs" />
     <Compile Include="Models\Entidades\Request\ReqMostrarComentarios.cs" />
     <Compile Include="Models\Entidades\Request\ReqPeliculaEsp.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Models\Entidades\Response\ResCrearCom.cs" />
     <Compile Include="Models\Entidades\Response\ResBase.cs" />
     <Compile Include="Models\Entidades\Response\ResFiltrarGenero.cs" />
+    <Compile Include="Models\Entidades\Response\ResGeneros.cs" />
     <Compile Include="Models\Entidades\Response\ResLogin.cs" />
     <Compile Include="Models\Entidades\Response\ResMostrarComentarios.cs" />
     <Compile Include="Models\Entidades\Response\ResPeliculaEsp.cs" />

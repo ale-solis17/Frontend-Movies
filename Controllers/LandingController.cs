@@ -9,39 +9,62 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Silicon.Models.Entidades.Request;
+using Silicon.Models.Entidades.Response;
 
 namespace Silicon.Controllers
 {
     public class LandingController : Controller
     {
         // GET: Landing
-        public ActionResult blog()
+        public async Task<ActionResult> blog(String generoFilter)
         {
-                return View();
-        }
-        [System.Web.Mvc.HttpPost]
-        public async Task<ActionResult> blog(int id)
-        {
-            LandingModel.FiltrarGeneroModel model = new LandingModel.FiltrarGeneroModel();
+            LandingModel model = new LandingModel();
 
-            if (model.pelicula == null)
+            try
             {
-                model.pelicula = new List<Pelicula>();
-            }
-            
-            
-            
-                try
+                using (HttpClient client = new HttpClient())
                 {
-                    ReqFiltrarGenero req = new ReqFiltrarGenero();
-                    req.genero.IdGenero = id;
+                    var response = await client.GetAsync("https://localhost:44377/api/generos");
 
-                    var jsonContent = new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
-                    using (HttpClient client = new HttpClient())
+                    if (response.IsSuccessStatusCode)
                     {
-                        var response = await client.PostAsync("http://localhost:54579/api/generos/filtrar", jsonContent);
+                        var responseContent = await response.Content.ReadAsStringAsync();
+                        var res = JsonConvert.DeserializeObject<ResGeneros>(responseContent);
 
-                    // Filtrar por género si está especificado
+                        if (res.respuesta)
+                        {
+                            if (res.Generos != null)
+                            {
+                                model.Mostrar.Generos = res.Generos;
+                            }
+                            else
+                            {
+                                ModelState.AddModelError("", "No hay generos por mostrar");
+                            }
+                        }
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                ModelState.AddModelError("", "Ha ocurrido un error. Intente mas tarde \n" + e.Message);
+            }
+
+            try
+            {
+                long longValue = Convert.ToInt64(generoFilter ?? "0");
+
+                var jsonContent = new StringContent("{\"Generos\": {\"IdGenero\":" +longValue+"}}",Encoding.UTF8, "application/json");
+                using (HttpClient client = new HttpClient())
+                {
+                    var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44377/api/generos/filtrar")
+                    {
+                        Content = jsonContent
+                    };
+                    var response = await client.SendAsync(request);
+
                     if (response.IsSuccessStatusCode)
                     {
                         var responseContent = await response.Content.ReadAsStringAsync();
@@ -49,46 +72,34 @@ namespace Silicon.Controllers
 
                         if (res.respuesta)
                         {
-                            if (res.Peliculas != null && res.Peliculas.Any())
+                            if (res.Peliculas != null)
                             {
-                                foreach (var item in res.Peliculas)
-                                {
-                                    Pelicula pelicula = new Pelicula()
-                                    {
-                                        id = item.id,
-                                        name = item.name,
-                                        director = item.director,
-                                        duracion = item.duracion,
-                                        creacion = item.creacion,
-                                        synopsis = item.synopsis,
-                                        generos = item.generos,
-                                        URL = item.URL
-                                    };
-                                    model.pelicula.Add(pelicula);
-                                }
+                                model.filtrar.Peliculas = res.Peliculas;
                             }
-                        
+                            else
+                            {
+                                ModelState.AddModelError("", "No hay películas por mostrar");
+                            }
+
                         }
                         else
                         {
 
                             ModelState.AddModelError("", "Ha ocurrido un error. Intente mas tarde");
-                            
+
                         }
                     }
 
-                        
-                        
-                    }
                 }
-                catch (Exception ex)
-                {
-                    ModelState.AddModelError("", "Error al cargar las películas. Intente más tarde.");
-                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Error al cargar las películas. Intente más tarde.");
+            }
 
-                return View(model);
-            
+            return View(model);
         }
+        
 
         public ActionResult conference()
         {
