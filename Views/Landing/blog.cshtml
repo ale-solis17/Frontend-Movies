@@ -20,7 +20,7 @@
     <div class="container px-3">
         <a href="/" class="navbar-brand pe-3">
             <img src="~/assets/img/logooo.png" width="47" alt="Silicon">
-            ¡Alerta De Spoiler!
+            Alerta De Spoiler!
         </a>
         <div id="navbarNav" class="offcanvas offcanvas-end">
             <div class="offcanvas-header border-bottom">
@@ -61,7 +61,7 @@
                 <li class="breadcrumb-item">
                     <a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Películas</li>
+                <li class="breadcrumb-item active" aria-current="page">Peliculas</li>
             </ol>
         </nav>
 
@@ -70,9 +70,10 @@
             <div class="col-lg-6 col-md-7 pb-3 pb-md-0 mb-4 mb-md-5">
                 <div class="mb-3 fs-lg text-light">
                     <img src="~/assets/img/blog/flame.svg" width="24" alt="Flame icon" class="mt-n1 me-1">
-                    ¡Recomendaciones!
+                    Recomendaciones!
                 </div>
                 <h1 class="display-5 pb-md-3">@Model.PeliculaInicio.Peliculas.name</h1>
+                <p>@Model.PeliculaInicio.Peliculas.synopsis</p>
                 <div class="d-flex flex-wrap mb-md-5 mb-4 pb-md-2 text-white">
                     <div class="border-end border-light h-100 mb-2 pe-3 me-3">
                         <img src="@Model.PeliculaInicio.Peliculas.URL" alt="@Model.PeliculaInicio.Peliculas.URL" class="img-fluid" />
@@ -143,7 +144,7 @@
 }
 <!-- Latest posts -->
 <section class="container mb-5 pt-5 pb-lg-5">
-    <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Géneros</h2>
+    <h2 class="h1 mb-4 pt-lg-2 pb-lg-3 py-1 text-center">Generos</h2>
 
     <!-- Category tabs -->
     @using (Html.BeginForm("blog", "Landing", FormMethod.Post, new { id = "loginForm" }))
