@@ -7,7 +7,7 @@ namespace Silicon.Models.Entidades.Response
 {
     public class ResPeliculaInicio : ResBase
     {
-        public Pelicula Pelicula { get; set; }
-        public List<Comentario> Comentarios { get; set; } 
+        public Pelicula Peliculas { get; set; }
+        public List<Comentario> Comentario { get; set; } 
     }
 }

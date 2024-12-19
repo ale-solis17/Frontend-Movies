@@ -9,6 +9,7 @@ namespace Silicon.Models
         {
             filtrar = new FiltrarGeneroModel();
             Mostrar = new GenerosMostrar();
+            PeliculaInicio = new PeliculaInicioModel();
         }
 
         public class FiltrarGeneroModel
@@ -33,9 +34,23 @@ namespace Silicon.Models
                 Generos = new List<Genero>();
             }
         }
+        
+        public class PeliculaInicioModel
+        {
+            public Pelicula Peliculas { get; set; }
+            public List<Comentario> Comentario { get; set; }
+   
+            public PeliculaInicioModel()
+            {
+                Peliculas = new Pelicula();
+                Comentario = new List<Comentario>();
+            }
+        }    
 
         public FiltrarGeneroModel filtrar { get; set; }
 
         public GenerosMostrar Mostrar { get; set; }
+        
+        public PeliculaInicioModel PeliculaInicio { get; set; }
     }
 }

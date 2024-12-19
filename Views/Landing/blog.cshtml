@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" media="screen" href="~/assets/vendor/boxicons/css/boxicons.min.css">
     <link rel="stylesheet" media="screen" href="~/assets/vendor/swiper/swiper-bundle.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 }
 <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
@@ -36,7 +37,8 @@
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
             <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
         </div>
-        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
@@ -45,7 +47,7 @@
 <section class="position-relative jarallax pb-xl-3" data-jarallax data-speed="0.4" data-bs-theme="dark">
 
     <!-- Parallax img -->
-    <div class="jarallax-img bg-dark opacity-70" style="background-image: url('/assets/img/blog/single/Wicked.jpeg');"></div>
+    <div class="jarallax-img bg-dark opacity-70" style="background-image: url('@Model.PeliculaInicio.Peliculas.URL');"></div>
 
     <!-- Overlay bg -->
     <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-70 zindex-1"></span>
@@ -70,10 +72,10 @@
                     <img src="~/assets/img/blog/flame.svg" width="24" alt="Flame icon" class="mt-n1 me-1">
                     ¡Recomendaciones!
                 </div>
-                <h1 class="display-5 pb-md-3">@Model.pelicula.name</h1>
+                <h1 class="display-5 pb-md-3">@Model.PeliculaInicio.Peliculas.name</h1>
                 <div class="d-flex flex-wrap mb-md-5 mb-4 pb-md-2 text-white">
                     <div class="border-end border-light h-100 mb-2 pe-3 me-3">
-                        <img src="@Model.pelicula.URL" alt="@Model.pelicula.URL" class="img-fluid" />
+                        <img src="@Model.PeliculaInicio.Peliculas.URL" alt="@Model.PeliculaInicio.Peliculas.URL" class="img-fluid" />
                     </div>
                 </div>
             </div>
@@ -94,23 +96,22 @@
                         <div class="swiper-slide h-auto px-2">
                             <div class="row row-cols-md-1 row-cols-sm-2 row-cols-1 g-md-4 g-3">
 
-                                @foreach (var comment in Model.comentario)
+                                @foreach (var comment in Model.PeliculaInicio.Comentario)
                                 {
                                     <!-- Article -->
                                     <div class="col">
                                         <article class="card h-100 border-0 shadow-sm card-hover-primary">
                                             <div class="card-body pb-0">
                                                 <div class="d-flex align-items-center justify-content-between mb-3">
-                                                 
-                                                    <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">
-                                                        @comment.rating?.ToString("0.0") ?? "Sin rating"
+                                                    <a href="#"
+                                                       class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">
+                                                        <i class='bx bxs-star'></i> @(comment.rating == null ? "Sin rating" : (int)comment.rating)
                                                     </a>
-                                               
                                                     <span class="fs-sm text-muted">
-                                                        @comment.creationDate?.ToString("MMMM dd, yyyy")"
+                                                        @(comment.creationDate?.ToString("MMMM dd, yyyy"))
                                                     </span>
                                                 </div>
-                                             
+
                                                 <h3 class="h5 mb-0">
                                                     @comment.comentario
                                                 </h3>
@@ -124,79 +125,21 @@
                     <div class="swiper-scrollbar"></div>
                 </div>
             </div>
-
-            <!-- Articles slider -->
-            <!--<div class="col-lg-4 offset-lg-2 col-md-5">
-                <div class="swiper overflow-hidden w-100 ms-n2 ms-md-0 pe-3 pe-sm-4" style="max-height: 405px;" data-swiper-options='{
-                "direction": "vertical",
-                "slidesPerView": "auto",
-                "freeMode": true,
-                "scrollbar": {
-                  "el": ".swiper-scrollbar"
-                },
-                "mousewheel": true
-              }'>
-                    <div class="swiper-wrapper pe-md-2">
-                        <div class="swiper-slide h-auto px-2">
-
-                            <div class="row row-cols-md-1 row-cols-sm-2 row-cols-1 g-md-4 g-3">-->
-
-                                <!-- Article -->
-                                <!--<div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                    </article>
-                                </div>-->
-
-                                <!-- Article -->
-                                <!--<div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Acción</a>
-                                                <span class="fs-sm text-muted">May 24, 2023</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                ¡La pareja más explosiva del cómic está de vuelta! Deadpool y Wolverine: acción, humor y caos en su máxima expresión.
-                                            </h3>
-                                        </div>
-                                    </article>
-                                </div>-->
-
-                                <!-- Article -->
-                                <!--<div class="col">
-                                    <article class="card h-100 border-0 shadow-sm card-hover-primary">
-                                        <div class="card-body pb-0">
-                                            <div class="d-flex align-items-center justify-content-between mb-3">
-                                                <a href="#" class="badge fs-sm text-nav bg-white text-decoration-none position-relative zindex-2">Drama</a>
-                                                <span class="fs-sm text-muted">May 25, 2023</span>
-                                            </div>
-                                            <h3 class="h5 mb-0">
-                                                Gladiador: La lucha por la justicia y la venganza se desatan en la antigua Roma. Un hombre, un imperio, una batalla épica.
-                                            </h3>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
-                </div>
-            </div>-->
         </div>
     </div>
 </section>
 @if (!ViewData.ModelState.IsValid)
 {
-	<div class="alert alert-danger validation-summary">
-		@Html.ValidationSummary(false, "Se encontraron los siguientes errores:")
-	</div>
+    <div class="alert alert-danger validation-summary">
+        @Html.ValidationSummary(false, "Se encontraron los siguientes errores:")
+    </div>
 }
- 
+
 @if (TempData["SuccessMessage"] != null)
 {
-	<div class="alert alert-success" role="alert">
-		@TempData["SuccessMessage"]
-	</div>
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
 }
 <!-- Latest posts -->
 <section class="container mb-5 pt-5 pb-lg-5">
@@ -205,49 +148,47 @@
     <!-- Category tabs -->
     @using (Html.BeginForm("blog", "Landing", FormMethod.Post, new { id = "loginForm" }))
     {
-	    <ul class="nav nav-tabs justify-content-center mb-lg-5 mb-4 pb-lg-2">
+        <ul class="nav nav-tabs justify-content-center mb-lg-5 mb-4 pb-lg-2">
             @foreach (var item in Model.Mostrar.Generos)
             {
-	            <li class="nav-item">
-		            <button type="submit" class="btn btn-outline-secondary" name="generoFilter" value=@item.IdGenero>@item.NombreGenero</button>
-	            </li>
+                <li class="nav-item">
+                    <button type="submit" class="btn btn-outline-secondary" name="generoFilter" value=@item.IdGenero>@item.NombreGenero</button>
+                </li>
             }
-		    
-	    </ul>
+
+        </ul>
     }
 
     <!-- Artículos del blog -->
     <div class="pb-3" id="blogArticles">
         <!-- Artículo -->
-        @foreach(var pelicula in Model.filtrar.Peliculas) 
-        { 
-        <article class="card border-0 shadow-sm overflow-hidden mb-4" data-category="terror">
-            <div class="row g-0">
-                <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/01.jpg'); min-height: 15rem;">
+        @foreach (var pelicula in Model.filtrar.Peliculas)
+        {
+            <article class="card border-0 shadow-sm overflow-hidden mb-4" data-category="terror">
+                <div class="row g-0">
+                    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('/assets/img/blog/01.jpg'); min-height: 15rem;">
 
-	                <a class="badge fs-sm text-nav bg-secondary text-decoration-none">@pelicula.generos</a>
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">@pelicula.generos</a>
-                            <span class="fs-sm text-muted border-start ps-3 ms-3">@pelicula.creacion</span>
+                        <a class="badge fs-sm text-nav bg-secondary text-decoration-none">@pelicula.generos</a>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">@pelicula.generos</a>
+                                <span class="fs-sm text-muted border-start ps-3 ms-3">@pelicula.creacion</span>
+                            </div>
+                            <h3 class="h4">
+                                <a href="@Url.Action("podcast", "Blog", new { idFilter = pelicula.id })">
+                                    @pelicula.name
+                                </a>
+                            </h3>
+                            <p>@pelicula.synopsis</p>
+                            <hr class="my-4">
                         </div>
-                        <h3 class="h4">
-                            <a href="@Url.Action("podcast", "Blog", new { idFilter = pelicula.id })">
-                               @pelicula.name
-                            </a>
-                        </h3>
-                        <p>@pelicula.synopsis</p>
-                        <hr class="my-4">
                     </div>
                 </div>
-            </div>
-        </article>
+            </article>
         }
         <!-- Artículo -->
-        
-
         <!-- Más artículos -->
     </div>
 
@@ -278,10 +219,6 @@
             });
         });
     </script>
-
-    @*<a href="#" class="btn btn-lg btn-secondary w-100">
-            Agregar Reseña
-        </a>*@
 </section>
 
 
