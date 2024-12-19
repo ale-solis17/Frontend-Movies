@@ -67,7 +67,7 @@ namespace Silicon.Controllers
                                 Comentario = new Comentario()
                             };
                             //reqCom.Comentario.idPelicula = req.pelicula.id;
-                                
+
                             var jsonContentCom = new StringContent(JsonConvert.SerializeObject(reqCom), Encoding.UTF8, "application/json");
                             using (HttpClient clientCom = new HttpClient())
                             {
@@ -125,78 +125,141 @@ namespace Silicon.Controllers
             }
             catch (Exception e)
             {
-                    
+
                 ModelState.AddModelError("", $"Ha ocurrido un error inesperado: {e.Message}");
-                    
+
                 Console.WriteLine(e.StackTrace);
             }
             return View(model: new BlogModel.PeliculaEspecificaModel());
         }
+       
+            [HttpPost]
+            public async Task<ActionResult> CrearComentario()
+            {
+                BlogModel model = new BlogModel();
+           
+                if (!Sesion.ComprobarSesion())
+                {
+                return RedirectToAction("Login", "Account", new { returnUrl = Url.Action("podcast", "Blog", new { idFilter = model.PeliculaEspecifica?.pelicula?.id }) });
+                }
+            
 
-        //[System.Web.Mvc.HttpPost]
-        //public async Task<ActionResult> podcast(BlogModel.PeliculaEspecificaModel model)
-        //{
-        //    try
-        //    {
-        //        ReqCrearCom req = new ReqCrearCom
-        //        {
-        //            comentario = new Comentario()
-        //        };
-        //        var jsonContent =
-        //            new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
-        //        using (HttpClient client = new HttpClient())
-        //        {
-        //            var response = await client.PostAsync("http://localhost:54579/api/comentario/crearr", jsonContent);
-        //            //Este if(rating) no sé si funciona
-        //            decimal rating = 0;
-        //            int idPelicula = 0;
-        //            if (rating < 0 || rating > 5)
-        //            {
-        //                ModelState.AddModelError("", "La puntuación debe estar entre 0 y 5.");
-        //                return RedirectToAction("Details", new { id = idPelicula });
-        //            }
+               try
+                {
+                    var nuevoComentario = new Comentario
+                    {
+                        idPelicula = model.Comentario.,
+                        idUsuario = Sesion.Id,
+                        comentario = model.Comentario.Comentario.comentario,
+                        rating = model.Comentario.Comentario.rating,
+                    };
 
-        //            if (response.IsSuccessStatusCode)
-        //            {
-        //                var responseContent = await response.Content.ReadAsStringAsync();
-        //                var res = JsonConvert.DeserializeObject<ResCrearCom>(responseContent);
-        //                if (res.respuesta)
-        //                {
-        //                    // En lugar de redireccionar, mostramos el mensaje de éxito
-        //                    ViewBag.SuccessMessage = "Comentario Publicado";
-        //                    ViewBag.ShowSuccess = true;
-        //                    return RedirectToAction("blog");
-        //                }
-        //                else
-        //                {
-        //                    foreach (var error in res.errores)
-        //                    {
-        //                        ModelState.AddModelError("", error);
-        //                    }
-        //                }
-        //            }
-        //            else
-        //            {
-        //                ModelState.AddModelError("",
-        //                    "Error de comunicación con el servidor. Por favor, intente más tarde.");
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ModelState.AddModelError("", "Ha ocurrido un error inesperado. Por favor, intente más tarde.");
-        //    }
+                    // Crear el requerimiento para la API
+                    var reqCrearComentario = new ReqCrearCom
+                    {
+                        comentario = nuevoComentario
+                    };
 
-        //    return View();
-        //}
-        public ActionResult simplefeed()
-        {
-            return View();
+                    var jsonContent = new StringContent(JsonConvert.SerializeObject(reqCrearComentario), Encoding.UTF8, "application/json");
+
+                    using (HttpClient client = new HttpClient())
+                    {
+                        var response = await client.PostAsync("http://localhost:54579/api/comentario/crear", jsonContent);
+                        response.EnsureSuccessStatusCode();
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var responseContent = await response.Content.ReadAsStringAsync();
+                            var resCrearComentario = JsonConvert.DeserializeObject<ResCrearCom>(responseContent);
+
+                        if (resCrearComentario.respuesta)
+                        {
+
+                            return RedirectToAction("podcast", new { idFilter = model.PeliculaEspecifica.pelicula.id });
+                        }
+                        else
+                        {
+                            foreach (var error in resCrearComentario.errores)
+                            {
+                                ModelState.AddModelError("", error);
+                            }
+                        }
+                    }
+                    }
+                }
+                catch (Exception e)
+                {
+                    ModelState.AddModelError("", $"Ha ocurrido un error inesperado: {e.Message}");
+                    Console.WriteLine(e.StackTrace);
+                }
+
+            return RedirectToAction("podcast", new { idFilter = model.PeliculaEspecifica?.pelicula?.id });
         }
+            //[System.Web.Mvc.HttpPost]
+            //public async Task<ActionResult> podcast(BlogModel.PeliculaEspecificaModel model)
+            //{
+            //    tryid
+            //    {
+            //        ReqCrearCom req = new ReqCrearCom
+            //        {
+            //            comentario = new Comentario()
+            //        };
+            //        var jsonContent =
+            //            new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
+            //        using (HttpClient client = new HttpClient())
+            //        {
+            //            var response = await client.PostAsync("http://localhost:54579/api/comentario/crearr", jsonContent);
+            //            //Este if(rating) no sé si funciona
+            //            decimal rating = 0;
+            //            int idPelicula = 0;
+            //            if (rating < 0 || rating > 5)
+            //            {
+            //                ModelState.AddModelError("", "La puntuación debe estar entre 0 y 5.");
+            //                return RedirectToAction("Details", new { id = idPelicula });
+            //            }
 
-        public ActionResult single()
-        {
-            return View();
-        }
+            //            if (response.IsSuccessStatusCode)
+            //            {
+            //                var responseContent = await response.Content.ReadAsStringAsync();
+            //                var res = JsonConvert.DeserializeObject<ResCrearCom>(responseContent);
+            //                if (res.respuesta)
+            //                {
+            //                    // En lugar de redireccionar, mostramos el mensaje de éxito
+            //                    ViewBag.SuccessMessage = "Comentario Publicado";
+            //                    ViewBag.ShowSuccess = true;
+            //                    return RedirectToAction("blog");
+            //                }
+            //                else
+            //                {
+            //                    foreach (var error in res.errores)
+            //                    {
+            //                        ModelState.AddModelError("", error);
+            //                    }
+            //                }
+            //            }
+            //            else
+            //            {
+            //                ModelState.AddModelError("",
+            //                    "Error de comunicación con el servidor. Por favor, intente más tarde.");
+            //            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        ModelState.AddModelError("", "Ha ocurrido un error inesperado. Por favor, intente más tarde.");
+            //    }
+
+            //    return View();
+            //}
+            public ActionResult simplefeed()
+            {
+                return View();
+            }
+
+            public ActionResult single()
+            {
+                return View();
+            }
+        
     }
 }
