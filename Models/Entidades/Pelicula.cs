@@ -6,6 +6,7 @@ namespace Silicon.Models.Entidades
     {
         public long id { get; set; }
         public string name { get; set; }
+        public decimal rating { get; set; }
         public string director {  get; set; }
         public int duracion { get; set; }
         public DateTime creacion { get; set; }

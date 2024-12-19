@@ -39,35 +39,32 @@ namespace Silicon.Controllers
             long longValue = Convert.ToInt64(idFilter ?? "0");
 
             BlogModel model = new BlogModel();
-
+            model.PeliculaEspecifica.Peliculas.id = longValue;
             try
             {
-                var jsonContent = new StringContent(JsonConvert.SerializeObject(longValue), Encoding.UTF8, "application/json");
+                var jsonContent = new StringContent("{\"Peliculas\": {\"id\":" +longValue+"}}", Encoding.UTF8, "application/json");
                 using (HttpClient client = new HttpClient())
                 {
-                    var response = await client.PostAsync("http://localhost:54579/api/peliculas/especifica", jsonContent);
-                    response.EnsureSuccessStatusCode();
-
+                    var request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:44377/api/peliculas/especifica")
+                    {
+                        Content = jsonContent
+                    };
+                    var response = await client.SendAsync(request);
+                    
                     if (response.IsSuccessStatusCode)
                     {
                         var responseContent = await response.Content.ReadAsStringAsync();
                         var res = JsonConvert.DeserializeObject<ResPeliculaEsp>(responseContent);
                         if (res.respuesta)
                         {
-                            //model.pelicula.name = res.pelicula.name;
-                            //model.pelicula.director = res.pelicula.director;
-                            //model.pelicula.duracion = res.pelicula.duracion;
-                            //model.pelicula.creacion = res.pelicula.creacion;
-                            //model.pelicula.synopsis = res.pelicula.synopsis;
-                            //model.pelicula.generos = res.pelicula.generos;
-                            //model.pelicula.URL = res.pelicula.URL;
+                            model.PeliculaEspecifica.Peliculas = res.Peliculas;
 
                             ReqMostrarComentarios reqCom = new ReqMostrarComentarios
                             {
                                 Comentario = new Comentario()
                             };
-                            //reqCom.Comentario.idPelicula = req.pelicula.id;
-                                
+                            reqCom.Comentario.idPelicula = longValue;
+
                             var jsonContentCom = new StringContent(JsonConvert.SerializeObject(reqCom), Encoding.UTF8, "application/json");
                             using (HttpClient clientCom = new HttpClient())
                             {
@@ -94,7 +91,7 @@ namespace Silicon.Controllers
                                                     rating = item.rating
                                                 };
 
-                                                //model.comentario.Add(comentario);
+                                                model.PeliculaEspecifica.comentario.Add(comentario);
                                             }
                                         }
                                         else
@@ -130,7 +127,7 @@ namespace Silicon.Controllers
                     
                 Console.WriteLine(e.StackTrace);
             }
-            return View(model: new BlogModel.PeliculaEspecificaModel());
+            return View(model);
         }
 
         //[System.Web.Mvc.HttpPost]

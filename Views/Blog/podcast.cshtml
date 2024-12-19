@@ -1,5 +1,5 @@
 @using Silicon.Models.Entidades
-@model Silicon.Models.BlogModel.PeliculaEspecificaModel
+@model Silicon.Models.BlogModel
 @{
     ViewBag.Title = "podcast";
     ViewBag.ActiveItem = "pages";
@@ -59,7 +59,19 @@
     </ol>
 </nav>
 
+@if (!ViewData.ModelState.IsValid)
+{
+	<div class="alert alert-danger validation-summary">
+		@Html.ValidationSummary(false, "Se encontraron los siguientes errores:")
+	</div>
+}
 
+@if (TempData["SuccessMessage"] != null)
+{
+	<div class="alert alert-success" role="alert">
+		@TempData["SuccessMessage"]
+	</div>
+}
 <!-- Post title + Meta  -->
 <section class="container mt-4 mb-5 pt-2 pb-lg-5">
     <div class="row gy-4">
@@ -166,7 +178,7 @@
         <div class="col-lg-9">
             <hr class="my-2">
             <!-- Comments -->
-            @foreach (var comentario in Model.comentario ?? new List<Comentario>())
+            @foreach (var comentario in Model.PeliculaEspecifica.comentario ?? new List<Comentario>())
             {
                 <div class="position-relative ps-4 mt-4">
                     <span class="position-absolute top-0 start-0 w-1 h-100 bg-primary"></span>
@@ -221,9 +233,9 @@
                     {
                         
                     <div class="col-12">
-                        @Html.LabelFor(model => model.comentario, "Comentario", new { @class = "form-label" })
-                        @Html.TextAreaFor(model => model.comentario, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })
-                        @Html.ValidationMessageFor(model => model.comentario, "", new { @class = "text-danger" })
+                        @Html.LabelFor(model => model.PeliculaEspecifica.comentario, "Comentario", new { @class = "form-label" })
+                        @Html.TextAreaFor(model => model.PeliculaEspecifica.comentario, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })
+                        @Html.ValidationMessageFor(model => model.PeliculaEspecifica.comentario, "", new { @class = "text-danger" })
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Postear</button>
