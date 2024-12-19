@@ -2,6 +2,7 @@
 using Silicon.Models;
 using Silicon.Models.Entidades;
 using System;
+using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -101,7 +102,7 @@ namespace Silicon.Controllers
 
                         if (res.respuesta)
                         {
-                            if (res.Peliculas != null)
+                            if (res.Peliculas != null && (res.Peliculas != null || res.Peliculas.Count == 0))
                             {
                                 model.filtrar.Peliculas = res.Peliculas;
                             }

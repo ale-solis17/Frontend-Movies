@@ -16,7 +16,7 @@ namespace Silicon
             routes.MapRoute(
              name: "Default",
              url: "{controller}/{action}/{id}",
-            defaults: new { controller = "Blog", action = "single", id = UrlParameter.Optional });
+            defaults: new { controller = "Landing", action = "blog", id = UrlParameter.Optional });
            
         }
     }
