@@ -91,7 +91,7 @@ namespace Silicon.Controllers
                                                     rating = item.rating
                                                 };
 
-                                                model.PeliculaEspecifica.comentario.Add(comentario);
+                                                //model.comentario.Add(comentario);
                                             }
                                         }
                                         else
@@ -122,36 +122,98 @@ namespace Silicon.Controllers
             }
             catch (Exception e)
             {
-                    
+
                 ModelState.AddModelError("", $"Ha ocurrido un error inesperado: {e.Message}");
-                    
+
                 Console.WriteLine(e.StackTrace);
             }
             return View(model);
         }
+       
+            [HttpPost]
+            public async Task<ActionResult> CrearComentario()
+            {
+                BlogModel model = new BlogModel();
+           
+                if (!Sesion.ComprobarSesion())
+                {
+                return RedirectToAction("Login", "Account", new { returnUrl = Url.Action("podcast", "Blog", new { idFilter = model.PeliculaEspecifica?.pelicula?.id }) });
+                }
+            
 
-        //[System.Web.Mvc.HttpPost]
-        //public async Task<ActionResult> podcast(BlogModel.PeliculaEspecificaModel model)
-        //{
-        //    try
-        //    {
-        //        ReqCrearCom req = new ReqCrearCom
-        //        {
-        //            comentario = new Comentario()
-        //        };
-        //        var jsonContent =
-        //            new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
-        //        using (HttpClient client = new HttpClient())
-        //        {
-        //            var response = await client.PostAsync("http://localhost:54579/api/comentario/crearr", jsonContent);
-        //            //Este if(rating) no sé si funciona
-        //            decimal rating = 0;
-        //            int idPelicula = 0;
-        //            if (rating < 0 || rating > 5)
-        //            {
-        //                ModelState.AddModelError("", "La puntuación debe estar entre 0 y 5.");
-        //                return RedirectToAction("Details", new { id = idPelicula });
-        //            }
+               try
+                {
+                    var nuevoComentario = new Comentario
+                    {
+                        idPelicula = model.Comentario.,
+                        idUsuario = Sesion.Id,
+                        comentario = model.Comentario.Comentario.comentario,
+                        rating = model.Comentario.Comentario.rating,
+                    };
+
+                    // Crear el requerimiento para la API
+                    var reqCrearComentario = new ReqCrearCom
+                    {
+                        comentario = nuevoComentario
+                    };
+
+                    var jsonContent = new StringContent(JsonConvert.SerializeObject(reqCrearComentario), Encoding.UTF8, "application/json");
+
+                    using (HttpClient client = new HttpClient())
+                    {
+                        var response = await client.PostAsync("http://localhost:54579/api/comentario/crear", jsonContent);
+                        response.EnsureSuccessStatusCode();
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            var responseContent = await response.Content.ReadAsStringAsync();
+                            var resCrearComentario = JsonConvert.DeserializeObject<ResCrearCom>(responseContent);
+
+                        if (resCrearComentario.respuesta)
+                        {
+
+                            return RedirectToAction("podcast", new { idFilter = model.PeliculaEspecifica.pelicula.id });
+                        }
+                        else
+                        {
+                            foreach (var error in resCrearComentario.errores)
+                            {
+                                ModelState.AddModelError("", error);
+                            }
+                        }
+                    }
+                    }
+                }
+                catch (Exception e)
+                {
+                    ModelState.AddModelError("", $"Ha ocurrido un error inesperado: {e.Message}");
+                    Console.WriteLine(e.StackTrace);
+                }
+
+            return RedirectToAction("podcast", new { idFilter = model.PeliculaEspecifica?.pelicula?.id });
+        }
+            //[System.Web.Mvc.HttpPost]
+            //public async Task<ActionResult> podcast(BlogModel.PeliculaEspecificaModel model)
+            //{
+            //    tryid
+            //    {
+            //        ReqCrearCom req = new ReqCrearCom
+            //        {
+            //            comentario = new Comentario()
+            //        };
+            //        var jsonContent =
+            //            new StringContent(JsonConvert.SerializeObject(req), Encoding.UTF8, "application/json");
+            //        using (HttpClient client = new HttpClient())
+            //        {
+            //            var response = await client.PostAsync("http://localhost:54579/api/comentario/crearr", jsonContent);
+            //            //Este if(rating) no sé si funciona
+            //            decimal rating = 0;
+            //            int idPelicula = 0;
+            //            if (rating < 0 || rating > 5)
+            //            {
+            //                ModelState.AddModelError("", "La puntuación debe estar entre 0 y 5.");
+            //                return RedirectToAction("Details", new { id = idPelicula });
+            //            }
 
         //            if (response.IsSuccessStatusCode)
         //            {

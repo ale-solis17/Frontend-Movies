@@ -180,9 +180,42 @@
                         @Html.LabelFor(model => model.PeliculaEspecifica.comentario, "Comentario", new { @class = "form-label" })
                         @Html.TextAreaFor(model => model.PeliculaEspecifica.comentario, 5, 50, new { @class = "form-control", placeholder = "Escribe tu comentario aquí", required = "required" })
                         @Html.ValidationMessageFor(model => model.PeliculaEspecifica.comentario, "", new { @class = "text-danger" })
+                        @if (Sesion.ComprobarSesion())
+                        {
+
+                            <div class="col-12">
+                                <label for="Comment" class="form-label fs-base">Comentario</label>
+                                <textarea id="Comment" name="Comment" class="form-control form-control-lg" rows="3" placeholder="Escribe tu comentario aquí..." required></textarea>
+                                <span asp-validation-for="Comment" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Publicar Comentario</button>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-12 mb-3">
+                                <button type="button" id="btnMostrarLogin" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">
+                                    Publicar Comentario
+                                </button>
+                            </div>
+
+                            <div id="loginAlert" class="alert alert-danger d-none">
+                                <strong>Debes iniciar sesion para comentar.</strong>
+                                <a href="/Account/signin" class="btn btn-sm btn-primary ms-2">Iniciar sesion</a>
+                            </div>
+
+                            <script>
+                            document.getElementById("btnMostrarLogin").addEventListener("click", function () {
+                             const loginAlert = document.getElementById("loginAlert");
+                             loginAlert.classList.remove("d-none");
+                            });
+                            </script>
+                        }
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Postear</button>
+                        @*<button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Postear</button>*@
                     </div>
                     }
                 </div>
@@ -195,32 +228,74 @@
                 <div class="row gy-lg-5 gy-4 justify-content-center text-lg-start text-center">
 
 
-                    @if (Sesion.ComprobarSesion())
-                    {
-                        <div class="col-12 mb-3">
-                            <button type="button" id="btnMostrarLogin"
-                                    class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">
-                                Publicar Comentario
-                            </button>
-                        </div>
-
-                        <div id="loginAlert" class="alert alert-danger d-none">
-                            <strong>Debes iniciar sesión para comentar.</strong>
-                            <a href="/Account/signin" class="btn btn-sm btn-primary ms-2">Iniciar sesión</a>
-                        </div>
-                    }
-                    <script>
-                        document.getElementById("btnMostrarLogin").addEventListener("click", function () {
-                            const loginAlert = document.getElementById("loginAlert");
-                            loginAlert.classList.remove("d-none");
-                        });
-                    </script>
-                </div>
+                    @*@if (Sesion.ComprobarSesion())
+        {
+            <div class="col-12 mb-3">
+                <button type="button" id="btnMostrarLogin"
+                        class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">
+                    Publicar Comentario
+                </button>
             </div>
-        </div>
+
+            <div id="loginAlert" class="alert alert-danger d-none">
+                <strong>Debes iniciar sesión para comentar.</strong>
+                <a href="/Account/signin" class="btn btn-sm btn-primary ms-2">Iniciar sesión</a>
+            </div>
+        }
+        <script>
+            document.getElementById("btnMostrarLogin").addEventListener("click", function () {
+                const loginAlert = document.getElementById("loginAlert");
+                loginAlert.classList.remove("d-none");
+            });
+        </script>*@
+                    <!-- Comment form -->
+                    @*<div class="col-lg-9">
+                        <div class="card p-md-5 p-4 border-0 bg-secondary">
+                            <div class="card-body w-100 mx-auto px-0" style="max-width: 746px;">
+                            
+                                <h2 class="mb-4 pb-3">Deja un Comentario</h2>
+
+                                @if (Sesion.ComprobarSesion())
+                                {
+
+                                    <div class="col-12">
+                                        <label for="Comment" class="form-label fs-base">Comentario</label>
+                                        <textarea id="Comment" name="Comment" class="form-control form-control-lg" rows="3" placeholder="Escribe tu comentario aquí..." required></textarea>
+                                        <span asp-validation-for="Comment" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">Publicar Comentario</button>
+                                    </div>
+                                }
+                                else
+                                {
+                                <div class="col-12 mb-3">
+                                    <button type="button" id="btnMostrarLogin" class="btn btn-lg btn-primary w-sm-auto w-100 mt-2">
+                                        Publicar Comentario
+                                    </button>
+                                </div>
+
+                                <div id="loginAlert" class="alert alert-danger d-none">
+                                    <strong>Debes iniciar sesión para comentar.</strong>
+                                    <a href="~/Views/Account/signin.cshtml" class="btn btn-sm btn-primary ms-2">Iniciar sesión</a>
+                                </div>
+
+                                <script>
+                                    document.getElementById("btnMostrarLogin").addEventListener("click", function () {
+                                    const loginAlert = document.getElementById("loginAlert");
+                                    loginAlert.classList.remove("d-none");
+                                    });
+                                </script>
+                                }*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        @*</div>*@
 
 
-    </div>        <!-- Subscription form + Sharing -->
+    @*</div>*@        <!-- Subscription form + Sharing -->
 </section>
 
 @section scripts{
